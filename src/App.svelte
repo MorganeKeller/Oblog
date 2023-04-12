@@ -10,6 +10,7 @@
 <main>
 <Header />
 
+<Welcome />
 
 <Comment />
   
