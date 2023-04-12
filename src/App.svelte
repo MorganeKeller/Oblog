@@ -10,9 +10,9 @@
 <main>
 <Header />
 
-<Welcome />
 
-<Comment />
+
+
   
 
 <Footer />
