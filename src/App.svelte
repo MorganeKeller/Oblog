@@ -1,9 +1,20 @@
 <script>
+  
+  import Header from "./lib/Header.svelte";
+  import Footer from "./lib/Footer.svelte";
+
+    import Welcome from "./lib/Welcome.svelte";
 
 </script>
 
 <main>
-<p>coucou</p>
+<Header />
+
+
+<Welcome />
+  
+
+<Footer />
 </main>
 
 <style>
