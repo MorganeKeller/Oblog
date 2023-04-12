@@ -1,6 +1,6 @@
 <script></script>
 
-<main>
+
     <h1>Formulaire de contact</h1>
     <div>
         <p>
@@ -9,9 +9,16 @@
             délais. Merci de votre intérêt pour notre blog et nous espèrons avoir de vos nouvelles bientôt !
         </p>
 
-        <input type="search" name="" placeholder="Name">
-        <input type="search" name="" placeholder="Email">
-        <input type="search" name="" placeholder="Message">
-    </div>
+        
+<form>
+        
+
+        <textarea  name="" placeholder="Name"></textarea>
+        <textarea  name="" placeholder="Email"></textarea>
+        <textarea  name="" placeholder="Message"></textarea>
+</form>
+       
+</div>
+   
+
     
-</main>
