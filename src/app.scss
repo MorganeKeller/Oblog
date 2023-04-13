@@ -1,6 +1,6 @@
+@use 'variables' as *;
 @use 'extends';
 @use 'mixins';
-
 
 header {
 
@@ -23,7 +23,7 @@ header {
     border-radius: 0 0 0 10px;
     padding: 1em;
     text-align: right;
-    box-shadow: 1px 1px 7px 1px black;
+    box-shadow: 1px 1px 7px 1px $dark;
 
     &.active {
       right: 0;
@@ -67,7 +67,7 @@ header {
 
       li {
         a {
-          color: black;
+          color: $dark;
           text-decoration: none;
         }
 

@@ -18,7 +18,7 @@
 <main>
   <Header />
 
-  <Welcome />
+  <Home/>
 
   <Footer />
 </main>
