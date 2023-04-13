@@ -1,4 +1,5 @@
 <script>
+<<<<<<< HEAD
 </script>
 
 <h1>Bienvenue dans nos Carnets de Voyages!</h1>
@@ -32,3 +33,9 @@
         <a href="">Lire la suite</a>
     </article>
 </div>
+=======
+
+</script>
+
+<h1>Tu es arrivé à destination</h1>
+>>>>>>> Comment
