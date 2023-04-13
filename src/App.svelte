@@ -6,7 +6,9 @@
   import Welcome from "./lib/Welcome.svelte";
   import Contact from "./lib/Contact.svelte";
 
-  
+  const router = {
+    
+  }
 
 
 
