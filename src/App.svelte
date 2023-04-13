@@ -1,6 +1,7 @@
 <script>
   import Header from "./lib/Header.svelte";
   import Footer from "./lib/Footer.svelte";
+
   import Error from "./lib/404.svelte";
   import Article from "./lib/Article.svelte";
   import ArticlesList from "./lib/ArticlesList.svelte";
@@ -11,18 +12,22 @@
   import Home from "./lib/Home.svelte";
   import Login from "./lib/Login.svelte";
   import Register from "./lib/Register.svelte";
-  
+
   import Welcome from "./lib/Welcome.svelte";
+
+  
+
 </script>
 
-<main>
-  <Header />
-  <Authors />
 
-  <Home />
+<main>
+  <Header  />
+  <Welcome />
 
   <Footer />
 </main>
 
+
 <style>
+  
 </style>

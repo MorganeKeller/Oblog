@@ -1,11 +1,11 @@
 <script>
-    import logo from "../assets/logo.png";
+    import logo from "../assets/img/logo.png";
 </script>
 
 <header>
     <nav>
         <a href="" title="Carnets de voyages" aria-label="accueil du site">
-            <img class="logo" src={logo} alt="Logo du site" />
+            <img src={logo} alt="Logo du site" />
         </a>
 
         <div>
