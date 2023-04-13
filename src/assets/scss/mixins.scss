@@ -1,0 +1,18 @@
+@mixin large {
+    @media (min-width: 1024px) {
+        @content;
+    }
+  }
+
+  @mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+  }
+  
+  @mixin button($bg: #000, $color: #fff) {
+    outline: none;
+    background: $bg;
+    color: $color;
+    border: none;
+  } 

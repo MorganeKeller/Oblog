@@ -1,32 +1,25 @@
 <script>
   import Header from "./lib/Header.svelte";
   import Footer from "./lib/Footer.svelte";
-<<<<<<< HEAD
+  import Error from "./lib/404.svelte";
+  import Article from "./lib/Article.svelte";
   import ArticlesList from "./lib/ArticlesList.svelte";
-  import CGU from "./lib/CGU.svelte";
-  import Welcome from "./lib/Welcome.svelte";
-  import Contact from "./lib/Contact.svelte";
-
-  
-
-
-
-=======
-
   import Authors from "./lib/Authors.svelte";
->>>>>>> Authors
+  import CGU from "./lib/CGU.svelte";
+  import Contact from "./lib/Contact.svelte";
+  import Destinations from "./lib/Destinations.svelte";
+  import Home from "./lib/Home.svelte";
+  import Login from "./lib/Login.svelte";
+  import Register from "./lib/Register.svelte";
+  
+  import Welcome from "./lib/Welcome.svelte";
 </script>
 
 <main>
   <Header />
-
-<<<<<<< HEAD
-  <Contact/>
-  
-  
-=======
   <Authors />
->>>>>>> Authors
+
+  <Home />
 
   <Footer />
 </main>
