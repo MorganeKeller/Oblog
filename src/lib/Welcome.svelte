@@ -1,5 +1,5 @@
 <script>
- import greenlake from '../assets/greenlake.jpeg';
+ import greenlake from '../assets/img/greenlake.jpeg';
 </script>
 
 
