@@ -1,7 +1,44 @@
 @use 'extends';
 @use 'mixins';
 
+.background_img {
+  position: relative;
+  background-image: url('../greenlake.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-color:red;
+  height: 1000px;
+  width: 100%;
+  opacity: 0.7;
 
+
+}
+
+
+.text-over {
+  position: absolute;
+  // left: 50vw;
+  // top: 35vh; 
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+
+  @include mixins.large {
+    top: 35%;
+  }
+
+  @include mixins.tablet {
+    top: 15%;
+  }
+
+  // @include mixins.mobile {
+  //   transform: translate(-50%, -600%);
+  // } 
+  
+  // -5vh, -100vw
+}
 header {
 
   // NAV

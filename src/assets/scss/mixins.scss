@@ -9,6 +9,12 @@
         @content;
     }
   }
+
+  @mixin mobile {
+    @media (min-width: 375px) {
+      @content;
+    }
+  }
   
   @mixin button($bg: #000, $color: #fff) {
     outline: none;

@@ -17,9 +17,9 @@
 
 <main>
   <Header />
-  <Authors />
 
-  <Home />
+<Welcome />
+
 
   <Footer />
 </main>
