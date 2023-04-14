@@ -22,7 +22,7 @@
 
 
   <Header  />
-  <Welcome />
+  <Destinations />
 
   <Footer />
 
