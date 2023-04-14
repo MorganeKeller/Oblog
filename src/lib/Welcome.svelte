@@ -1,14 +1,13 @@
 <script>
   import logo from "../assets/img/logo.png";
-  // import background_img from "..assets/img/greenlake.jpeg";
+  import plane from "../assets/img/plane.png";
 </script>
 
-<section class="welcome">
-  <div class="background_img" />
-
-  <div class="text-over">
-    <h1>CARNETS DE VOYAGES</h1>
-    <img src={logo} alt="Logo du site" />
-    <a href=""><button>Entrer dans le blog...</button></a>
+<section>
+  <div class="background-img">
+    <div class="text-over">
+      <h1>CARNETS DE VOYAGES</h1>
+      <a class="button" href="">Entrer...<img src={plane} alt=""/></a>
+    </div>
   </div>
 </section>
