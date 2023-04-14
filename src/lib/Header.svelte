@@ -1,29 +1,66 @@
-<script></script>
+<script>
+    import logo from "../assets/logo.png";
+
+   
+    import { link } from 'svelte-spa-router';
+    import active from 'svelte-spa-router/active'    
+   
+    
+    const navlinks = [
+        {
+            "label" : "Home",
+            "url": "/" 
+        },
+        {
+            "label" : "Contact",
+            "url": "/contact" 
+        },
+        {
+            "label" : "ArticlesList",
+            "url": "/articleslist" 
+        },
+        {
+            "label" : "Authors",
+            "url": "/authors" 
+        },
+        {
+            "label" : "CGU",
+            "url": "/cgu" 
+        },
+
+    ];
+</script>
 
 <header>
     <nav>
         <a href="" title="Carnets de voyages" aria-label="accueil du site">
-            <img src="./logo.png" alt="Logo du site" />
+            <img class="logo" src={logo} alt="Logo du site" />
         </a>
-        <input type="search" name="" placeholder="rechercher..." />
 
-        <button
-            ><img
-                src="./arrow-right.svg"
-                alt="Bouton pour lancer la recherche"
-            /></button
-        >
-
-        <ul role="menu" aria-labelledby="menubutton">
-            <li role="presentation"><a role="menuitem" href="">Accueil</a></li>
-            <li role="presentation"><a role="menuitem" href="">Articles</a></li>
-            <li role="presentation">
-                <a role="menuitem" href="">Destinations</a>
-            </li>
-            <li role="presentation"><a role="menuitem" href="">Auteurs</a></li>
-            <li role="presentation">
-                <a role="menuitem" href="">Connexion</a>
-            </li>
-        </ul>
+        <div>
+            <input type="search" name="" placeholder="rechercher..." />
+            <button aria-label="Bouton pour lancer la recherche">Go!</button>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <ul role="menu" aria-labelledby="menubutton">
+                {#each navlinks as lien}
+                <li role="presentation">
+                    <a use:link role="menuitem" href="{lien.url}">{lien.label}</a>
+                </li>
+                {/each}
+                <!-- <li role="presentation">
+                    <a role="menuitem" href="/articleslist">Articles</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="">Destinations</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="/authors">Auteurs</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="">Connexion</a> -->
+                <!-- </li> -->
+            </ul>
+        </div>
     </nav>
 </header>
