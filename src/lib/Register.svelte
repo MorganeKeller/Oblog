@@ -1,6 +1,6 @@
 <script></script>
 
-<main>
+
     <h1>Création de compte</h1>
     <div>
         <p>
@@ -40,4 +40,3 @@
             </div>
         </form>
     </div>
-</main>

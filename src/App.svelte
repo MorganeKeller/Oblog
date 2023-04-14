@@ -20,12 +20,12 @@
 </script>
 
 
-<main>
+
   <Header  />
   <Welcome />
 
   <Footer />
-</main>
+
 
 
 <style>
