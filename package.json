@@ -15,6 +15,9 @@
     "vite": "^4.2.1"
   },
   "dependencies": {
+    "hamburger-menu-svelte": "^2.2.0",
+    "svelte-burger-menu": "^2.0.5",
+    "svelte-hamburger": "^1.0.1",
     "svelte-spa-router": "^3.3.0"
   }
 }

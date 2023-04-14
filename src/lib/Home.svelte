@@ -1,13 +1,14 @@
 <script>
-<<<<<<< HEAD
+    import mont_fuji from '../assets/img/Mont_Fuji.jpg';
 </script>
 
 <h1>Bienvenue dans nos Carnets de Voyages!</h1>
 <p>
-    Vous voici arrivés à destination: ici découvrez les derniers articles
+    Vous voici arrivé à destination : ici découvrez les derniers articles
     publiés
 </p>
 <div>
+
     <article>
         <h2>Article 1</h2>
         <img src="" alt="" />
@@ -16,6 +17,7 @@
         <p>Contenu de l'article</p>
         <a href="">Lire la suite</a>
     </article>
+
     <article>
         <h2>Article 2</h2>
         <img src="" alt="" />
@@ -33,9 +35,3 @@
         <a href="">Lire la suite</a>
     </article>
 </div>
-=======
-
-</script>
-
-<h1>Tu es arrivé à destination</h1>
->>>>>>> Comment
