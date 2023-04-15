@@ -15,14 +15,12 @@
 
   import Welcome from "./lib/Welcome.svelte";
 
-  
-
 </script>
 
 
 
   <Header  />
-  <Destinations />
+  <Error />
 
   <Footer />
 

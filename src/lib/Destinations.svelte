@@ -1,4 +1,5 @@
-<script></script>
+<script>
+</script>
 
 <section class="destinationsimg">
     <h1>Destinations</h1>
