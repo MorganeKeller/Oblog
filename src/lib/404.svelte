@@ -1,6 +1,6 @@
 <script></script>
 
-<section>
+<section id="section-404">
     <div class="bloc-error">
         <h1>Oups!</h1>
         <p>Il semblerait que tu te sois perdu ou que la page recherchée n'ait pas été trouvée...</p>

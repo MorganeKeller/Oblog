@@ -20,7 +20,7 @@
 
 
   <Header  />
-  <Error />
+  <CGU />
 
   <Footer />
 
