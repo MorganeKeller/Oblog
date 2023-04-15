@@ -1,6 +1,6 @@
 <script></script>
 
-<section>
+<section id="cgu-background">
     <h1>Conditions Générales d'Utilisation</h1>
 
     <p>

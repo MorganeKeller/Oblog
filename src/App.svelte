@@ -20,7 +20,7 @@
 
 
   <Header  />
-  <CGU />
+  <Login/>
 
   <Footer />
 
