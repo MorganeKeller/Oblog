@@ -1,6 +1,6 @@
 <script></script>
 
-<main>
+
     <h1>Tous les articles</h1>
     <p>Ici tu peux consulter tous nos articles</p>
     <div>
@@ -29,4 +29,4 @@
             <a href="">Lire la suite</a>
         </article>
     </div>
-</main>
+

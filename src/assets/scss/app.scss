@@ -46,8 +46,8 @@ nav {
 //FOOTER
 footer {
   font-family: 'Amatic SC', sans-serif;
-  background-color: $yellow;
-  box-shadow: inset 0 0 25px $brown;
+  background-color: $brown;
+  box-shadow: inset 0 0 25px $yellow;
   padding: 0.1em;
 
   @include mixins.tablet {
@@ -89,9 +89,9 @@ footer {
     }
 
     img:hover {
-      background-color: $yellow;
+      background-color: $brown;
       border-radius: 25%;
-      box-shadow: 0 0 25px $brown;
+      box-shadow: 0 0 25px $yellow;
     }
   }
 }
@@ -312,11 +312,12 @@ footer {
   font-family: 'Amatic SC', sans-serif;
   font-size: 1.2em;
 
-@include mixins.tablet{
-  background: radial-gradient(circle, $yellow 25%, $brown 60%, black 90%);
-  font-size: 1.5em;
+  @include mixins.tablet {
+    background: radial-gradient(circle, $yellow 25%, $brown 60%, black 90%);
+    font-size: 1.5em;
 
-}
+  }
+
   h1 {
     font-size: 2.5em;
     margin: 0;
@@ -380,4 +381,92 @@ footer {
     }
   }
 
+}
+
+//REGISTER
+
+.main-register {
+  font-family: 'Amatic SC', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/wood.jpg");
+  background-size: cover;
+  height: 80vh;
+  object-fit: cover;
+  font-size: 1.2em;
+  color: $yellow;
+
+  @include mixins.large {
+    font-size: 1.5em;
+
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 1em 0 0 0;
+    color: $yellow;
+
+    @include mixins.large {
+      font-size: 3em;
+      margin: 0;
+    }
+  }
+
+  .before-register {
+    text-align: center;
+    color: $yellow;
+    margin: 0.2em 0 0 0;
+
+    p {
+      margin: 0.2em 0 0 0;
+
+    }
+
+    a {
+      color: $yellow;
+    }
+
+    a:hover {
+      text-decoration: dotted;
+    }
+
+  }
+
+  form {
+    .register-form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 1em;
+      //padding: 1em;
+
+      label,
+      input {
+        margin: 0.2em 0;
+      }
+    }
+
+    .register-validation {
+      input {
+        width: 10em;
+        font-size: 0.7em;
+        border-radius: 0.5em;
+        border: none;
+        background-color: $blue;
+        box-shadow: inset 0 0 1em $brown;
+        padding: 0.2em 0em;
+        border-radius: 0.5em;
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 1.2em;
+        margin-top: 0.2em;
+      }
+
+      input:hover {
+        box-shadow: inset 0 0 1em $brown;
+        background-color: $yellow;
+        border: 1px solid $brown;
+      }
+    }
+  }
 }

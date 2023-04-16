@@ -14,18 +14,14 @@
   import Register from "./lib/Register.svelte";
 
   import Welcome from "./lib/Welcome.svelte";
-
 </script>
 
+<Header />
+<main>
+  <Register />
+</main>
 
-
-  <Header  />
-  <Login/>
-
-  <Footer />
-
-
+<Footer />
 
 <style>
-  
 </style>
