@@ -15,10 +15,13 @@
 
   import Welcome from "./lib/Welcome.svelte";
 </script>
-
+<svelte:head>
+  <title>Carnets de Voyages</title>
+</svelte:head>
 <Header />
+
 <main>
-  <Register />
+  <Login/>
 </main>
 
 <Footer />

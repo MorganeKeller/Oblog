@@ -11,7 +11,7 @@
     <ul>
         <div class="foot-elem">
             <li>nous contacter</li>
-            <a href="#" aria-label="redirection vers formulaire de contact"
+            <a href={"#"} aria-label="redirection vers formulaire de contact"
                 ><img src={LogoMail} alt="Logo Contact" /></a
             >
         </div>
