@@ -1,80 +1,474 @@
-@use 'extends';
+@use 'variables'as *;
 @use 'mixins';
 
+@import url('https://fonts.bunny.net/css?family=amatic-sc:700');
 
-header {
 
-  // NAV
-  nav {
-    display: flex;
+// HEADER
+nav {
+  font-family: 'Amatic SC', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
 
-    img {
-      height: 40px;
-      width: auto;
-    }
+  img {
+    height: 40px;
   }
 
-  #mySidenav {
-    position: fixed;
-    top: 0px;
-    right: -225px;
-    transition: 0.3s;
-    background-color: white;
-    border-radius: 0 0 0 10px;
-    padding: 1em;
-    text-align: right;
-    box-shadow: 1px 1px 7px 1px black;
+  // .searchbar {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 
-    &.active {
-      right: 0;
+  // .burger {
+  //   background-color: $blue;
+  //   text-align: center;
+  //   color: black;
+  //   font-size: smaller;
+  //   transition: 1s;
+  //   border-radius: 10px 0 0 10px;
+  //   z-index: 1;
+
+  //   a {
+  //     color: $brown;
+  //     text-decoration: none;
+  //     cursor: pointer;
+  //   }
+
+  //   a:hover {
+  //     text-decoration: $brown wavy underline;
+  //   }
+  // }
+}
+
+//FOOTER
+footer {
+  font-family: 'Amatic SC', sans-serif;
+  background-color: $brown;
+  box-shadow: inset 0 0 25px $yellow;
+  padding: 0.1em;
+
+  @include mixins.tablet {
+    font-size: 1.5em;
+  }
+
+  @include mixins.large {
+    font-size: 2em;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    //margin-left: -2em;
+
+    .foot-elem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mixins.mobile {
+      li {
+        display: none;
+      }
+    }
+
+    img {
+      height: 3em;
+
+      @include mixins.tablet {
+        height: 1.7em;
+      }
+
+      
+    }
+
+    img:hover {
+      background-color: $brown;
+      border-radius: 25%;
+      box-shadow: 0 0 25px $yellow;
+    }
+  }
+}
+
+
+//WELCOME
+
+.welcome-img {
+  background-image: url("../img/jeteelac.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .text-over {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2.5em;
+
+    a {
+      font-size: 0.7em;
+      text-decoration: none;
+      color: black;
+      background-color: $blue;
+      padding: 0.01em 0.2em;
+      border-radius: 2em;
+      display: flex;
+      align-items: center;
+      box-shadow: inset 0 0 40px $brown;
+    }
+
+    a:hover {
+      box-shadow: inset 0 0 15px $brown;
+
+    }
+  }
+}
+
+//DESTINATIONS
+
+.destinationsimg {
+  background-image: url("../img/oldpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  font-family: 'Amatic SC', sans-serif;
+  text-shadow: 0 0 15px white;
+  justify-content: space-evenly;
+
+  @include mixins.tablet {
+    flex-direction: column;
+  }
+
+  @include mixins.large {
+    flex-direction: column;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    text-decoration: underline;
+    margin-left: 0.5em;
+
+    @include mixins.tablet {
+      margin-bottom: 0;
+      margin-top: 0;
+      font-size: 3.2em;
     }
 
     @include mixins.large {
-      position: relative;
-      top: unset;
-      right: unset;
-      border-radius: unset;
+      margin-bottom: 0;
+      margin-top: 0;
+      font-size: 4em;
+    }
+  }
+
+  .destinations {
+    font-size: 1.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: black;
+      text-shadow: 0 0 20px white;
+      margin: 1em;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
       padding: 0em;
-      text-align: left;
-      box-shadow: none;
-      margin: auto 5px auto auto;
+      margin: 0.5em;
 
-      &.active {
-        right: unset;
-      }
-    }
-
-    button#closeBtn {
-      margin: 1em 0;
-      background-color: transparent;
-
-      // Extend -> css en plus pour le bouton , vient de _extends.scss
-      @extend %boutonSpecial;
-
-      @include mixins.large {
+      span {
         display: none;
+      }
+
+      @include mixins.tablet {
+        font-size: 1.7em;
         margin: 0;
+        padding: 0em;
+      }
+
+      @include mixins.large {
+        font-size: 2em;
       }
     }
 
-    ul {
-      list-style-type: none;
+    a:hover {
+      box-shadow: 0 0 40px $brown;
+      border-radius: 30%;
+      padding: 0 0.1em;
 
-      @include mixins.large {
-        display: flex;
-        list-style: none;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+//404
+
+#section-404 {
+  background-image: url("../img/404ponton.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  font-family: 'Amatic SC', sans-serif;
+  text-shadow: 0 0 20px white;
+
+  .bloc-error {
+    background-color: white;
+    box-shadow: 0 0 20px $yellow;
+    border-radius: 0 3em;
+    opacity: 0.6;
+    position: absolute;
+    margin: 4em 2em;
+    padding: 0 1em 2em 1em;
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    @include mixins.tablet {
+      margin: 15%;
+
+      h1 {
+        font-size: 3.5em;
       }
 
-      li {
-        a {
-          color: black;
-          text-decoration: none;
-        }
+      p {
+        font-size: 2.5em;
+      }
+    }
 
-        @include mixins.large {
-          margin: auto 15px;
-          display: inline-block;
-        }
+    @include mixins.large {
+      margin: 5%;
+
+      h1 {
+        font-size: 4.5em;
+      }
+
+      p {
+        font-size: 3em;
+      }
+    }
+  }
+}
+
+//CGU
+
+#cgu-background {
+  padding: 1em;
+  background-color: $yellow;
+  text-align: center;
+  box-shadow: inset 0 0 25px $brown;
+
+  h1 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 3em;
+    text-shadow: 0 0 20px black;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+
+  ul {
+    text-align: left;
+    list-style: circle;
+
+    strong {
+      color: $brown
+    }
+  }
+}
+
+//LOGIN
+
+.login-background {
+  background: radial-gradient(circle, $yellow 35%, $brown 70%, black 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 1.2em;
+
+  @include mixins.tablet {
+    background: radial-gradient(circle, $yellow 25%, $brown 60%, black 90%);
+    font-size: 1.5em;
+
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0em;
+
+    .input-login {
+      display: flex;
+      align-items: center;
+      padding: 0.3em;
+      margin: 0.8em;
+
+      input {
+        padding: 0.6em;
+        border-radius: 0.5em;
+        border: none;
+      }
+    }
+
+    .connexion {
+      width: 10em;
+      font-size: 0.7em;
+      border-radius: 0.5em;
+      border: none;
+      background-color: $blue;
+      box-shadow: inset 0 0 1em $brown;
+      padding: 0.2em 0em;
+      border-radius: 0.5em;
+      font-family: 'Amatic SC', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .connexion:hover {
+      box-shadow: inset 0 0 1em $brown;
+      background-color: $yellow;
+      border: 1px solid $brown;
+    }
+  }
+
+  .text-login-register {
+    a {
+      box-shadow: inset 0 0 1em $brown;
+      text-decoration: none;
+      color: black;
+      background-color: $blue;
+      padding: 0.1em 0.5em;
+      border-radius: 0.5em;
+      font-size: 1.2em;
+    }
+
+    a:hover {
+      box-shadow: inset 0 0 1em $brown;
+      background-color: $yellow;
+      border: 1px solid $brown;
+
+    }
+  }
+
+}
+
+//REGISTER
+
+.main-register {
+  font-family: 'Amatic SC', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/wood.jpg");
+  background-size: cover;
+  height: 80vh;
+  object-fit: cover;
+  font-size: 1.2em;
+  color: $yellow;
+
+  @include mixins.large {
+    font-size: 1.5em;
+
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 1em 0 0 0;
+    color: $yellow;
+
+    @include mixins.large {
+      font-size: 3em;
+      margin: 0;
+    }
+  }
+
+  .before-register {
+    text-align: center;
+    color: $yellow;
+    margin: 0.2em 0 0 0;
+
+    p {
+      margin: 0.2em 0 0 0;
+
+    }
+
+    a {
+      color: $yellow;
+    }
+
+    a:hover {
+      text-decoration: dotted;
+    }
+
+  }
+
+  form {
+    .register-form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 1em;
+      //padding: 1em;
+
+      label,
+      input {
+        margin: 0.2em 0;
+      }
+    }
+
+    .register-validation {
+      input {
+        width: 10em;
+        font-size: 0.7em;
+        border-radius: 0.5em;
+        border: none;
+        background-color: $blue;
+        box-shadow: inset 0 0 1em $brown;
+        padding: 0.2em 0em;
+        border-radius: 0.5em;
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 1.2em;
+        margin-top: 0.2em;
+      }
+
+      input:hover {
+        box-shadow: inset 0 0 1em $brown;
+        background-color: $yellow;
+        border: 1px solid $brown;
       }
     }
   }

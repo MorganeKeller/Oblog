@@ -12,9 +12,12 @@
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
     "sass": "^1.62.0",
     "svelte": "^3.55.1",
+    "svelte-hamburgers": "^4.0.1",
     "vite": "^4.2.1"
   },
   "dependencies": {
+    "hamburger-menu-svelte": "^2.2.0",
+    "svelte-burger-menu": "^2.0.5",
     "svelte-spa-router": "^3.3.0"
   }
 }
