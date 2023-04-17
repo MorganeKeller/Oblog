@@ -1,4 +1,5 @@
 <script>
+
     import logo from "../assets/img/logo.png";
 
     import { link } from "svelte-spa-router";
@@ -25,9 +26,11 @@
             url: "/login",
         },];
 
+
 </script>
 <header>
     <nav>
+
         <div class="logo">
             <a use:link href="/home" title="Carnets de voyages" aria-label="accueil du site">
                 <img src={logo} alt="Logo du site" />
@@ -43,10 +46,6 @@
                 <a use:link href="/destinations">Destinations</a>
                 <a use:link href="/authors">Auteurs</a>
                 <a use:link href="/login">Connexion</a>
-        
-        
+
     </nav>
 </header>
-
-<style>
-</style>

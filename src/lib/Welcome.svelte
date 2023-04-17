@@ -1,4 +1,5 @@
 <script>
+
   import logo from "../assets/img/logo.png";
   import plane from "../assets/img/plane.png";
 
@@ -12,3 +13,4 @@
     <a use:link class="button" href="/home">Entrer...<img src={plane} alt="logo illustratif d'avion" /></a>
   </div>
 </section>
+
