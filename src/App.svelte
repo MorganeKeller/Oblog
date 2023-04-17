@@ -1,4 +1,6 @@
 <script>
+  import Router from "svelte-spa-router";
+
   import Header from "./lib/Header.svelte";
   import Footer from "./lib/Footer.svelte";
 
@@ -14,14 +16,17 @@
   import Register from "./lib/Register.svelte";
 
   import Welcome from "./lib/Welcome.svelte";
+
+  
 </script>
+
 <svelte:head>
   <title>Carnets de Voyages</title>
 </svelte:head>
 <Header />
 
 <main>
-  <Welcome/>
+  <Welcome />
 </main>
 
 <Footer />
