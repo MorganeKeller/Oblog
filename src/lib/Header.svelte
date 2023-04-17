@@ -1,5 +1,4 @@
 <script>
-
     import logo from "../assets/img/logo.png";
 
     import { link } from "svelte-spa-router";
