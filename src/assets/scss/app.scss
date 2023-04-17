@@ -58,10 +58,11 @@ header {
  
     h1,h2 {
       font-family: 'Amatic SC', sans-serif;
-      
+      text-align: center;
 
       @include mixins.tablet {
-        text-align: center;
+        
+        font-size: 2.5em;
       }
     }
 
