@@ -10,9 +10,17 @@
     }
   }
   
+<<<<<<< HEAD
   @mixin button($bg: #000, $color: #fff) {
     outline: none;
     background: $bg;
     color: $color;
     border: none;
   } 
+=======
+@mixin mobile {
+  @media (min-width:350px) and (max-width:767px){
+    @content;
+  }
+}
+>>>>>>> f7895a64ae82d5ae94825978c525b714f50e217c
