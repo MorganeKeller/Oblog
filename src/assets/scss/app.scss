@@ -40,21 +40,18 @@ header {
   }
 
 
-    // .japanPreview {
-  //   background-image: url(../img/Mont_Fuji.jpg);
-  //   background-repeat:no-repeat;
-  //   background-size: cover;
-  //   background-position:center;
-  //   height: 15vh;
-  //   width: 100%;
-  // }
-
   
   section {
     
     background-image: url(../img/sky.webp);
+    background-size: cover;
+    background-repeat: repeat;
     height: 100vh;
     width: 100%;
+
+    @include mixins.large {
+      height: 1200px;
+    }
  
     h1,h2 {
       font-family: 'Amatic SC', sans-serif;
@@ -73,6 +70,9 @@ header {
       @include mixins.tablet {
         margin-bottom: 6vh;
       }
+      @include mixins.large {
+        margin-bottom: 10vh;
+      }
 
         .blue-back {
           position:absolute;
@@ -89,6 +89,9 @@ header {
           @include mixins.tablet {
             height: 17vh;
           }
+          @include mixins.large {
+            height: 22.5vh;
+          }
         }
 
         img {
@@ -100,6 +103,11 @@ header {
 
           @include mixins.tablet {
             height: 15vh;
+            width : 30vw;
+          }
+
+          @include mixins.large {
+            height: 20vh;
             width : 30vw;
           }
         }
