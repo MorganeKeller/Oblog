@@ -1,7 +1,8 @@
 <script>
+  import Header from "./lib/Header.svelte";
   import Router from "svelte-spa-router";
 
-  import Header from "./lib/Header.svelte";
+  
   import Footer from "./lib/Footer.svelte";
 
   import Error from "./lib/404.svelte";
@@ -16,7 +17,26 @@
   import Register from "./lib/Register.svelte";
 
   import Welcome from "./lib/Welcome.svelte";
+
+
+const routes = {
+    "/": Welcome,
+    "/home": Home,
+    "/404": Error,
+    "/login": Login,
+    "/destinations": Destinations,
+    "/register": Register,
+    "/contact-us": Contact,
+    "/CGU": CGU,
+    "/authors": Authors,
+    "/article": Article,
+    "/articlesList": ArticlesList,
+    "*": Welcome,
+
+  }
+
 </script>
+
 
 <svelte:head>
   <title>Carnets de Voyages</title>
@@ -24,10 +44,8 @@
 <Header />
 
 <main>
-  <Welcome />
+<Router {routes} />
+
 </main>
 
 <Footer />
-
-<style>
-</style>

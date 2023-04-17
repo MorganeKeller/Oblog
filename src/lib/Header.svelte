@@ -1,7 +1,30 @@
 <script>
-    import logo from "../assets/logo.png";
-</script>
+    import logo from "../assets/img/logo.png";
 
+    import { link } from "svelte-spa-router";
+
+    const links = [
+        {
+            label: "Accueil",
+            url: "/",
+        },
+        {
+            label: "Articles",
+            url: "articlesList",
+        },
+        {
+            label: "Destinations",
+            url: "/destinations",
+        },
+        {
+            label: "Auteurs",
+            url: "/authors",
+        },
+        {
+            label: "Connexion",
+            url: "/login",
+        },];
+</script>
 <header>
     <nav>
         <a href="" title="Carnets de voyages" aria-label="accueil du site">

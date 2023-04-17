@@ -1,13 +1,11 @@
 <script>
- import greenlake from '../assets/greenlake.jpeg';
+  import logo from "../assets/img/logo.png";
+  import plane from "../assets/img/plane.png";
 </script>
 
-
-
-
-  <img class="background_img" src={greenlake} alt="">
-
-  <h1>CARNETS DE VOYAGES</h1>
-  <img src="" alt="Logo du site">
-  <a href=""><button>Entrer dans le blog...</button></a>
-
+<section class="welcome-img">
+  <div class="text-over">
+    <h1>CARNETS DE VOYAGES</h1>
+    <a class="button" href="">Entrer...<img src={plane} alt="logo illustratif d'avion" /></a>
+  </div>
+</section>
