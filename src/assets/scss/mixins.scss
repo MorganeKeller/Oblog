@@ -10,9 +10,3 @@
     }
   }
   
-  @mixin button($bg: #000, $color: #fff) {
-    outline: none;
-    background: $bg;
-    color: $color;
-    border: none;
-  } 
