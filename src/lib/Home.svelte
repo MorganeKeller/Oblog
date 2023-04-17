@@ -16,11 +16,11 @@
     publiés
 </p>
 <div>
-    <article>
+    <article >
 
         <h2>Le Japon</h2>
         
-        <div class="blue-back"></div>
+        <div >
 
         <img src={mont_fuji} alt="Mont Fuji">
 
@@ -33,11 +33,11 @@
 
     </article>
 
-    <article>
+    <article >
 
         <h2>La nouvelle Zélande</h2>
         
-        <div class="blue-back"></div>
+        <div >
 
         <img src={new_zealand} alt="paysage de Nouvelle-Zélande">
 
@@ -50,11 +50,11 @@
 
     </article>
 
-    <article>
+    <article >
 
         <h2>Les Etats-Unis</h2>
         
-        <div class="blue-back"></div>
+        <div >
 
         <img src={grand_canyon} alt="vue sur le Grand Canyon">
 
