@@ -6,7 +6,7 @@
     <div>
         <article>
             <h2>Article 1</h2>
-            <img src="" />
+            <img src="" alt=""/>
             <strong>Nom de l'auteur</strong>
             <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
             <p>Contenu de l'article</p>
@@ -14,7 +14,7 @@
         </article>
         <article>
             <h2>Article 2</h2>
-            <img src="" />
+            <img src="" alt=""/>
             <strong>Nom de l'auteur</strong>
             <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
             <p>Contenu de l'article</p>
@@ -22,7 +22,7 @@
         </article>
         <article>
             <h2>Article 3</h2>
-            <img src="" />
+            <img src="" alt=""/>
             <strong>Nom de l'auteur</strong>
             <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
             <p>Contenu de l'article</p>
