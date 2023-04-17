@@ -1,4 +1,6 @@
 <script>
+            import { link } from "svelte-spa-router";
+
 </script>
 
 <section class="main-register">
@@ -6,7 +8,7 @@
     <div class="before-register">
         <p>
             Avant de te créer un compte on souhaiterait que tu jettes un oeil à
-            nos <a href="">&#x27BD; Conditions Générales</a>
+            nos <a use:link href="/cgu">&#x27BD; Conditions Générales</a>
         </p>
     </div>
     <form action="#" aria-label="Informations d'enregistrement">
