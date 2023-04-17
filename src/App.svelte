@@ -26,7 +26,7 @@ import Router from "svelte-spa-router";
 
 <main>
   
-  <Welcome />
+  <CGU />
 
 </main>
 
