@@ -1,5 +1,5 @@
 <script>
-import Router from "svelte-spa-router";
+  import Router from "svelte-spa-router";
 
   import Header from "./lib/Header.svelte";
   import Footer from "./lib/Footer.svelte";
@@ -17,15 +17,30 @@ import Router from "svelte-spa-router";
 
   import Welcome from "./lib/Welcome.svelte";
 
+  const routes = {
+    "/": Welcome,
+    "/home": Home,
+    "/article": Article,
+    "/destinations": Destinations,
+    "/authors": Authors,
+    "/articlesList": ArticlesList,
+    "/contact": Contact,
+    "/404": Error,
+    "/cgu": CGU,
+    "/login": Login,
+    "/register": Register,
+    "*": Error,
+  };
 </script>
 
 <svelte:head>
   <title>Carnets de Voyages</title>
 </svelte:head>
+
 <Header />
 
 <main>
-  <Welcome />
+  <Router {routes} />
 </main>
 
 <Footer />
