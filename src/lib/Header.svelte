@@ -1,4 +1,5 @@
 <script>
+
     import logo from "../assets/img/logo.png";
 
     import { link } from "svelte-spa-router";
@@ -27,32 +28,22 @@
 </script>
 <header>
     <nav>
-        <a href="" title="Carnets de voyages" aria-label="accueil du site">
-            <img class="logo" src={logo} alt="Logo du site" />
-        </a>
 
-        <div>
+        <div class="logo">
+            <a use:link href="/home" title="Carnets de voyages" aria-label="accueil du site">
+                <img src={logo} alt="Logo du site" />
+            </a>
+        </div>
+        <div class="searchbar">
             <input type="search" name="" placeholder="rechercher..." />
             <button aria-label="Bouton pour lancer la recherche">Go!</button>
         </div>
-        <div id="mySidenav" class="sidenav">
-            <ul role="menu" aria-labelledby="menubutton">
-                <li role="presentation">
-                    <a role="menuitem" href="/Home.svelte">Accueil</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" href="">Articles</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" href="">Destinations</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" href="">Auteurs</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" href="">Connexion</a>
-                </li>
-            </ul>
-        </div>
+        
+                <a use:link href="/home">Accueil</a>
+                <a use:link href="/articles">Articles</a>
+                <a use:link href="/destinations">Destinations</a>
+                <a use:link href="/authors">Auteurs</a>
+                <a use:link href="/login">Connexion</a>
+
     </nav>
 </header>

@@ -1,4 +1,6 @@
 <script>
+        import { link } from "svelte-spa-router";
+
 </script>
 
 <div class="login-background">
@@ -34,7 +36,7 @@
                 Si l'envie te prend de vouloir nous raconter toi aussi tes
                 aventures et ressentis, n'hésites pas à en créer un!
             </p>
-            <a href="">&#x27BD; Par ici!</a>
+            <a use:link href="/register">&#x27BD; Par ici!</a>
         </div>
     </section>
 </div>

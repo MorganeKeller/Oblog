@@ -18,34 +18,33 @@
 
   import Welcome from "./lib/Welcome.svelte";
 
-
-const routes = {
+  const routes = {
     "/": Welcome,
     "/home": Home,
-    "/404": Error,
-    "/login": Login,
-    "/destinations": Destinations,
-    "/register": Register,
-    "/contact-us": Contact,
-    "/CGU": CGU,
-    "/authors": Authors,
     "/article": Article,
+    "/destinations": Destinations,
+    "/authors": Authors,
     "/articlesList": ArticlesList,
-    "*": Welcome,
-
-  }
-
+    "/contact": Contact,
+    "/404": Error,
+    "/cgu": CGU,
+    "/login": Login,
+    "/register": Register,
+    "*": Error,
+  };
 </script>
 
 
 <svelte:head>
   <title>Carnets de Voyages</title>
 </svelte:head>
+
 <Header />
 
 <main>
-<Router {routes} />
-
+  <Router {routes} />
 </main>
 
-<Footer />
+
+
+<Footer/>

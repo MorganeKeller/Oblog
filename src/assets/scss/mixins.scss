@@ -9,9 +9,8 @@
         @content;
     }
   }
-  
-@mixin mobile {
-  @media (min-width:350px) and (max-width:767px){
-    @content;
-  }
-}
+ 
+  @mixin mobile {
+    @media (min-width:350px) and (max-width:767px){
+      @content;
+    }}
