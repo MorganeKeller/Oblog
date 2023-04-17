@@ -50,7 +50,7 @@
     }
 
     a:hover {
-      text-decoration: overline;
+      text-decoration:underline;
     }
   }
 }
@@ -582,4 +582,127 @@ form {
       }
     }
   }
+}
+// ARTICLE 
+
+article {
+
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin: 3vh 3vw auto 4.5vw;
+
+    @include mixins.large {
+      margin-top: 5vh;
+    }
+  }
+
+  p {
+
+    margin: 3vh 3vw 1vh 4.5vw;
+
+    @include mixins.tablet {
+      margin-top: 3vh;
+      margin-right: 4.5vw;
+      text-transform: none;
+      font-size: larger;
+    }
+
+    @include mixins.large {
+      text-transform: none;
+      font-size: 1.5em;
+      margin-top: 5vh;
+    }
+  }
+
+  .p-right {
+    position: relative;
+    margin: 3vh auto 3vh 33vw;
+    text-transform: lowercase;
+
+    @include mixins.tablet {
+      margin: 3vh 3vw 8vh 36vw;
+    }
+
+    @include mixins.large {
+      margin: 5vh 3vw 10vh 36vw;
+    }
+  }
+
+  .img-back {
+    position: absolute;
+    background-image: url(../img/Tokyo.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: 102em;
+    width: 95%;
+    opacity: 0.2;
+    border-radius: 0.5rem;
+    margin-left: 0.5vw;
+
+    @include mixins.tablet {
+      height: 106em;
+    }
+
+    @include mixins.large {
+      height: 127em;
+
+    }
+
+  }
+
+  img {
+    position: relative;
+    height: 25vh;
+    width: 90%;
+    margin: 2vh 1rem 2vh 1rem;
+    border-radius: 0.5rem;
+
+    @include mixins.tablet {
+      height: 32vh;
+      margin: 2vh 2rem 2vh 2rem;
+    }
+
+    @include mixins.large {
+      height: 40vh;
+      margin: 2vh 3rem 2vh 2.5rem;
+    }
+  }
+
+  .little-img {
+    position: absolute;
+    height: 10vh;
+    width: 30vw;
+    margin: 3vh auto auto 1.5vw;
+    border-radius: 0.5rem;
+
+    @include mixins.tablet {
+      margin-top: 3vh;
+      margin-left: 4vw;
+      height: 14vh;
+    }
+
+    @include mixins.large {
+      margin-top: 5vh;
+      margin-left: 4vw;
+      height: 18vh;
+    }
+
+  }
+
+  textarea {
+    width: 95%;
+    margin: 0.6vh 1.75vw;
+
+    @include mixins.tablet {
+      margin: 1vh 3.5vw auto;
+      width: 90%;
+    }
+  }
+
 }

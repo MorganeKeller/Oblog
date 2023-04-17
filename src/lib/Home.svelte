@@ -1,5 +1,5 @@
 <script>
-    import mont_fuji from '../assets/img/Mont Fuji.jpg'
+    import mont_fuji from '../assets/img/Mont_Fuji.jpg'
     import new_zealand from '../assets/img/new_zealand.jpg'
     import grand_canyon from '../assets/img/grand_canyon.jpg'
     import { link } from "svelte-spa-router";
