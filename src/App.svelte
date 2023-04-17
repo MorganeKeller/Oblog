@@ -21,7 +21,7 @@
 <Header />
 
 <main>
-  <Login/>
+  <Destinations/>
 </main>
 
 <Footer />

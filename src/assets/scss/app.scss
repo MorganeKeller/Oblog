@@ -191,12 +191,14 @@ footer {
       text-shadow: 0 0 20px white;
       margin: 1em;
       display: flex;
-      flex-direction: column;
+      flex-direction: row-reverse;
       align-items: center;
       justify-content: center;
       padding: 0em;
       margin: 0.5em;
-
+span{
+  display:none;
+}
       @include mixins.tablet {
         font-size: 1.7em;
         margin: 0;
@@ -205,8 +207,6 @@ footer {
 
       @include mixins.large {
         font-size: 2em;
-        // margin: 0;
-        // padding: 0em;
       }
     }
 
@@ -214,6 +214,9 @@ footer {
       box-shadow: 0 0 40px $brown;
       border-radius: 30%;
       padding: 0 0.1em;
+      span{
+        display: block;
+      }
     }
   }
 }
@@ -230,7 +233,7 @@ footer {
   text-shadow: 0 0 20px white;
 
   .bloc-error {
-    background-color: $yellow;
+    background-color: white;
     box-shadow: 0 0 20px $yellow;
     border-radius: 0 3em;
     opacity: 0.6;
