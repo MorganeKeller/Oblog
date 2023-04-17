@@ -62,7 +62,7 @@ footer {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    margin-left: -2em;
+    //margin-left: -2em;
 
     .foot-elem {
       display: flex;
@@ -196,9 +196,11 @@ footer {
       justify-content: center;
       padding: 0em;
       margin: 0.5em;
-span{
-  display:none;
-}
+
+      span {
+        display: none;
+      }
+
       @include mixins.tablet {
         font-size: 1.7em;
         margin: 0;
@@ -214,7 +216,8 @@ span{
       box-shadow: 0 0 40px $brown;
       border-radius: 30%;
       padding: 0 0.1em;
-      span{
+
+      span {
         display: block;
       }
     }
