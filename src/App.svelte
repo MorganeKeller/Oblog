@@ -17,15 +17,15 @@ import Router from "svelte-spa-router";
 
   import Welcome from "./lib/Welcome.svelte";
 
-
 </script>
+
 <svelte:head>
   <title>Carnets de Voyages</title>
 </svelte:head>
 <Header />
 
 <main>
-  <Welcome/>
+  <Welcome />
 </main>
 
 <Footer />

@@ -8,39 +8,38 @@
 nav {
   font-family: 'Amatic SC', sans-serif;
   display: flex;
-  margin-top: 1em;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1em;
 
   img {
     height: 40px;
-    width: auto;
   }
 
-  .searchbar {
-    display: flex;
-    justify-content: space-between;
-  }
+  // .searchbar {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 
-  .burger {
-    background-color: $blue;
-    text-align: center;
-    color: black;
-    font-size: smaller;
-    transition: 1s;
-    border-radius: 10px 0 0 10px;
-    z-index: 1;
+  // .burger {
+  //   background-color: $blue;
+  //   text-align: center;
+  //   color: black;
+  //   font-size: smaller;
+  //   transition: 1s;
+  //   border-radius: 10px 0 0 10px;
+  //   z-index: 1;
 
-    a {
-      color: $brown;
-      text-decoration: none;
-      cursor: pointer;
-    }
+  //   a {
+  //     color: $brown;
+  //     text-decoration: none;
+  //     cursor: pointer;
+  //   }
 
-    a:hover {
-      text-decoration: $brown wavy underline;
-    }
-  }
+  //   a:hover {
+  //     text-decoration: $brown wavy underline;
+  //   }
+  // }
 }
 
 //FOOTER
@@ -83,9 +82,7 @@ footer {
         height: 1.7em;
       }
 
-      @include mixins.large {
-        height: 1.7em;
-      }
+      
     }
 
     img:hover {
