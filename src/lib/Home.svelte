@@ -9,7 +9,7 @@
 
 
 <h1>Bienvenue dans nos Carnets de Voyages!</h1>
-<p>
+<p class="text-center">
     Vous voici arrivés à destination: ici découvrez les derniers articles
     publiés
 </p>
