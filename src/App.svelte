@@ -1,8 +1,6 @@
 <script>
   import Header from "./lib/Header.svelte";
   import Router from "svelte-spa-router";
-
-  
   import Footer from "./lib/Footer.svelte";
 
   import Error from "./lib/404.svelte";
@@ -15,7 +13,6 @@
   import Home from "./lib/Home.svelte";
   import Login from "./lib/Login.svelte";
   import Register from "./lib/Register.svelte";
-
   import Welcome from "./lib/Welcome.svelte";
 
   const routes = {
