@@ -4,8 +4,7 @@
     // import { Hamburger } from "svelte-hamburgers";
     // let open;
 
-
-    // const links = [
+    // const toto = [
     //     {
     //         label: "Accueil",
     //         url: "/",
@@ -25,7 +24,8 @@
     //     {
     //         label: "Connexion",
     //         url: "/login",
-    //     },];
+    //     },
+    // ];
 </script>
 
 <header>
@@ -47,8 +47,12 @@
                 >
             </div>
         </div>
-        <!-- {#each links as item}
-        <a use:link  href={item.url}>{item.label}</a> {/each} -->
+        <script>
+            console.log(toto);
+        </script>
+        <!-- {#each toto as item}
+            <a use:link href={item.url}>{item.label}</a>
+        {/each} -->
         <div class="nav-links">
             <!-- <Hamburger bind:open />{#if open} -->
             <a use:link href="/home">Accueil</a>
