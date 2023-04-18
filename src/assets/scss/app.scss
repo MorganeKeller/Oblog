@@ -715,34 +715,57 @@ article {
 
 .aurore-boreale_background {
   
-  position: relative;
-  background-image: url(../img/aurore_boréale.jpg);
+  background-color: $blue;
+  // background-image:   linear-gradient(
+  //   rgba(0, 0, 0, 0.1), 
+  //   rgba(0, 0, 0, 0.1)
+  // ), url(../img/aurore_boréale.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
   min-height: 100vh;
+  margin-top: -1.9vh;
 
 }
 
-.white-background {
-  position:absolute;
-  // background-color: white;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  background: rgba($color: white, $alpha: 0.2);
+h1 {
+  font-size: 2em;
+  text-align: center;
 
 }
+
+  h2 {
+    font-size: 1.75em;
+    margin-left: 4.5vw;
+  }
+  p {
+    margin-left: 4.5vw;
+  }
+  .content-center {
+    padding: .5em;
+  
+
+    a {
+    margin-left: 4.5vw;
+    color: red;
+  }
+  }
 
 article {
-  position: relative;
+  margin: 3vh auto auto auto;
 
-
-
-  img {
+    img {
     margin: 1vw auto auto 3vw;
 
+  }
+
+    h3 {
+      font-size: 1.5em;
+    }
+      h3, p, time {
+    
+    margin-top: 1vh;
+    margin-left: 4.5vw;
   }
 
   
