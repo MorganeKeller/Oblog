@@ -495,7 +495,7 @@ form {
   background-image: url(../img/sky.webp);
   background-size: cover;
   background-repeat: repeat;
-  height: 80em;
+  height: 100vh;
   width: 100%;
 
   @include mixins.large {
@@ -529,26 +529,26 @@ form {
       margin-bottom: 10vh;
     }
 
-    .blue-back {
-      position: absolute;
-      background-color: $green;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      height: 19vh;
-      width: 95%;
-      opacity: 0.5;
-      border-radius: 0.5rem;
-      margin-left: 0.35vw;
+    // .blue-back {
+    //   position: absolute;
+    //   background-color: $green;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   background-position: center;
+    //   height: 19vh;
+    //   width: 95%;
+    //   opacity: 0.5;
+    //   border-radius: 0.5rem;
+    //   margin-left: 0.35vw;
 
-      @include mixins.tablet {
-        height: 17vh;
-      }
+    //   @include mixins.tablet {
+    //     height: 17vh;
+    //   }
 
-      @include mixins.large {
-        height: 22.5vh;
-      }
-    }
+    //   @include mixins.large {
+    //     height: 22.5vh;
+    //   }
+    // }
 
     img {
       position: absolute;
