@@ -1,4 +1,5 @@
-<script>    import { link } from "svelte-spa-router";
+<script>
+    import { link } from "svelte-spa-router";
 </script>
 
 <section id="section-404">
