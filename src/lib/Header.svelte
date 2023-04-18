@@ -47,16 +47,14 @@
                 >
             </div>
         </div>
-        <script>
-            console.log(toto);
-        </script>
+      
         <!-- {#each toto as item}
             <a use:link href={item.url}>{item.label}</a>
         {/each} -->
         <div class="nav-links">
             <!-- <Hamburger bind:open />{#if open} -->
             <a use:link href="/home">Accueil</a>
-            <a use:link href="/articles">Articles</a>
+            <a use:link href="/articlesList">Articles</a>
             <a use:link href="/destinations">Destinations</a>
             <a use:link href="/authors">Auteurs</a>
             <a use:link href="/login">Connexion</a>
