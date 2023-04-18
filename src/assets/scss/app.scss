@@ -62,6 +62,8 @@ footer {
   background-color: $brown;
   box-shadow: inset 0 0 25px $yellow;
   padding: 0.1em;
+  position: sticky;
+
 
   @include mixins.tablet {
     font-size: 1.5em;
@@ -706,4 +708,42 @@ article {
     }
   }
 
+}
+
+// Liste des articles
+
+
+.aurore-boreale_background {
+  
+  position: relative;
+  background-image: url(../img/aurore_boréale.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  min-height: 100vh;
+
+}
+
+.white-background {
+  position:absolute;
+  // background-color: white;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background: rgba($color: white, $alpha: 0.2);
+
+}
+
+article {
+  position: relative;
+
+
+
+  img {
+    margin: 1vw auto auto 3vw;
+
+  }
+
+  
 }
