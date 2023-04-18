@@ -787,6 +787,11 @@ article {
     color: black;
     text-shadow: #FC0 1px 0 10px;
     margin: 0;
+    @include mixins.tablet{
+      font-size: 3em;
+      margin: 0.5em;
+
+    }
   }
 
   p {
@@ -813,8 +818,6 @@ article {
         padding: 10px;
         width: 250%;
         font-size: 1em;
-
-
       }
     }
 

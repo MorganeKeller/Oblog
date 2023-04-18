@@ -13,20 +13,20 @@
             <label for="pseudo">Votre pseudo</label>
             <input type="text" name="Nom" placeholder="ex: Newton23" required />
         </div>
-        <div class="input-create">
-            <label for="date">Date de rédaction</label>
+        <div class="input-create" >
+            <label for="date" >Date de rédaction</label>
             <input type="date" required />
         </div>
         <div class="input-create">
             <label for="title">Titre de votre article</label>
 
-            <input type="text" minlength="2" maxlength="30" />
+            <input type="text" minlength="2" maxlength="50" required/>
         </div>
         <div class="input-create">
             <label for="text" class="input-creat-textarea"
                 >Et pour nous partager votre aventure, c'est par là:</label
             >
-            <textarea required />
+            <textarea required minlength="30" maxlength="800"/>
         </div>
         <div class="input-create">
             <label for="continent-select">Choisissez une destination: </label>
