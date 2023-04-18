@@ -1,23 +1,24 @@
-<script></script>
+<script>
+            import { link } from "svelte-spa-router";
 
-<main>
+</script>
+
+<section class="main-register">
     <h1>Création de compte</h1>
-    <div>
+    <div class="before-register">
         <p>
             Avant de te créer un compte on souhaiterait que tu jettes un oeil à
-            nos Conditions Générales
+            nos <a use:link href="/cgu">&#x27BD; Conditions Générales</a>
         </p>
-        <a href=""><button>Nos CGU</button></a>
-
-        <form action="#" aria-label="Informations d'enregistrement">
-            <div>
-                <label for="name">Nom</label>
-                <label for="firstname">Prénom</label>
-                <label for="pseudo">Pseudo</label>
-                <input required name="name" placeholder="ex : NEWTON" />
-                <input required name="firstname" placeholder="ex : Isaac" />
-                <input required name="pseudo" placeholder="ex=Isaacnewton54" />
-            </div>
+    </div>
+    <form action="#" aria-label="Informations d'enregistrement">
+        <div class="register-form">
+            <label for="name">Nom</label>
+            <input required name="name" placeholder="ex : NEWTON" />
+            <label for="firstname">Prénom</label>
+            <input required name="firstname" placeholder="ex : Isaac" />
+            <label for="pseudo">Pseudo</label>
+            <input required name="pseudo" placeholder="ex=Isaacnewton23" />
 
             <label for="email">Email</label>
             <input
@@ -34,10 +35,9 @@
                 name="password"
                 placeholder="***********"
             />
-
-            <div>
-                <input type="submit" value="Créer un compte" />
-            </div>
-        </form>
-    </div>
-</main>
+        </div>
+        <div class="register-validation">
+            <input type="submit" value="&#x27BD; Créer un compte" />
+        </div>
+    </form>
+</section>

@@ -1,29 +1,65 @@
-<script></script>
+<script>
+    import logo from "../assets/img/logo.png";
+    import { link } from "svelte-spa-router";
+    // import { Hamburger } from "svelte-hamburgers";
+    // let open;
+
+
+    // const links = [
+    //     {
+    //         label: "Accueil",
+    //         url: "/",
+    //     },
+    //     {
+    //         label: "Articles",
+    //         url: "articlesList",
+    //     },
+    //     {
+    //         label: "Destinations",
+    //         url: "/destinations",
+    //     },
+    //     {
+    //         label: "Auteurs",
+    //         url: "/authors",
+    //     },
+    //     {
+    //         label: "Connexion",
+    //         url: "/login",
+    //     },];
+</script>
 
 <header>
-    <nav>
-        <a href="" title="Carnets de voyages" aria-label="accueil du site">
-            <img src="./logo.png" alt="Logo du site" />
-        </a>
-        <input type="search" name="" placeholder="rechercher..." />
-
-        <button
-            ><img
-                src="./arrow-right.svg"
-                alt="Bouton pour lancer la recherche"
-            /></button
-        >
-
-        <ul role="menu" aria-labelledby="menubutton">
-            <li role="presentation"><a role="menuitem" href="">Accueil</a></li>
-            <li role="presentation"><a role="menuitem" href="">Articles</a></li>
-            <li role="presentation">
-                <a role="menuitem" href="">Destinations</a>
-            </li>
-            <li role="presentation"><a role="menuitem" href="">Auteurs</a></li>
-            <li role="presentation">
-                <a role="menuitem" href="">Connexion</a>
-            </li>
-        </ul>
+    <nav class="nav">
+        <div class="logo-search">
+            <div class="logo">
+                <a
+                    use:link
+                    href="/home"
+                    title="Carnets de voyages"
+                    aria-label="accueil du site"
+                >
+                    <img src={logo} alt="Logo du site" />
+                </a>
+            </div>
+            <div class="searchbar">
+                <input type="search" name="" placeholder="rechercher..." />
+                <button aria-label="Bouton pour lancer la recherche">Go!</button
+                >
+            </div>
+        </div>
+        <!-- {#each links as item}
+        <a use:link  href={item.url}>{item.label}</a> {/each} -->
+        <div class="nav-links">
+            <!-- <Hamburger bind:open />{#if open} -->
+            <a use:link href="/home">Accueil</a>
+            <a use:link href="/articles">Articles</a>
+            <a use:link href="/destinations">Destinations</a>
+            <a use:link href="/authors">Auteurs</a>
+            <a use:link href="/login">Connexion</a>
+            <!-- {/if} -->
+        </div>
     </nav>
 </header>
+
+<style>
+</style>

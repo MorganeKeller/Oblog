@@ -1,12 +1,13 @@
-<script></script>
+<script>
+</script>
 
-<main>
+<section class="destinationsimg">
     <h1>Destinations</h1>
-    <div>
-        <a href="#" role="menuitem"><h2>Afrique</h2></a>
-        <a href="#" role="menuitem"><h2>Amérique</h2></a>
-        <a href="#" role="menuitem"><h2>Asie</h2></a>
-        <a href="#" role="menuitem"><h2>Europe</h2></a>
-        <a href="#" role="menuitem"><h2>Océanie</h2></a>
+    <div class="destinations">
+        <a href="#" role="menuitem"> Afrique<span>&#x27BD;</span></a>
+        <a href="#" role="menuitem"> Amérique<span>&#x27BD;</span></a>
+        <a href="#" role="menuitem"> Asie<span>&#x27BD;</span></a>
+        <a href="#" role="menuitem"> Europe<span>&#x27BD;</span></a>
+        <a href="#" role="menuitem"> Océanie<span>&#x27BD;</span></a>
     </div>
-</main>
+</section>
