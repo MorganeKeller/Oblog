@@ -1,12 +1,7 @@
 
-@mixin large {
-  @media (min-width: 1440px) {
-      @content;
-  }
-}
 
 
-@mixin large {
+@mixin ultra_wide {
   @media (min-width: 1440px) {
       @content;
   }
