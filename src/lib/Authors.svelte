@@ -1,4 +1,7 @@
 <script>
+   import author from '../assets/scss/author.scss';
+
+
 </script>
 
 <section class="authors">

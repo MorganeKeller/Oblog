@@ -1,4 +1,7 @@
 <script>
+import destination from '../assets/scss/destination.scss';
+
+
 </script>
 
 <section class="destinationsimg">

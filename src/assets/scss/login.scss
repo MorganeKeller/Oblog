@@ -1,0 +1,87 @@
+@use 'variables'as *;
+@use 'mixins';
+
+@import url('https://fonts.bunny.net/css?family=amatic-sc:700');
+
+//LOGIN
+
+.login-background {
+    background: radial-gradient(circle, $yellow 35%, $brown 70%, black 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.2em;
+  
+    @include mixins.tablet {
+      background: radial-gradient(circle, $yellow 25%, $brown 60%, black 90%);
+      font-size: 1.5em;
+  
+    }
+  
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0em;
+  
+      .input-login {
+        display: flex;
+        align-items: center;
+        padding: 0.3em;
+        margin: 0.8em;
+  
+        input {
+          padding: 0.6em;
+          border-radius: 0.5em;
+          border: none;
+        }
+      }
+  
+      .connexion {
+        width: 10em;
+        font-size: 0.7em;
+        border-radius: 0.5em;
+        border: none;
+        background-color: $blue;
+        box-shadow: inset 0 0 1em $brown;
+        padding: 0.2em 0em;
+        border-radius: 0.5em;
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 1.2em;
+      }
+  
+      .connexion:hover {
+        box-shadow: inset 0 0 1em $brown;
+        background-color: $yellow;
+        border: 1px solid $brown;
+      }
+    }
+  
+    .text-login-register {
+      a {
+        box-shadow: inset 0 0 1em $brown;
+        text-decoration: none;
+        color: black;
+        background-color: $blue;
+        padding: 0.1em 0.5em;
+        border-radius: 0.5em;
+        font-size: 1.2em;
+      }
+  
+      a:hover {
+        box-shadow: inset 0 0 1em $brown;
+        background-color: $yellow;
+        border: 1px solid $brown;
+  
+      }
+    }
+  
+  }

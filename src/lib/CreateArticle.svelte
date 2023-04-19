@@ -1,4 +1,7 @@
 <script>
+import createArticle from '../assets/scss/createArticle.scss';
+
+
 </script>
 
 <section id="create-article">

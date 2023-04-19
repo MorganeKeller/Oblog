@@ -3,6 +3,9 @@
     import new_zealand2 from "../assets/img/new_zealand2.jpg";
     import grand_canyon from "../assets/img/grand_canyon.jpg";
     import { link } from "svelte-spa-router";
+
+    import articleList from '../assets/scss/articleList.scss';
+    
 </script>
 
 <section class="aurore-boreale_background">
@@ -21,7 +24,7 @@
             <h3>Le Japon</h3>
 
             <div class="alignement">
-                <img src={tokyo} alt="" />
+                <img class="taille" src={tokyo} alt="" />
                 
                     <p><strong>OY</strong></p> 
                     <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
@@ -43,7 +46,7 @@
             <h3>La Nouvelle-Zélande</h3>
 
             <div class="alignement">
-            <img src={new_zealand2} alt="" />
+            <img class="taille" src={new_zealand2} alt="" />
             <p><strong>MK</strong></p>
             <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
             <p>
@@ -63,7 +66,7 @@
             <h3>Les Etats-Unis</h3>
 
             <div class="alignement">
-            <img src={grand_canyon} alt="" />
+            <img class="taille" src={grand_canyon} alt="" />
             <p><strong>QP</strong></p>
             <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
             <p>
