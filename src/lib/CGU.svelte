@@ -1,4 +1,6 @@
-<script></script>
+<script>
+    import cgu from '../assets/scss/cgu.scss';
+</script>
 
 <section id="cgu-background">
     <h1>Conditions Générales d'Utilisation</h1>

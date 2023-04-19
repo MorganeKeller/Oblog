@@ -1,5 +1,6 @@
 <script>
         import { link } from "svelte-spa-router";
+        import login from '../assets/scss/login.scss';
 
 </script>
 

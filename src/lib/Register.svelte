@@ -1,5 +1,6 @@
 <script>
             import { link } from "svelte-spa-router";
+            import register from '../assets/scss/register.scss';
 
 </script>
 
