@@ -1,5 +1,5 @@
 ###
-# Recuperer les commentaires
+# Recuperer du premier commentaires
 http://chara-redif.vpnuser.lan:8055/items/commentary/1
 
 ###
@@ -9,3 +9,15 @@ http://chara-redif.vpnuser.lan:8055/items/article/1
 ###
 # Récuparation d'un user 
 http://chara-redif.vpnuser.lan:8055/items/user/1
+
+###
+# Récuparation de tout les user
+http://chara-redif.vpnuser.lan:8055/items/user/
+
+###
+# Récupération de tout les  articles
+http://chara-redif.vpnuser.lan:8055/items/article/
+
+###
+# Recuperer tout les commentaires
+http://chara-redif.vpnuser.lan:8055/items/commentary/
