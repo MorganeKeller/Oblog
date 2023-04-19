@@ -19,7 +19,7 @@
 
     <img src={akihabara} alt="quartier geek" aria-label="photo d'akihabara" />
 
-    <h2>Le magnifique château d'Osaka</h2>
+    
 
     <!-- ici il serait intéressant de pouvoir agrandir l'image lorsqu'on clique dessus -->
     <img class="little-img" src={mont_fuji} alt="photo du mont fuji" />
