@@ -1,19 +1,20 @@
 <script>
-  import Router from "svelte-spa-router";
-
   import Header from "./lib/Header.svelte";
+  import Router from "svelte-spa-router";
   import Footer from "./lib/Footer.svelte";
 
-  import Error from "./lib/404.svelte";
+  import Home from "./lib/Home.svelte";
   import Article from "./lib/Article.svelte";
   import ArticlesList from "./lib/ArticlesList.svelte";
-  import Authors from "./lib/Authors.svelte";
-  import CGU from "./lib/CGU.svelte";
-  import Contact from "./lib/Contact.svelte";
   import Destinations from "./lib/Destinations.svelte";
-  import Home from "./lib/Home.svelte";
+  import Authors from "./lib/Authors.svelte";
   import Login from "./lib/Login.svelte";
+  import Contact from "./lib/Contact.svelte";
+  import CGU from "./lib/CGU.svelte";
   import Register from "./lib/Register.svelte";
+  import Error from "./lib/404.svelte";
+  import CreateArticle from "./lib/CreateArticle.svelte"
+  //import Comments from "./lib/Comments.svelte"
 
   import Welcome from "./lib/Welcome.svelte";
 
@@ -29,9 +30,11 @@
     "/cgu": CGU,
     "/login": Login,
     "/register": Register,
+    "/createArticle":CreateArticle,
     "*": Error,
   };
 </script>
+
 
 <svelte:head>
   <title>Carnets de Voyages</title>
@@ -43,7 +46,6 @@
   <Router {routes} />
 </main>
 
-<Footer />
 
-<style>
-</style>
+
+<Footer/>
