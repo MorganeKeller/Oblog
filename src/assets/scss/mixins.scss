@@ -1,31 +1,17 @@
-
 @mixin large {
-  @media (min-width: 1440px) {
-      @content;
+  @media (min-width: 1024px) {
+    @content;
   }
 }
 
-
-@mixin large {
-  @media (min-width: 1440px) {
-      @content;
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
   }
 }
 
-
-@mixin large {
-    @media (min-width: 1024px) {
-        @content;
-    }
+@mixin mobile {
+  @media (min-width:360px) and (max-width:767px) {
+    @content;
   }
-
-  @mixin tablet {
-    @media (min-width: 768px) {
-        @content;
-    }
-  }
- 
-  @mixin mobile {
-    @media (min-width:350px) and (max-width:767px){
-      @content;
-    }}
+}
