@@ -5,7 +5,7 @@
 
     import article from "../assets/scss/article.scss";
 
-    // import Comments from "./Comments.svelte";
+    import Comments from "./Comments.svelte";
     // export let params = {};
     // let article_id = params.id;
 </script>
@@ -29,7 +29,7 @@
 
     <img src={chateau} alt="" />
 
-    <!-- <Comments article_id={article_id} /> -->
+    <Comments />
 </article>
 
 <style>
