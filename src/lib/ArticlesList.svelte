@@ -18,7 +18,7 @@
 
         <p>C'est ici que nous partageons nos expériences</p>
 
-        <a href="">A ta plume</a>
+        <a use:link href=/createArticle>A ta plume</a>
 
         <article>
             <h3>Le Japon</h3>

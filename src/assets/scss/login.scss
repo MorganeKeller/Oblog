@@ -14,7 +14,8 @@
     padding: 1em;
     font-family: 'Amatic SC', sans-serif;
     font-size: 1.2em;
-  
+    height: 80vh;
+
     @include mixins.tablet {
       background: radial-gradient(circle, $yellow 25%, $brown 60%, black 90%);
       font-size: 1.5em;
