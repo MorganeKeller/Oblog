@@ -1,0 +1,71 @@
+@use 'variables'as *;
+@use 'mixins';
+
+@import url('https://fonts.bunny.net/css?family=amatic-sc:700');
+
+
+// ARTICLE 
+
+.art {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 1.5em;
+
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.5)), url("../img/Tokyo.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @include mixins.mobile {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)), url("../img/Tokyo.jpg");
+
+  }
+
+  h1 {
+    text-shadow: #FC0 1px 0 10px;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin: 3vh 3vw auto 4.5vw;
+    text-decoration: underline;
+    font-size: 1.5em;
+
+    @include mixins.large {
+      margin-top: 5vh;
+      font-size: 2em;
+
+    }
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 3vh 3vw 1vh 4.5vw;
+    font-size: 0.6em;
+
+
+    @include mixins.tablet {
+      margin-top: 3vh;
+      margin-right: 4.5vw;
+      text-transform: none;
+      font-size: 0.7em;
+    }
+
+    @include mixins.large {
+      text-transform: none;
+      font-size: 0.8em;
+      margin-top: 5vh;
+    }
+  }
+
+  img {
+    max-width: 80%;
+    margin: 2em 0;
+  }
+
+}

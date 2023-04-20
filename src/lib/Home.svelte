@@ -4,6 +4,8 @@
     import grand_canyon from '../assets/img/grand_canyon.jpg'
     import { link } from "svelte-spa-router";
 
+    import home from '../assets/scss/home.scss';
+
 </script>
 
 

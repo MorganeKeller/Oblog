@@ -4,6 +4,7 @@
   import plane from "../assets/img/plane.png";
 
   import { link } from "svelte-spa-router";
+  import welcome from "../assets/scss/welcome.scss";
 
 </script>
 

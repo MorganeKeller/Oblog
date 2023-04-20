@@ -1,8 +1,10 @@
-<script></script>
+<script>
+    import cgu from '../assets/scss/cgu.scss';
+</script>
 
 <section id="cgu-background">
     <h1>Conditions Générales d'Utilisation</h1>
-
+<div class="cgu-bloc">
     <p>
         Hey, ami voyageur ! Bienvenue sur notre blog « Carnet de voyages ».
         Avant de plonger dans nos récits palpitants, voici quelques règles à
@@ -56,7 +58,7 @@
             contacter. Nous vous souhaitons une bonne lecture et de belles
             aventures !
         </li>
-    </ul>
+    </ul></div>
     <p>
         Voilà, tu sais tout l’ami. Maintenant, en route vers de nouvelles
         aventures !

@@ -1,4 +1,7 @@
-<script>    import { link } from "svelte-spa-router";
+<script>    
+import { link } from "svelte-spa-router";
+
+import error from '../assets/scss/error.scss';
 </script>
 
 <section id="section-404">
