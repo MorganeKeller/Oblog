@@ -7,20 +7,24 @@
 
     import home from '../assets/scss/home.scss';
 
-   
 
-    const getArticles = async () => {
-        const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/Article";
-        const response = await fetch(endpoint)
-        // Gestion des erreurs de réponse
+        const getArticles = async () => {
+            
+            const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/article";
+            const response = await fetch(endpoint);
+            let art = [];
+            // Gestion des erreurs de réponse
 
-        const json = await response.json();
+            const json = await response.json();
 
-        // Gestion des erreurs d'extraction
+            // Gestion des erreurs d'extraction
+console.log(json);
+        return json.data;
 
-    return json.data;
-}
-console.log (getArticles);
+    }
+    console.log (getArticles);
+
+
 </script>
 
     
@@ -46,7 +50,7 @@ console.log (getArticles);
 
     <h2>{article.title}</h2>
 
-        <img src={import.meta.env.VITE_URL_DIRECTUS + 'assets/' + article.pictures + '?key=medium'} alt="Mont Fuji">
+        <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="Mont Fuji">
 
             <p>{article.content}</p>
 
