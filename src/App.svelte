@@ -21,7 +21,7 @@
   const routes = {
     "/": Welcome,
     "/home": Home,
-    "/article": Article,
+    "/article/:id": Article,
     "/destinations": Destinations,
     "/authors": Authors,
     "/articlesList": ArticlesList,

@@ -4,7 +4,7 @@ http://chara-redif.vpnuser.lan:8055/items/commentary/1
 
 ###
 # Récupération du premier article
-http://chara-redif.vpnuser.lan:8055/items/article/
+http://chara-redif.vpnuser.lan:8055/items/article/5
 
 ###
 # Récuparation d'un user 
@@ -18,3 +18,6 @@ Content-Type: application/json
     "email":"admin@example.com",
     "password":"1234"
 }
+
+###
+http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3

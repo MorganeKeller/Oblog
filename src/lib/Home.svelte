@@ -7,12 +7,17 @@
 
     import home from '../assets/scss/home.scss';
 
+    export let params = {};
+    console.log(params)
+
+    // Extrait l'id issue de la route
+    let article_id = params.id;
 
         const getArticles = async () => {
-            
-            const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/article";
+            // ?fields=*.*.*&sort=created_at&limit=3"
+            const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/article?fields=*.*.*&sort=created_at&limit=3";
             const response = await fetch(endpoint);
-            let art = [];
+           
             // Gestion des erreurs de réponse
 
             const json = await response.json();
@@ -26,6 +31,7 @@ console.log(json);
 
 
 </script>
+
 
     
     <section class="home-background">
@@ -49,9 +55,9 @@ console.log(json);
 <article >
 
     <h2>{article.title}</h2>
-
-        <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="Mont Fuji">
-
+    <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
+        <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="illustration">
+        <!-- import.meta.env.UPLOAD_DIRECTUS  -->
             <p>{article.content}</p>
 
             <a use:link href="/article">Lire la suite</a>
@@ -65,43 +71,6 @@ console.log(json);
 
 {/await}
 </section>
-<!-- <article >
-
-        <h2>La nouvelle Zélande</h2>
-        
-        
-
-        <img src={new_zealand} alt="paysage de Nouvelle-Zélande">
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe iste quasi quas fuga libero culpa voluptate doloremque, officia doloribus facilis ipsa ad odit ducimus, quaerat delectus deserunt aperiam commodi.</p>
-
-        <a use:link href="/article">Lire la suite</a>
-
-        <p><strong>MK</strong></p>
-        <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
-
-    </article>
-
-    <article >
-
-        <h2>Les Etats-Unis</h2>
-        
-        
-
-        <img src={grand_canyon} alt="vue sur le Grand Canyon">
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe iste quasi quas fuga libero culpa voluptate doloremque, officia doloribus facilis ipsa ad odit ducimus, quaerat delectus deserunt aperiam commodi.</p>
-
-        <a use:link href="/article">Lire la suite</a>
-
-        <p><strong>QP</strong></p>
-        <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
-
-    </article> -->
-
-
-
-
 
 <style>
 

@@ -5,32 +5,51 @@
 
     import article from "../assets/scss/article.scss";
 
-    // import Comments from "./Comments.svelte";
-    // export let params = {};
-    // let article_id = params.id;
+    export let params = {};
+    console.log(params)
+
+    // Extrait l'id issue de la route
+    let article_id = params.id;
+
+        const getPublication = async () => {
+            // ?fields=*.*.*&sort=created_at&limit=3"
+            const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/article/" + article_id;
+            const response = await fetch(endpoint);
+            // Gestion des erreurs de réponse
+
+            const json = await response.json();
+
+            // Gestion des erreurs d'extraction
+console.log(json);
+        return json.data;
+
+    }
+    console.log (getPublication);
+
 </script>
 
+
+
 <article class="art">
+
+    {#await getPublication()}
+
     <h1>Le Japon</h1>
-
     
+        
+    {:then publication} 
 
-    <h2>Le quartier geek d'Akihabara</h2>
+    <h2>{publication.title}</h2>
 
     <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores dicta
-        nulla esse voluptatibus, vel voluptatum sit. Consectetur, voluptate
-        voluptatum maiores nulla harum distinctio dolorum incidunt quibusdam ut
-        minima possimus velit sapiente, iure hic. Inventore voluptates quos odio
-        corporis optio. Provident aperiam nam porro dolore perspiciatis
-        recusandae dolores numquam fugit quia in voluptate ipsum neque eveniet
-        sint minus, vero expedita corporis.
+        {publication.content}
     </p>
 
-    <img src={chateau} alt="" />
+    <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + publication.pictures + '.jpg'} alt=""/>
 
-    <!-- <Comments article_id={article_id} /> -->
+   {/await}
 </article>
+
 
 <style>
 </style>
