@@ -31,8 +31,11 @@ Content-Type: application/json
 }
 ###
 
-http://chara-redif.vpnuser.lan:8055/items/article?filter [article_id]
+http://chara-redif.vpnuser.lan:8055/items/article?filter[article_id]
 
 ###
 
 http://chara-redif.vpnuser.lan:8055/items/article
+
+###
+http://chara-redif.vpnuser.lan:8055/items/article?fields=id, title, pictures, author, content, category_id

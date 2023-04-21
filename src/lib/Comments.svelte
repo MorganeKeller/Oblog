@@ -5,9 +5,9 @@
     let commentary = [];
 
     //Form informations
-    let commentText = "très beau pays";
-    let commentAuthor = "Gilou";
-    let commentDate = "12/05/22";
+    let commentText = "";
+    let commentAuthor = "";
+    let commentDate = "";
     //let CommentUpdate = "";
 
     const handleSubmitForm = async (event) => {
@@ -72,7 +72,7 @@
                 body: JSON.stringify({
                     text: commentText,
                     author: commentAuthor,
-                    date: commentDate,
+                    created_at: commentDate,
                 }),
             }
         );
@@ -86,40 +86,41 @@
     <h2>Commentaires</h2>
     <!-- Function calling -->
     {#await getComments(commentary)}
+        <!-- {@debug commentary} -->
         <p>chargement en cours...</p>
         <!-- Once the promise is kept, we store the function's result in the variable "comments" -->
     {:then comments}
         <!-- Go through the whole list of comments, and for each element we store it in the variable "comment" -->
         {#each comments as commentary}
-            <div aria-labelledby="comment-{commentary.id}">
-                <h3 id="comment-{commentary.id}">{commentary.text}</h3>
-                <i
-                    >Posté le <time datetime={commentary.created_at}
-                        >{commentary.created_at}</time
-                    ></i
-                >
-                <p>{commentary.text}</p>
+            <i
+                >Posté le: <b>{commentary.created_at}</b>
+                Par: <b>{commentary.author}</b>
+            </i>
+            <div aria-labelledby="comment-{commentary.id}" class="div-comment">
+                <p id="comment-{commentary.id}">{commentary.text}</p>
             </div>
         {/each}
 
         <form
             on:submit={handleSubmitForm}
             aria-labelledby="form-title"
-            class="comments-form"
         >
             <h3 id="form-title">Votre commentaire</h3>
-            <label for="author">Auteur</label>
-            <input type="text" bind:value={commentAuthor} />
 
-            <label for="date">Date</label>
-            <input type="datetime" bind:value={commentDate} />
+            <label for="author">Nom/Pseudo</label>
+            <input type="text" required bind:value={commentAuthor} />
+
+            <label for="date" >Date</label>
+            <input type="date" required pattern="\d{4}-\d{2}-\d{2}" bind:value={commentDate} />
 
             <label for="Commentary">Commentaire</label>
-            <input
+            <input required
+                class="input-comment"
                 bind:value={commentText}
                 type="text"
                 name="Nom"
-                placeholder="Votre nom"
+                
+                placeholder="Votre commentaire"
             />
 
             <input type="submit" />
