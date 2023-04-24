@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  
 
   @include mixins.mobile {
     background-image: linear-gradient(rgba(255, 255, 255, 0.7),
@@ -46,19 +47,19 @@
   p {
     font-family: Arial, Helvetica, sans-serif;
     margin: 3vh 3vw 1vh 4.5vw;
-    font-size: 0.7em;
+    font-size: 0.6em;
 
 
     @include mixins.tablet {
       margin-top: 3vh;
       margin-right: 4.5vw;
       text-transform: none;
-      font-size: 1em;
+      font-size: 0.7em;
     }
 
     @include mixins.large {
       text-transform: none;
-      font-size: 1.3em;
+      font-size: 0.8em;
       margin-top: 5vh;
     }
   }
