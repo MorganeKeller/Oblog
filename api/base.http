@@ -4,7 +4,7 @@ http://chara-redif.vpnuser.lan:8055/items/commentary/1
 
 ###
 # Récupération du premier article
-http://chara-redif.vpnuser.lan:8055/items/article/5
+http://chara-redif.vpnuser.lan:8055/items/article/
 
 ###
 # Récuparation d'un user 
@@ -19,5 +19,11 @@ Content-Type: application/json
     "password":"1234"
 }
 
+
 ###
+# Chargement list article trié chronologiquement et affichage limité à 3
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
+
+###
+# Chargement des images
+http://chara-redif.vpnuser.lan:8055/items/article?fields=pictures

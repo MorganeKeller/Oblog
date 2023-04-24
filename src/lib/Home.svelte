@@ -14,8 +14,8 @@
     let article_id = params.id;
 
         const getArticles = async () => {
-            // ?fields=*.*.*&sort=created_at&limit=3"
-            const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/article?fields=*.*.*&sort=created_at&limit=3";
+            // ?fields=*&sort=created_at&limit=3"
+            const endpoint = import.meta.env.VITE_URL_DIRECTUS + 'items/article?fields=*&limit=3&sort=created_at';
             const response = await fetch(endpoint);
            
             // Gestion des erreurs de réponse
