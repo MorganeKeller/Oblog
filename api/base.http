@@ -26,4 +26,4 @@ http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&
 
 ###
 # Chargement des images
-http://chara-redif.vpnuser.lan:8055/items/article?fields=pictures
+http://chara-redif.vpnuser.lan:8055/items/article?user?fields=

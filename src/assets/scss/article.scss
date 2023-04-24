@@ -68,4 +68,17 @@
     margin: 2em 0;
   }
 
+  .author_date {
+    display: flex;
+    align-items: center;
+    
+   
+
+    @include mixins.tablet {
+      
+      
+      width: 90%;
+    }
+  }
+
 }
