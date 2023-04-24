@@ -14,8 +14,8 @@
     let article_id = params.id;
 
         const getArticles = async () => {
-            // ?fields=*.*.*&sort=created_at&limit=3"
-            const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/article?fields=*.*.*&sort=created_at&limit=3";
+            // ?fields=*&sort=created_at&limit=3"
+            const endpoint = import.meta.env.VITE_URL_DIRECTUS + 'items/article?fields=*&limit=3&sort=created_at';
             const response = await fetch(endpoint);
            
             // Gestion des erreurs de réponse
@@ -60,7 +60,7 @@ console.log(json);
         <!-- import.meta.env.UPLOAD_DIRECTUS  -->
             <p>{article.content}</p>
 
-            <a use:link href="/article">Lire la suite</a>
+            <a use:link href="/article/{article.id}">Lire la suite</a>
 
     <p><strong>{article.author}</strong></p>
     <time datetime="2011-11-18T14:54:39">{article.created_at}</time>

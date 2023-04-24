@@ -47,6 +47,13 @@ console.log(json);
 
     <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + publication.pictures + '.jpg'} alt=""/>
 
+<<<<<<< HEAD
+=======
+    <div class="authot_date">
+        <p>Par {publication.author}<time datetime="">le : {publication.created_at}</time></p>
+    </div>
+
+>>>>>>> 8cc9b111d01b525d3891b8c1eddabbf43a7ec607
    {/await}
 </article>
 
