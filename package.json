@@ -13,6 +13,7 @@
     "sass": "^1.62.0",
     "svelte": "^3.55.1",
     "svelte-hamburgers": "^4.0.1",
+    "svelte-use-form": "^2.6.2",
     "vite": "^4.2.1"
   },
   "dependencies": {
