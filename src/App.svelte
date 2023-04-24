@@ -17,6 +17,7 @@
   //import Comments from "./lib/Comments.svelte"
 
   import Welcome from "./lib/Welcome.svelte";
+  import Afrique from "./lib/Afrique.svelte";
 
   const routes = {
     "/": Welcome,
@@ -32,6 +33,8 @@
     "/register": Register,
     "/createArticle":CreateArticle,
     "*": Error,
+    "/DestinationAfrique": Afrique,
+     
   };
 </script>
 
