@@ -56,7 +56,7 @@ console.log(json);
 
     <h2>{article.title}</h2>
     <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
-        <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="illustration">
+        <img src={ 'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="illustration">
         <!-- import.meta.env.UPLOAD_DIRECTUS  -->
             <p>{article.content}</p>
 
