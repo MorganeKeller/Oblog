@@ -5,11 +5,6 @@
 
     import article from "../assets/scss/article.scss";
 
-<<<<<<< HEAD
-    import Comments from "./Comments.svelte";
-    // export let params = {};
-    // let article_id = params.id;
-=======
     export let params = {};
     console.log(params)
 
@@ -31,7 +26,6 @@ console.log(json);
     }
     console.log (getPublication);
 
->>>>>>> home
 </script>
 
 
@@ -53,11 +47,7 @@ console.log(json);
 
     <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + publication.pictures + '.jpg'} alt=""/>
 
-<<<<<<< HEAD
-    <Comments />
-=======
    {/await}
->>>>>>> home
 </article>
 
 
