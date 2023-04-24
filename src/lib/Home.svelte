@@ -60,7 +60,7 @@ console.log(json);
         <!-- import.meta.env.UPLOAD_DIRECTUS  -->
             <p>{article.content}</p>
 
-            <a use:link href="/article">Lire la suite</a>
+            <a use:link href="/article/{article.id}">Lire la suite</a>
 
     <p><strong>{article.author}</strong></p>
     <time datetime="2011-11-18T14:54:39">{article.created_at}</time>
