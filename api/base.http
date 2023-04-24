@@ -9,15 +9,21 @@ http://chara-redif.vpnuser.lan:8055/items/commentary
 
 ###
 # Récupération du premier article
-http://chara-redif.vpnuser.lan:8055/items/article/4
+http://chara-redif.vpnuser.lan:8055/items/article/5
 
 ###
 # Récuparation d'un user 
+<<<<<<< HEAD
 http://chara-redif.vpnuser.lan:8055/items/user/
 
 ###
 #se connecter en tant qu utilisateur de directus
 
+=======
+http://chara-redif.vpnuser.lan:8055/items/user/2
+
+###
+>>>>>>> home
 POST  HTTP://chara-redif.vpnuser.lan:8055/auth/login HTTP/1.1
 Content-Type: application/json
 
@@ -27,6 +33,7 @@ Content-Type: application/json
 }
 
 ###
+<<<<<<< HEAD
 http://chara-redif.vpnuser.lan:8055/items/commentary?filter[article_id][_eq]=article_id HTTP/1.1
 Content-Type: application/json
 
@@ -44,3 +51,6 @@ http://chara-redif.vpnuser.lan:8055/items/article
 
 ###
 http://chara-redif.vpnuser.lan:8055/items/article?fields=id, title, pictures, author, content, category_id
+=======
+http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
+>>>>>>> home

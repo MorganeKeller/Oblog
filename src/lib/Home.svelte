@@ -1,74 +1,77 @@
 <script>
-    import mont_fuji from '../assets/img/Mont_Fuji.jpg'
-    import new_zealand from '../assets/img/new_zealand.jpg'
-    import grand_canyon from '../assets/img/grand_canyon.jpg'
     import { link } from "svelte-spa-router";
+    import mont_fuji from '../assets/img/Mont_Fuji.jpg';
+    import new_zealand from '../assets/img/new_zealand.jpg';
+    import grand_canyon from '../assets/img/grand_canyon.jpg';
+    
 
     import home from '../assets/scss/home.scss';
+
+    export let params = {};
+    console.log(params)
+
+    // Extrait l'id issue de la route
+    let article_id = params.id;
+
+        const getArticles = async () => {
+            // ?fields=*.*.*&sort=created_at&limit=3"
+            const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/article?fields=*.*.*&sort=created_at&limit=3";
+            const response = await fetch(endpoint);
+           
+            // Gestion des erreurs de réponse
+
+            const json = await response.json();
+
+            // Gestion des erreurs d'extraction
+console.log(json);
+        return json.data;
+
+    }
+    console.log (getArticles);
+
 
 </script>
 
 
-<section class="home-background">
+    
+    <section class="home-background">
+
+        <h1>Bienvenue dans nos Carnets de Voyages!</h1>
+
+            <p class="text-center">
+            Vous voici arrivés à destination: ici découvrez les derniers articles
+            publiés
+            </p>
+
+<!-- Appel de la fonciton pour récupérer les données -->
+    {#await getArticles()}
+        <p>ça charge...</p>
+
+    <!-- Des que les données sont prêtes, je les range dans la variable articles -->
+   {:then articles} 
 
 
-<h1>Bienvenue dans nos Carnets de Voyages!</h1>
-<p class="text-center">
-    Vous voici arrivés à destination: ici découvrez les derniers articles
-    publiés
-</p>
-<div>
-    <article >
+{#each articles as article}
+<article >
 
-        <h2>Le Japon</h2>
-        
-        <div >
+    <h2>{article.title}</h2>
+    <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
+        <img src={ 'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="illustration">
+        <!-- import.meta.env.UPLOAD_DIRECTUS  -->
+            <p>{article.content}</p>
 
-        <img src={mont_fuji} alt="Mont Fuji">
+            <a use:link href="/article">Lire la suite</a>
 
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe iste quasi quas fuga libero culpa voluptate doloremque, officia doloribus facilis ipsa ad odit ducimus, quaerat delectus deserunt aperiam commodi.</p>
+    <p><strong>{article.author}</strong></p>
+    <time datetime="2011-11-18T14:54:39">{article.created_at}</time>
 
-        <a use:link href="/article">Lire la suite</a>
+</article>
 
-        <p><strong>OY</strong></p>
-        <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
+{/each}
 
-    </article>
-
-    <article >
-
-        <h2>La nouvelle Zélande</h2>
-        
-        <div >
-
-        <img src={new_zealand} alt="paysage de Nouvelle-Zélande">
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe iste quasi quas fuga libero culpa voluptate doloremque, officia doloribus facilis ipsa ad odit ducimus, quaerat delectus deserunt aperiam commodi.</p>
-
-        <a use:link href="/article">Lire la suite</a>
-
-        <p><strong>MK</strong></p>
-        <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
-
-    </article>
-
-    <article >
-
-        <h2>Les Etats-Unis</h2>
-        
-        <div >
-
-        <img src={grand_canyon} alt="vue sur le Grand Canyon">
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe iste quasi quas fuga libero culpa voluptate doloremque, officia doloribus facilis ipsa ad odit ducimus, quaerat delectus deserunt aperiam commodi.</p>
-
-        <a use:link href="/article">Lire la suite</a>
-
-        <p><strong>QP</strong></p>
-        <time datetime="2011-11-18T14:54:39">18 Nov 11</time>
-
-    </article>
-
-</div>
-
+{/await}
 </section>
+
+<style>
+
+</style>
