@@ -4,8 +4,9 @@
     import mont_fuji from "../assets/img/Mont_Fuji.jpg";
 
     import article from "../assets/scss/article.scss";
- import Comments from "../lib/Comments.svelte";
-    
+    import Comments from "../lib/Comments.svelte";
+   
+
     export let params = {};
 
     // Extrait l'id issue de la route
@@ -22,6 +23,7 @@
             // Gestion des erreurs d'extraction
         return json.data;
     }
+
 
 </script>
 
@@ -41,7 +43,7 @@
     </div>
 
    {/await}
-<Comments />
+<Comments article_id={article_id}/>
 
 </article>
 

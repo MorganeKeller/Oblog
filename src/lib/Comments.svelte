@@ -3,9 +3,7 @@
     import { link } from "svelte-spa-router";
 
     let commentary = [];
-    export let params = {};
-    let article_id = params.id;
-
+    export let article_id;
 
     //Form informations
     let commentText = "";
@@ -17,13 +15,12 @@
         event.preventDefault();
 
         //create a new comment
-        const new_comment = await postComment();
+        const new_commentary = await postComment();
         //Adds a new comment to the list in order to trigger Svelte's watcher
         //Regenerate the part of DOM that depends on it
-        commentary.push(new_comment);
+        commentary.push(new_commentary);
         //Refresh the commentary list officially
         commentary = [...commentary];
-
         //Empty the textarea
         commentText = "";
         commentAuthor = "";
@@ -40,14 +37,13 @@
         let endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/commentary";
 
         //endpoint modification to filter on the article id only
-        endpoint += "?filter=[article_id][_eq]=" + article_id;
+        endpoint += "?filter[article_id][_eq]=" + article_id;
 
         const response = await fetch(endpoint, {
             headers: {
                 Authorization: "Bearer " + window.localStorage.getItem("token"),
             },
         });
-
         //Handling response errors
         if (response.ok === false) {
             //We trigger an error to enter the Svelte's catch
@@ -82,7 +78,7 @@
         const json = await response.json();
         return json.data;
     };
-    console.log(postComment);
+    //console.log(postComment);
 </script>
 
 <section class="comments" aria-labelledby="comments-title">
@@ -90,6 +86,7 @@
     <!-- Function calling -->
     {#await getComments(commentary)}
         <!-- {@debug commentary} -->
+        
         <p>chargement en cours...</p>
         <!-- Once the promise is kept, we store the function's result in the variable "comments" -->
     {:then comments}
