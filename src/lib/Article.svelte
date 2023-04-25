@@ -48,7 +48,7 @@ console.log(json);
     <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + publication.pictures + '.jpg'} alt=""/>
 
     <div class="author_date">
-        <p>Par {publication.author}<time datetime="">le : {publication.created_at}</time></p>
+        <p>Par {publication.author}<time datetime={publication.created_at}>{new Date(publication.created_at).toLocaleDateString('fr-FR')}</time></p>
     </div>
 
    {/await}

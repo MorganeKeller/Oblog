@@ -63,7 +63,7 @@ console.log(json);
             <a use:link href="/article/{article.id}">Lire la suite</a>
 
     <p><strong>{article.author}</strong></p>
-    <time datetime="2011-11-18T14:54:39">{article.created_at}</time>
+    <time datetime={article.created_at}>{new Date(article.created_at).toLocaleDateString('fr-FR')}</time>
 
 </article>
 
