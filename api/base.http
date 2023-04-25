@@ -47,4 +47,26 @@ http://chara-redif.vpnuser.lan:8055/items/article?fields=id, title, pictures, au
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
 
 ###
-http://chara-redif.vpnuser.lan:8055/items/article?fields=author+user_id
+http://chara-redif.vpnuser.lan:8055/items/commentary?filter=[article_id][_eq]article_id
+
+
+###
+http://chara-redif.vpnuser.lan:8055/users/?sort
+
+###
+POST  HTTP://chara-redif.vpnuser.lan:8055/items/user/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjQyMDc3NywiZXhwIjoxNjgyNDIxNjc3LCJpc3MiOiJkaXJlY3R1cyJ9.XY5o1r-_GBxjN7MgJPJQgLE4E8owNr0ozQy46_9dESM
+content-type: application/json
+
+{
+    "id": "",
+    "firstname": "Jean",
+    
+    "lastname": "Marc",
+    "mail": "jm@test.fr",
+    "password": "1111",
+    
+    "user_name": "JM",
+    "role": ""
+}
+

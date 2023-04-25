@@ -3,6 +3,9 @@
     import { link } from "svelte-spa-router";
 
     let commentary = [];
+    export let params = {};
+    let article_id = params.id;
+
 
     //Form informations
     let commentText = "";
@@ -12,7 +15,6 @@
 
     const handleSubmitForm = async (event) => {
         event.preventDefault();
-        console.log(commentText, commentAuthor, commentDate);
 
         //create a new comment
         const new_comment = await postComment();
@@ -38,7 +40,7 @@
         let endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/commentary";
 
         //endpoint modification to filter on the article id only
-        endpoint += "?filter=[article_id][_eq]=" + "article_id";
+        endpoint += "?filter=[article_id][_eq]=" + article_id;
 
         const response = await fetch(endpoint, {
             headers: {
@@ -80,6 +82,7 @@
         const json = await response.json();
         return json.data;
     };
+    console.log(postComment);
 </script>
 
 <section class="comments" aria-labelledby="comments-title">
@@ -101,25 +104,27 @@
             </div>
         {/each}
 
-        <form
-            on:submit={handleSubmitForm}
-            aria-labelledby="form-title"
-        >
+        <form on:submit={handleSubmitForm} aria-labelledby="form-title">
             <h3 id="form-title">Votre commentaire</h3>
 
             <label for="author">Nom/Pseudo</label>
             <input type="text" required bind:value={commentAuthor} />
 
-            <label for="date" >Date</label>
-            <input type="date" required pattern="\d{4}-\d{2}-\d{2}" bind:value={commentDate} />
+            <label for="date">Date</label>
+            <input
+                type="date"
+                required
+                pattern="\d{4}-\d{2}-\d{2}"
+                bind:value={commentDate}
+            />
 
             <label for="Commentary">Commentaire</label>
-            <input required
+            <input
+                required
                 class="input-comment"
                 bind:value={commentText}
                 type="text"
                 name="Nom"
-                
                 placeholder="Votre commentaire"
             />
 
