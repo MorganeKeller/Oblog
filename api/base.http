@@ -8,7 +8,7 @@ http://chara-redif.vpnuser.lan:8055/items/article/
 
 ###
 # Récuparation d'un user 
-http://chara-redif.vpnuser.lan:8055/items/user/
+http://chara-redif.vpnuser.lan:8055/users/
 
 ###
 #se connecter en tant qu utilisateur de directus
@@ -36,8 +36,7 @@ Content-Type: application/json
 }
 ###
 
-http://chara-redif.vpnuser.lan:8055/items/article?filter[article_id]
-
+http://chara-redif.vpnuser.lan:8055/items/article?fields=id
 ###
 
 http://chara-redif.vpnuser.lan:8055/items/article
@@ -47,4 +46,40 @@ http://chara-redif.vpnuser.lan:8055/items/article?fields=id, title, pictures, au
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
 
 ###
-http://chara-redif.vpnuser.lan:8055/items/article?fields=author+user_id
+http://chara-redif.vpnuser.lan:8055/items/commentary?filter=[article_id][_eq]=article_id
+
+
+###
+http://chara-redif.vpnuser.lan:8055/users/
+
+###
+POST  HTTP://chara-redif.vpnuser.lan:8055/users/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjQyNjczNywiZXhwIjoxNjgyNDI3NjM3LCJpc3MiOiJkaXJlY3R1cyJ9.HQmPYSADCOvqXqUDqa6xxki0l-hZ-uMoD5G_jG6kGNE
+content-type: application/json
+
+{
+    "first_name": "Olivier",
+      "last_name": "Olivier",
+      "email": "oliv@msn.com",
+      "password": "1234",
+      "location": null,
+      "title": null,
+      "description": null,
+      "tags": null,
+      "avatar": null,
+      "language": null,
+      "theme": "auto",
+      "tfa_secret": null,
+      "status": "active",
+      "role": "f3bb8d0e-b035-4c9c-8ce7-928dd1171be9",
+      "token": null,
+      "last_access": null,
+      "last_page": null,
+      "provider": "default",
+      "external_identifier": null,
+      "auth_data": null,
+      "email_notifications": true
+}
+
+###
+HTTP://chara-redif.vpnuser.lan:8055/items/article_id

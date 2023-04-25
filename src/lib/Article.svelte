@@ -4,9 +4,10 @@
     import mont_fuji from "../assets/img/Mont_Fuji.jpg";
 
     import article from "../assets/scss/article.scss";
+    import Comments from "../lib/Comments.svelte";
+   
 
     export let params = {};
-    console.log(params)
 
     // Extrait l'id issue de la route
     let article_id = params.id;
@@ -20,31 +21,21 @@
             const json = await response.json();
 
             // Gestion des erreurs d'extraction
-console.log(json);
         return json.data;
-
     }
-    console.log (getPublication);
+
 
 </script>
 
-
-
 <article class="art">
-
     {#await getPublication()}
 
     <h1>Le Japon</h1>
-    
-        
     {:then publication} 
-
     <h2>{publication.title}</h2>
-
     <p>
         {publication.content}
     </p>
-
     <img src={'http://chara-redif.vpnuser.lan/directus/uploads/' + publication.pictures + '.jpg'} alt=""/>
 
     <div class="author_date">
@@ -52,6 +43,8 @@ console.log(json);
     </div>
 
    {/await}
+<Comments article_id={article_id}/>
+
 </article>
 
 

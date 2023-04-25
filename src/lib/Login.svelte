@@ -4,7 +4,7 @@
 
     import { push } from "svelte-spa-router";
 
-    export let reload = false;
+    //export let reload = false;
     let email;
     let password;
     let error= '';
@@ -18,13 +18,13 @@
             // storage in "localstorage"
             window.localStorage.setItem("token", token);
 
-            if (reload === false) {
-                //Redirect to homepage
-                push("/home");
-            } else {
-                //Page reloading
-                location.reload();
-            }
+            // if (reload === false) {
+            //     //Redirect to homepage
+            //     push("/home");
+            // } else {
+            //     //Page reloading
+            //     location.reload();
+            // }
         }
     };
 
@@ -54,7 +54,10 @@
         return json.data.access_token;
     };
 
-    console.log(error);
+    
+    function goBack() {
+      window.history.back();
+    }
 </script>
 
 <div class="login-background">
@@ -87,7 +90,7 @@
                 />
             </div>
 
-            <input
+            <input on:click={goBack}
                 class="connexion"
                 type="submit"
                 value=" &#x27BD; Se connecter"
