@@ -1,5 +1,5 @@
 <script>
-import destination from '../assets/scss/destination.scss';
+import '../assets/scss/destination.scss';
 
 
 </script>

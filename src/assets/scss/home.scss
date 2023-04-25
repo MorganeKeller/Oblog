@@ -7,94 +7,74 @@
 
 .home-background {
 
-    background-image: url(../img/sky.webp);
-    background-size: cover;
-    background-repeat: repeat;
-    //height: 100vh;
-    width: 100%;
-  
+  background-image: url(../img/sky.webp);
+  background-size: cover;
+  // background-repeat: repeat;
+  // height: 100vh;
+  // width: 100%;
+  top:0;
+
+  @include mixins.large {
+    height: 1200px;
+  }
+
+  h1,
+  h2 {
+    font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+
+    @include mixins.tablet {
+      font-size: 2.5em;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+
+  article {
+
+    margin: 4vh auto 4vh auto;
+
+    @include mixins.tablet {
+      margin-bottom: 6vh;
+    }
+
     @include mixins.large {
-      height: 1200px;
+      margin-bottom: 10vh;
     }
-  
-    h1,
-    h2 {
-      font-family: 'Amatic SC', sans-serif;
-      text-align: center;
-  
+
+    img {
+      position: absolute;
+      height: 10vh;
+      width: 30vw;
+      margin: 0.5vh auto auto 1.5vw;
+      border-radius: 0.5rem;
+
       @include mixins.tablet {
-        font-size: 2.5em;
-      }
-    }
-  
-    .text-center {
-      text-align: center;
-    }
-  
-  
-    article {
-  
-      margin: 4vh auto 4vh auto;
-  
-      @include mixins.tablet {
-        margin-bottom: 6vh;
-      }
-  
-      @include mixins.large {
-        margin-bottom: 10vh;
-      }
-  
-      // .blue-back {
-      //   position: absolute;
-      //   background-color: $green;
-      //   background-repeat: no-repeat;
-      //   background-size: cover;
-      //   background-position: center;
-      //   height: 19vh;
-      //   width: 95%;
-      //   opacity: 0.5;
-      //   border-radius: 0.5rem;
-      //   margin-left: 0.35vw;
-  
-      //   @include mixins.tablet {
-      //     height: 17vh;
-      //   }
-  
-      //   @include mixins.large {
-      //     height: 22.5vh;
-      //   }
-      // }
-  
-      img {
-        position: absolute;
-        height: 10vh;
+        height: 15vh;
         width: 30vw;
-        margin: 0.5vh auto auto 1.5vw;
-        border-radius: 0.5rem;
-  
-        @include mixins.tablet {
-          height: 15vh;
-          width: 30vw;
-        }
-  
-        @include mixins.large {
-          height: 20vh;
-          width: 30vw;
-        }
       }
-  
-      p,
-      a,
-      time {
-        position: relative;
-        margin: 0.5vh auto auto 34vw;
-        text-transform: lowercase;
-  
-        @include mixins.tablet {
-          margin: 0.5vh 5vw auto 34vw;
-          padding-top: 0.8vh;
-          text-transform: none;
-        }
+
+      @include mixins.large {
+        height: 20vh;
+        width: 30vw;
+      }
+    }
+
+    p,
+    a,
+    time {
+      position: relative;
+      margin: 0.5vh auto auto 34vw;
+      text-transform: lowercase;
+
+      @include mixins.tablet {
+        margin: 0.5vh 5vw auto 34vw;
+        padding-top: 0.8vh;
+        text-transform: none;
       }
     }
   }
+}

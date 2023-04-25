@@ -1,5 +1,5 @@
 <script>
-    import cgu from "../assets/scss/comments.scss";
+    import "../assets/scss/comments.scss";
     import { link } from "svelte-spa-router";
 
     let commentary = [];
@@ -86,7 +86,7 @@
     <!-- Function calling -->
     {#await getComments(commentary)}
         <!-- {@debug commentary} -->
-        
+
         <p>chargement en cours...</p>
         <!-- Once the promise is kept, we store the function's result in the variable "comments" -->
     {:then comments}
@@ -116,11 +116,10 @@
             />
 
             <label for="Commentary">Commentaire</label>
-            <input
+            <textarea
                 required
                 class="input-comment"
                 bind:value={commentText}
-                type="text"
                 name="Nom"
                 placeholder="Votre commentaire"
             />

@@ -1,7 +1,10 @@
 <script>
-            import { link } from "svelte-spa-router";
-            import register from '../assets/scss/register.scss';
+    import { link } from "svelte-spa-router";
+    import "../assets/scss/register.scss";
 
+    function goBack() {
+        window.history.back();
+    }
 </script>
 
 <section class="main-register">
@@ -41,4 +44,5 @@
             <input type="submit" value="&#x27BD; Créer un compte" />
         </div>
     </form>
+    <button on:click={goBack}>Retour</button>
 </section>

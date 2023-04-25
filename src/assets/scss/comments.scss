@@ -6,10 +6,10 @@
 .comments {
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: $green;
-    margin: auto auto 4em auto;
-    max-width: 80%;
-
+    margin: auto auto 3em auto;
+    width: 80%;
+    background-color: $black;
+    color: $yellow;
 
     h2 {
         font-family: 'Amatic SC', sans-serif;
@@ -17,16 +17,17 @@
         margin-bottom: 1em;
         text-align: center;
     }
-
     i {
         margin: 1em 2em 0 2em;
-        font-size: 0.4em;
-
+        font-size: 0.5em;
+        
     }
+   
 
     p {
-        font-size: 0.5em;
+        font-size: 0.6em;
         margin-top: 0;
+        color:white;
     }
 
     a {
@@ -36,12 +37,13 @@
         margin: 1em;
         text-decoration: none;
         border: 1px solid black;
+        color: $blue;
         max-width: 90%;
         justify-content: center;
     }
 
     form {
-        background-color: $green;
+        background-color: $black;
         font-size: 0.5em;
         display: flex;
         flex-direction: column;
@@ -58,8 +60,32 @@
 
         }
 
+        label {
+            font-size: 1.3em;
+        }
+
         input {
-            margin: 1em;
+            margin: 0.5em 0 1em 0;
+            font-size: 1.5em;
+
+        }
+
+        .input-comment {
+            width: 200px;
+            height: 150px;
+            margin: 0.5em 0 1em 0 ;
+
+            @include mixins.tablet {
+                width: 300px;
+                height: 170px;
+
+            }
+
+            @include mixins.large {
+                width: 500px;
+                height: 200px;
+
+            }
 
         }
     }

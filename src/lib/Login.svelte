@@ -1,14 +1,13 @@
 <script>
     import { link } from "svelte-spa-router";
-    import login from "../assets/scss/login.scss";
+    import "../assets/scss/login.scss";
 
     import { push } from "svelte-spa-router";
 
-    //export let reload = false;
     let email;
     let password;
-    let error= '';
-    
+    let error = "";
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         const token = await connect();
@@ -17,14 +16,6 @@
         if (token !== false) {
             // storage in "localstorage"
             window.localStorage.setItem("token", token);
-
-            // if (reload === false) {
-            //     //Redirect to homepage
-            //     push("/home");
-            // } else {
-            //     //Page reloading
-            //     location.reload();
-            // }
         }
     };
 
@@ -43,10 +34,10 @@
 
         // response error handling
         if (response.ok !== true) {
-            error= 'Adresse e-mail ou mot de passe incorrect';
+            error = "Adresse e-mail ou mot de passe incorrect";
             return false;
         }
-        
+
         const json = await response.json();
         // Extraction errors handling
 
@@ -54,9 +45,8 @@
         return json.data.access_token;
     };
 
-    
     function goBack() {
-      window.history.back();
+        window.history.back();
     }
 </script>
 
@@ -90,7 +80,8 @@
                 />
             </div>
 
-            <input on:click={goBack}
+            <input
+                on:click={goBack}
                 class="connexion"
                 type="submit"
                 value=" &#x27BD; Se connecter"

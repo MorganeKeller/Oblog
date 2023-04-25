@@ -1,5 +1,9 @@
 <script>
-  import contact from "../assets/scss/contact.scss";
+  import "../assets/scss/contact.scss";
+
+  function goBack() {
+    window.history.back();
+  }
 </script>
 
 <section>
@@ -31,5 +35,6 @@
 
       <button type="submit">Envoyer</button>
     </form>
+    <button on:click={goBack}>Retour</button>
   </div>
 </section>
