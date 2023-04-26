@@ -1,8 +1,15 @@
 <script>
     import cgu from "../assets/scss/comments.scss";
     import { link } from "svelte-spa-router";
+    import Article from "./Article.svelte";
 
-    let commentary = [];
+    export let params = {};
+    console.log(params)
+
+    // Extrait l'id issue de la route
+    let article_id = params.id;
+
+    let commentaire = [];
 
     //Form informations
     let commentText = "";
@@ -18,9 +25,9 @@
         const new_comment = await postComment();
         //Adds a new comment to the list in order to trigger Svelte's watcher
         //Regenerate the part of DOM that depends on it
-        commentary.push(new_comment);
+        commentaire.push(new_comment);
         //Refresh the commentary list officially
-        commentary = [...commentary];
+        commentaire = [...commentaire];
 
         //Empty the textarea
         commentText = "";
@@ -29,16 +36,17 @@
     };
 
     //Function to retrieve comments
-    const getComments = async (commentary) => {
+    const getComments = async (commentaire) => {
         //In order to avoid an useless request, we return directly the list
-        if (commentary.length !== 0) {
-            return commentary;
+        if (commentaire.length !== 0) {
+            return commentaire;
         }
 
-        let endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/commentary";
+        let endpoint = import.meta.env.VITE_URL_DIRECTUS + 'items/commentary';
 
         //endpoint modification to filter on the article id only
-        endpoint += "?filter=[article_id][_eq]=" + "article_id";
+        endpoint += '?filter=[article_id][_eq]=' + article_id;
+       
 
         const response = await fetch(endpoint, {
             headers: {
@@ -55,9 +63,14 @@
         const json = await response.json();
 
         //Extract error handling
-        commentary = json.data;
+        commentaire = json.data;
+
+        console.log(commentaire);
+        
         return json.data;
     };
+
+    console.log(getComments);
 
     // Adding a comment in BDD with the API
     const postComment = async () => {
@@ -85,7 +98,7 @@
 <section class="comments" aria-labelledby="comments-title">
     <h2>Commentaires</h2>
     <!-- Function calling -->
-    {#await getComments(commentary)}
+    {#await getComments(commentaire)}
         <!-- {@debug commentary} -->
         <p>chargement en cours...</p>
         <!-- Once the promise is kept, we store the function's result in the variable "comments" -->

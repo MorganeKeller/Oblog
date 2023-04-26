@@ -4,6 +4,7 @@
     import mont_fuji from "../assets/img/Mont_Fuji.jpg";
 
     import article from "../assets/scss/article.scss";
+    import Comment from './Comments.svelte';
 
     export let params = {};
     console.log(params)
@@ -54,6 +55,7 @@ console.log(json);
    {/await}
 </article>
 
+    <Comment />
 
 <style>
 </style>
