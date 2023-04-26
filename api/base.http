@@ -54,7 +54,7 @@ http://chara-redif.vpnuser.lan:8055/users/
 
 ###
 POST  HTTP://chara-redif.vpnuser.lan:8055/users/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjQyNjczNywiZXhwIjoxNjgyNDI3NjM3LCJpc3MiOiJkaXJlY3R1cyJ9.HQmPYSADCOvqXqUDqa6xxki0l-hZ-uMoD5G_jG6kGNE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjQ5NzQ1OSwiZXhwIjoxNjgyNDk4MzU5LCJpc3MiOiJkaXJlY3R1cyJ9.miHyiyGfEkNrvOkiWCmxCzZuWHDnxTM1peNOrNyzJVM
 content-type: application/json
 
 {
@@ -82,4 +82,4 @@ content-type: application/json
 }
 
 ###
-HTTP://chara-redif.vpnuser.lan:8055/items/article_id
+HTTP://chara-redif.vpnuser.lan:8055/items/article?fields=*&sort=created_at
