@@ -21,8 +21,6 @@
             // modification de l'état de connexion après connexion réussie
             isLoggedIn = true;
 
-            //Redirection to homepage
-            push("/home");
         }
     };
 
@@ -70,6 +68,11 @@
     if (token) {
         isLoggedIn = true;
     }
+
+    function goBack() {
+      window.history.back();
+    }
+
 </script>
 
 <div class="login-background">
@@ -89,7 +92,7 @@
                     <input bind:value={password} required type="password" name="password" placeholder="***********"/>
                 </div>
 
-                <input class="connexion" type="submit" value=" &#x27BD; Se connecter"/>
+                <input on:click={goBack} class="connexion" type="submit" value=" &#x27BD; Se connecter"/>
             </form>
             <div class="text-login-register">
                 <p>Pas encore de compte?</p>
