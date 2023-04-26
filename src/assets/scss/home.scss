@@ -14,7 +14,7 @@
     width: 100%;
   
     @include mixins.large {
-      height: 1200px;
+      height: 1450px;
     }
   
     h1,
@@ -25,10 +25,19 @@
       @include mixins.tablet {
         font-size: 2.5em;
       }
+
+      @include mixins.ultra_wide {
+        font-size: 3.5em;
+      }
     }
+
   
     .text-center {
       text-align: center;
+
+      @include mixins.large {
+        font-size: 1.35em;
+      }
     }
   
   
@@ -43,6 +52,12 @@
       @include mixins.large {
         margin-bottom: 10vh;
       }
+
+      @include mixins.ultra_wide {
+        margin-bottom: 7.5vh;
+      }
+
+      
   
       // .blue-back {
       //   position: absolute;
@@ -81,8 +96,34 @@
           height: 20vh;
           width: 30vw;
         }
+
+        @include mixins.ultra_wide {
+          margin-left: 25vw;
+          height: 22.5vh;
+          width: 19vw;
+        }
       }
-  
+      
+      .overflow {
+        text-overflow: ellipsis;
+        width: 55vw;
+        height: 20.5vh;
+        overflow: hidden;
+
+          @include mixins.tablet {
+            height: 15vh;
+          }
+
+          @include mixins.large {
+            height: 13.5vh;
+          }
+
+          @include mixins.ultra_wide{
+            height: 12vh;
+            width: 30vw;
+          };
+      }
+
       p,
       a,
       time {
@@ -94,6 +135,11 @@
           margin: 0.5vh 5vw auto 34vw;
           padding-top: 0.8vh;
           text-transform: none;
+
+          @include mixins.ultra_wide {
+            margin: 0.5vh 5vw auto 46vw;
+            font-size: 1.35em;
+          }
         }
       }
     }

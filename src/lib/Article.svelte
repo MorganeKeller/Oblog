@@ -41,7 +41,7 @@ console.log(json);
 
     <h2>{publication.title}</h2>
 
-    <p>
+    <p >
         {publication.content}
     </p>
 

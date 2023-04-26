@@ -5,7 +5,7 @@
     import grand_canyon from '../assets/img/grand_canyon.jpg';
     
 
-    import home from '../assets/scss/home.scss';
+    import '../assets/scss/home.scss';
 
     export let params = {};
     console.log(params)
@@ -29,11 +29,11 @@ console.log(json);
     }
     console.log (getArticles);
 
-
+   
 </script>
 
 
-    
+   
     <section class="home-background">
 
         <h1>Bienvenue dans nos Carnets de Voyages!</h1>
@@ -58,7 +58,9 @@ console.log(json);
     <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
         <img src={ 'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="illustration">
         <!-- import.meta.env.UPLOAD_DIRECTUS  -->
-            <p>{article.content}</p>
+
+            
+            <p class="overflow">{article.content}</p>
 
             <a use:link href="/article/{article.id}">Lire la suite</a>
 
