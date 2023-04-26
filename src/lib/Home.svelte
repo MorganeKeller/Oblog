@@ -38,32 +38,31 @@
     {#await getArticles()}
         <p>ça charge...</p>
 
-        <!-- Des que les données sont prêtes, je les range dans la variable articles -->
-    {:then articles}
-        {#each articles as article}
-            <article>
-                <h2>{article.title}</h2>
-                <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
-                <img
-                    src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
-                        article.pictures +
-                        ".jpg"}
-                    alt="illustration"
-                />
-                <!-- import.meta.env.UPLOAD_DIRECTUS  -->
-                <p>{article.content}</p>
+    <!-- Des que les données sont prêtes, je les range dans la variable articles -->
+   {:then articles} 
 
-                <a use:link href="/article/{article.id}">Lire la suite</a>
 
-                <p><strong>{article.author}</strong></p>
-                <time datetime={article.created_at}
-                    >{new Date(article.created_at).toLocaleDateString(
-                        "fr-FR"
-                    )}</time
-                >
-            </article>
-        {/each}
-    {/await}
+{#each articles as article}
+<article >
+
+    <h2>{article.title}</h2>
+    <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
+        <img src={ 'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="illustration">
+        <!-- import.meta.env.UPLOAD_DIRECTUS  -->
+
+            
+            <p class="overflow">{article.content}</p>
+
+            <a use:link href="/article/{article.id}">Lire la suite</a>
+
+    <p><strong>{article.author}</strong></p>
+    <time datetime="2011-11-18T14:54:39">{article.created_at}</time>
+
+</article>
+
+{/each}
+
+{/await}
 </section>
 
 <style>
