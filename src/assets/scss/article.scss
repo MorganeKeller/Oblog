@@ -72,14 +72,9 @@
   .author_date {
     display: flex;
     align-items: center;
-    
-   
+    justify-content: space-evenly;
+margin-bottom: 1em;
 
-    @include mixins.tablet {
-      
-      
-      width: 90%;
-    }
   }
 
 }
