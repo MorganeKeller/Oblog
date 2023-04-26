@@ -29,10 +29,10 @@
     };
 
     //Function to retrieve comments
-    const getComments = async (commentaire) => {
+    const getComments = async (commentary) => {
         //In order to avoid an useless request, we return directly the list
-        if (commentaire.length !== 0) {
-            return commentaire;
+        if (commentary.length !== 0) {
+            return commentary;
         }
 
         let endpoint = import.meta.env.VITE_URL_DIRECTUS + 'items/commentary';
@@ -48,15 +48,15 @@
         //Handling response errors
         if (response.ok === false) {
             //We trigger an error to enter the Svelte's catch
-            throw new Error("Erreur de récupération des commentaires");
+            throw new Error("Erreur de récupération des commentarys");
         }
 
         const json = await response.json();
 
         //Extract error handling
-        commentaire = json.data;
+        commentary = json.data;
 
-        console.log(commentaire);
+        console.log(commentary);
         
         return json.data;
     };
