@@ -32,7 +32,7 @@
       }
     }
     
-  }
+  
 
 
   h1 {
@@ -54,17 +54,38 @@
         margin-left: 25vw;
       }
     }
-
+  }
 
 p {
   margin-left: 4.5vw;
 
   @include mixins.ultra_wide {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-left: 25vw;
     margin-right: 25vw;
   }
 }
+  .overflow-ellipsis {
+    text-overflow: ellipsis;
+    width: 85vw;
+    height: 15vh;
+    white-space: nowrap;
+    overflow: hidden;
+
+      @include mixins.tablet {
+        height: 10.5vh;
+      }
+
+      @include mixins.large {
+        height: 8.5vh;
+      }
+
+      @include mixins.ultra_wide{
+        height: 11.5vh;
+        width: 49vw;
+      };
+  }
+
 
 }
 
