@@ -13,8 +13,7 @@
   import CGU from "./lib/CGU.svelte";
   import Register from "./lib/Register.svelte";
   import Error from "./lib/404.svelte";
-  import CreateArticle from "./lib/CreateArticle.svelte"
-  //import Comments from "./lib/Comments.svelte"
+  import CreateArticle from "./lib/CreateArticle.svelte";
 
   import Welcome from "./lib/Welcome.svelte";
   
@@ -31,13 +30,12 @@
     "/cgu": CGU,
     "/login": Login,
     "/register": Register,
-    "/createArticle":CreateArticle,
+    "/createArticle": CreateArticle,
     "*": Error,
     
      
   };
 </script>
-
 
 <svelte:head>
   <title>Carnets de Voyages</title>
@@ -49,6 +47,4 @@
   <Router {routes} />
 </main>
 
-
-
-<Footer/>
+<Footer />

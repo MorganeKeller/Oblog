@@ -1,8 +1,9 @@
 <script>
-    import cgu from "../assets/scss/comments.scss";
+    import "../assets/scss/comments.scss";
     import { link } from "svelte-spa-router";
 
     let commentary = [];
+    export let article_id;
 
     //Form informations
     let commentText = "";
@@ -12,16 +13,14 @@
 
     const handleSubmitForm = async (event) => {
         event.preventDefault();
-        console.log(commentText, commentAuthor, commentDate);
 
         //create a new comment
-        const new_comment = await postComment();
+        const new_commentary = await postComment();
         //Adds a new comment to the list in order to trigger Svelte's watcher
         //Regenerate the part of DOM that depends on it
-        commentary.push(new_comment);
+        commentary.push(new_commentary);
         //Refresh the commentary list officially
         commentary = [...commentary];
-
         //Empty the textarea
         commentText = "";
         commentAuthor = "";
@@ -38,14 +37,13 @@
         let endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/commentary";
 
         //endpoint modification to filter on the article id only
-        endpoint += "?filter=[article_id][_eq]=" + "article_id";
+        endpoint += "?filter[article_id][_eq]=" + article_id;
 
         const response = await fetch(endpoint, {
             headers: {
                 Authorization: "Bearer " + window.localStorage.getItem("token"),
             },
         });
-
         //Handling response errors
         if (response.ok === false) {
             //We trigger an error to enter the Svelte's catch
@@ -80,6 +78,7 @@
         const json = await response.json();
         return json.data;
     };
+    //console.log(postComment);
 </script>
 
 <section class="comments" aria-labelledby="comments-title">
@@ -87,6 +86,7 @@
     <!-- Function calling -->
     {#await getComments(commentary)}
         <!-- {@debug commentary} -->
+
         <p>chargement en cours...</p>
         <!-- Once the promise is kept, we store the function's result in the variable "comments" -->
     {:then comments}
@@ -101,25 +101,26 @@
             </div>
         {/each}
 
-        <form
-            on:submit={handleSubmitForm}
-            aria-labelledby="form-title"
-        >
+        <form on:submit={handleSubmitForm} aria-labelledby="form-title">
             <h3 id="form-title">Votre commentaire</h3>
 
             <label for="author">Nom/Pseudo</label>
             <input type="text" required bind:value={commentAuthor} />
 
-            <label for="date" >Date</label>
-            <input type="date" required pattern="\d{4}-\d{2}-\d{2}" bind:value={commentDate} />
+            <label for="date">Date</label>
+            <input
+                type="date"
+                required
+                pattern="\d{4}-\d{2}-\d{2}"
+                bind:value={commentDate}
+            />
 
             <label for="Commentary">Commentaire</label>
-            <input required
+            <textarea
+                required
                 class="input-comment"
                 bind:value={commentText}
-                type="text"
                 name="Nom"
-                
                 placeholder="Votre commentaire"
             />
 

@@ -1,6 +1,6 @@
 <script>
-import destination from '../assets/scss/destination.scss';
-import { link } from "svelte-spa-router";
+import '../assets/scss/destination.scss';
+
 
 </script>
 
