@@ -1,12 +1,13 @@
+
 <script>
     import { link } from "svelte-spa-router";
-    import "../assets/scss/login.scss";
-
     import { push } from "svelte-spa-router";
+    import login from "../assets/scss/login.scss";
 
     let email;
     let password;
-    let error = "";
+    let error= '';
+    let isLoggedIn = false; // ajoute la variable d'état de connexion
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -16,7 +17,24 @@
         if (token !== false) {
             // storage in "localstorage"
             window.localStorage.setItem("token", token);
+
+            // modification de l'état de connexion après connexion réussie
+            isLoggedIn = true;
+
+            //Redirection to homepage
+            push("/home");
         }
+    };
+
+    const handleLogout = () => {
+        // nettoyage du localStorage
+        window.localStorage.removeItem("token");
+
+        // modification de l'état de connexion après déconnexion réussie
+        isLoggedIn = false;
+
+        // retour à la page de connexion
+        push("/login");
     };
 
     const connect = async () => {
@@ -34,10 +52,10 @@
 
         // response error handling
         if (response.ok !== true) {
-            error = "Adresse e-mail ou mot de passe incorrect";
+            error= 'Adresse e-mail ou mot de passe incorrect';
             return false;
         }
-
+        
         const json = await response.json();
         // Extraction errors handling
 
@@ -45,55 +63,39 @@
         return json.data.access_token;
     };
 
-    function goBack() {
-        window.history.back();
+    console.log(error);
+
+    // on vérifie l'état de connexion pour afficher le bouton de déconnexion
+    const token = window.localStorage.getItem("token");
+    if (token) {
+        isLoggedIn = true;
     }
 </script>
 
 <div class="login-background">
     <h1>Connexion</h1>
-    <section aria-labelledby="loginForm" class="section-form">
-        <form
-            on:submit={handleSubmit}
-            action="#"
-            aria-label="Informations de connexion"
-        >
-            <div class="input-login">
-                <label for="email">E-mail: </label>
-                <input
-                    bind:value={email}
-                    required
-                    type="email"
-                    name="email"
-                    placeholder="ex : i.newton@test.fr"
-                />
-            </div>
+    {#if isLoggedIn} <!-- on vérifie l'état de connexion pour afficher le bouton de déconnexion -->
+        <button on:click={handleLogout}>Se déconnecter</button>
+    {:else}
+        <section aria-labelledby="loginForm" class="section-form">
+            <form on:submit={handleSubmit} action="#" aria-label="Informations de connexion">
+                <div class="input-login">
+                    <label for="email">E-mail: </label>
+                    <input bind:value={email} required type="email" name="email" placeholder="ex : i.newton@test.fr"/>
+                </div>
 
-            <div class="input-login">
-                <label for="password">Mot de passe: </label>
-                <input
-                    bind:value={password}
-                    required
-                    type="password"
-                    name="password"
-                    placeholder="***********"
-                />
-            </div>
+                <div class="input-login">
+                    <label for="password">Mot de passe: </label>
+                    <input bind:value={password} required type="password" name="password" placeholder="***********"/>
+                </div>
 
-            <input
-                on:click={goBack}
-                class="connexion"
-                type="submit"
-                value=" &#x27BD; Se connecter"
-            />
-        </form>
-        <div class="text-login-register">
-            <p>Pas encore de compte?</p>
-            <p>
-                Si l'envie te prend de vouloir nous raconter toi aussi tes
-                aventures et ressentis, n'hésites pas à en créer un!
-            </p>
-            <a use:link href="/register">&#x27BD; Par ici!</a>
-        </div>
-    </section>
+                <input class="connexion" type="submit" value=" &#x27BD; Se connecter"/>
+            </form>
+            <div class="text-login-register">
+                <p>Pas encore de compte?</p>
+                <p>Si l'envie te prend de vouloir nous raconter toi aussi tes aventures et ressentis, n'hésites pas à en créer un!</p>
+                <a use:link href="/register">&#x27BD; Par ici!</a>
+            </div>
+        </section>
+    {/if}
 </div>
