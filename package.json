@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "hamburger-menu-svelte": "^2.2.0",
+    "surge": "^0.0.0",
     "svelte-burger-menu": "^2.0.5",
     "svelte-spa-router": "^3.3.0"
   }
