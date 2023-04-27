@@ -32,7 +32,14 @@ console.log(json);
    
 </script>
 
+<form action="#">
+    <select name="Tri" id="">
+      <option value="">Auteur</option>
+      <option value="">Date</option>
 
+    </select>
+    <input type="submit" value="Submit" />
+</form>
    
     <section class="home-background">
 
