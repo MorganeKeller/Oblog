@@ -35,7 +35,7 @@
         </p>
         <img
             src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
-                publication.pictures +
+                publication.pictures + 
                 ".jpg"}
             alt=""
         />

@@ -1,6 +1,7 @@
 <script>
     import "../assets/scss/comments.scss";
     import { link } from "svelte-spa-router";
+    
 
     let commentary = [];
     export let article_id;
@@ -28,13 +29,13 @@
     };
 
     //Function to retrieve comments
-    const getComments = async (commentary) => {
+    const getComments = async (commentaire) => {
         //In order to avoid an useless request, we return directly the list
-        if (commentary.length !== 0) {
-            return commentary;
+        if (commentaire.length !== 0) {
+            return commentaire;
         }
 
-        let endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/commentary";
+        let endpoint = import.meta.env.VITE_URL_DIRECTUS + 'items/commentary';
 
         //endpoint modification to filter on the article id only
         endpoint += "?filter[article_id][_eq]=" + article_id;
@@ -53,9 +54,14 @@
         const json = await response.json();
 
         //Extract error handling
-        commentary = json.data;
+        commentaire = json.data;
+
+        console.log(commentaire);
+        
         return json.data;
     };
+
+    console.log(getComments);
 
     // Adding a comment in BDD with the API
     const postComment = async () => {
