@@ -3,7 +3,7 @@
    import { link } from "svelte-spa-router";
 
    const getAuthors = async function () {
-      const endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/user/";
+      const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
       const response = await fetch(endpoint);
 
       const json = await response.json();
