@@ -1,15 +1,6 @@
 <script>
-<<<<<<< HEAD
-    import akihabara from "../assets/img/Akihabara.jpg";
-    import chateau from "../assets/img/chateau_oasaka.jpg";
-    import mont_fuji from "../assets/img/Mont_Fuji.jpg";
-
-    import article from "../assets/scss/article.scss";
-    import Comment from './Comments.svelte';
-=======
     import "../assets/scss/article.scss";
     import Comments from "../lib/Comments.svelte";
->>>>>>> 5ab6527c19b651898ee154ba2d284a3484cb85ca
 
     export let params = {};
 
@@ -67,10 +58,5 @@
     <Comments {article_id} />
 </article>
 
-<<<<<<< HEAD
-    <Comment />
-
-=======
->>>>>>> 5ab6527c19b651898ee154ba2d284a3484cb85ca
 <style>
 </style>
