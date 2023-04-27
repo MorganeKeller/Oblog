@@ -9,16 +9,21 @@
 
   background-image: url(../img/sky.webp);
   background-size: cover;
-  // background-repeat: repeat;
-  // height: 100vh;
-  // width: 100%;
-  top:0;
+  background-repeat: repeat;
+  //height: 100vh;
+  width: 100%;
+  margin: auto;
 
   @include mixins.large {
-    height: 1200px;
+    height: 1550px;
   }
 
-  h1,
+  h1 {
+    font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+  }
   h2 {
     font-family: 'Amatic SC', sans-serif;
     text-align: center;
@@ -26,54 +31,79 @@
     @include mixins.tablet {
       font-size: 2.5em;
     }
+
+    @include mixins.ultra_wide {
+      font-size: 3.5em;
+    }
   }
 
-  .text-center {
-    text-align: center;
-  }
 
 
-  article {
 
-    margin: 4vh auto 4vh auto;
+
+
+
+  img {
+    position: absolute;
+    height: 10vh;
+    width: 30vw;
+    margin: 0.5vh auto auto 1.5vw;
+    border-radius: 0.5rem;
 
     @include mixins.tablet {
-      margin-bottom: 6vh;
+      height: 15vh;
+      width: 30vw;
     }
 
     @include mixins.large {
-      margin-bottom: 10vh;
-    }
-
-    img {
-      position: absolute;
-      height: 10vh;
+      height: 20vh;
       width: 30vw;
-      margin: 0.5vh auto auto 1.5vw;
-      border-radius: 0.5rem;
-
-      @include mixins.tablet {
-        height: 15vh;
-        width: 30vw;
-      }
-
-      @include mixins.large {
-        height: 20vh;
-        width: 30vw;
-      }
     }
 
-    p,
-    a,
-    time {
-      position: relative;
-      margin: 0.5vh auto auto 34vw;
-      text-transform: lowercase;
+    @include mixins.ultra_wide {
+      margin-left: 25vw;
+      height: 22.5vh;
+      width: 19vw;
+    }
+  }
 
-      @include mixins.tablet {
-        margin: 0.5vh 5vw auto 34vw;
-        padding-top: 0.8vh;
-        text-transform: none;
+  .overflow {
+    text-overflow: ellipsis;
+    width: 55vw;
+    height: 20.5vh;
+    overflow: hidden;
+
+    @include mixins.tablet {
+      height: 15vh;
+    }
+
+    @include mixins.large {
+      height: 13.5vh;
+    }
+
+    @include mixins.ultra_wide {
+      height: 12vh;
+      width: 30vw;
+    }
+
+    ;
+  }
+
+  p,
+  a,
+  time {
+    position: relative;
+    margin: 0.5vh auto auto 34vw;
+    text-transform: lowercase;
+
+    @include mixins.tablet {
+      margin: 0.5vh 5vw auto 34vw;
+      padding-top: 0.8vh;
+      text-transform: none;
+
+      @include mixins.ultra_wide {
+        margin: 0.5vh 5vw auto 46vw;
+        font-size: 1.35em;
       }
     }
   }

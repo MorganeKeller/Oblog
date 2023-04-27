@@ -41,11 +41,11 @@
                     <img src={logo} alt="Logo du site" />
                 </a>
             </div>
-            <div class="searchbar">
+            <!-- <div class="searchbar">
                 <input type="search" name="" placeholder="rechercher..." />
                 <button aria-label="Bouton pour lancer la recherche">Go!</button
                 >
-            </div>
+            </div> -->
         </div>
       
         <!-- {#each toto as item}
