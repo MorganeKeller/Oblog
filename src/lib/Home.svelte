@@ -27,12 +27,13 @@
 </script>
 
 <section class="home-background">
+
     <h1>Bienvenue dans nos Carnets de Voyages!</h1>
 
-    <p class="text-center">
+    <h2>
         Vous voici arrivés à destination: ici découvrez les derniers articles
         publiés
-    </p>
+    </h2>
 
     <!-- Appel de la fonciton pour récupérer les données -->
     {#await getArticles()}
@@ -43,7 +44,7 @@
 
 
 {#each articles as article}
-<article >
+<article>
 
     <h2>{article.title}</h2>
     <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
