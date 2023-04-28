@@ -23,8 +23,8 @@
 
     if (!response.ok) {
       throw new Error("Erreur lors de la création de l'utilisateur.");
-    } 
-   
+    }
+
     const user = await response.json();
     return user;
   }

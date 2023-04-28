@@ -7,54 +7,75 @@
 
 .authors {
 
-    font-family: 'Amatic SC', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("../img/library.jpg");
-    background-size: cover;
-    object-fit: cover;
-    font-size: 2em;
-    color: $yellow;
-   min-height: 80vh;
-    h1 {
-      margin: 0;
-      text-shadow: #FC0 1px 0 10px;
+  font-family: 'Amatic SC', sans-serif;
+  background-image: url("../img/library.jpg");
+  background-size: cover;
+  object-fit: cover;
+  font-size: 2em;
+  color: $yellow;
+  min-height: 80vh;
+
+  h1 {
+    margin: 0;
+    text-shadow: #FC0 1px 0 10px;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .author-column {
+    height: 90%;
+    text-align: center;
+
+    @include mixins.tablet {
+      columns: 2;
     }
-  
+
+    @include mixins.large {
+      columns:2;
+    }
+
     .one-author {
-      background-color: black;
+      display: inline-block;
+      width: 70%;
+      text-align: center;
+      background-color: $black;
       opacity: 0.9;
       font-size: 0.6em;
       color: $yellow;
-      padding: 0.4em;
-      margin: 0.2em 3em;
       border-radius: 1em;
-  
+      padding: 0;
+      margin: auto auto 1em auto;
+
+
+      @include mixins.tablet {
+        width: 60%;
+
+      }
+
+      @include mixins.large {
+        width: 50%;
+
+      }
+
       h2 {
         margin: 0.1em;
       }
-  
+
       p {
         font-family: Arial, Helvetica, sans-serif;
         font-size: small;
-  
+
         @include mixins.large {
           font-size: medium;
         }
-  
+
       }
-  
-      @include mixins.tablet {
-        margin: 0.3em 7em;
-  
-      }
-  
-      @include mixins.large {
-        margin: 0.5em 12em;
-        font-size: 0.7em;
-  
-      }
-  
+
     }
   }
+}

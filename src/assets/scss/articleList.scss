@@ -16,7 +16,7 @@
   margin: auto;
 
   h1 {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 0.5em;
 
     @include mixins.tablet {
@@ -81,6 +81,7 @@
     h2 {
       font-family: 'Amatic SC', sans-serif;
       font-size: 2em;
+      margin-bottom: 0 0 1em 0;
 
       @include mixins.tablet {
         font-size: 2.2em;
@@ -115,6 +116,7 @@
       font-size: 0.9em;
       max-width: 90%;
       margin: auto;
+
       @include mixins.tablet {
         font-size: 1.2em;
       }
@@ -123,7 +125,8 @@
 
     a {
       color: $black;
-font-size: 1.1em;
+      font-size: 1.1em;
+
       &:hover {
         color: $yellow;
       }

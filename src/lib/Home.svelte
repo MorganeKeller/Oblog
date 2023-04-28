@@ -27,43 +27,44 @@
 </script>
 
 <section class="home-background">
-
     <h1>Bienvenue dans nos Carnets de Voyages!</h1>
 
-    <h2>
+    <p>
         Vous voici arrivés à destination: ici découvrez les derniers articles
         publiés
-    </h2>
+    </p>
 
     <!-- Appel de la fonciton pour récupérer les données -->
     {#await getArticles()}
-        <p>ça charge...</p>
+        <p>Chargement en cours...</p>
 
-    <!-- Des que les données sont prêtes, je les range dans la variable articles -->
-   {:then articles} 
+        <!-- Des que les données sont prêtes, je les range dans la variable articles -->
+    {:then articles}
+        {#each articles as article}
+            <article class="home-article">
+                <h2>{article.title}</h2>
+                <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
+                <div class="article-bloc">
+                    <img
+                        src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
+                            article.pictures +
+                            ".jpg"}
+                        alt="illustration"
+                    />
+                    <!-- import.meta.env.UPLOAD_DIRECTUS  -->
 
-
-{#each articles as article}
-<article>
-
-    <h2>{article.title}</h2>
-    <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
-        <img src={ 'http://chara-redif.vpnuser.lan/directus/uploads/' + article.pictures + '.jpg'} alt="illustration">
-        <!-- import.meta.env.UPLOAD_DIRECTUS  -->
-
-            
-            <p class="overflow">{article.content}</p>
-
-            <a use:link href="/article/{article.id}">Lire la suite</a>
-
-    <p><strong>{article.author}</strong></p>
-    <time datetime="2011-11-18T14:54:39">{article.created_at}</time>
-
-</article>
-
-{/each}
-
-{/await}
+                    <p class="overflow">{article.content}</p>
+                </div>
+                <div class="home-writer-date">
+                    <p><strong>{article.author}</strong></p>
+                    <time datetime="2011-11-18T14:54:39"
+                        >{article.created_at}</time
+                    >
+                </div>
+                <a use:link href="/article/{article.id}">Lire la suite...</a>
+            </article>
+        {/each}
+    {/await}
 </section>
 
 <style>

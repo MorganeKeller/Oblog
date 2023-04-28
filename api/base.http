@@ -4,11 +4,29 @@ http://chara-redif.vpnuser.lan:8055/items/commentary/1
 
 ###
 # Récupération du premier article
-http://chara-redif.vpnuser.lan:8055/items/article/
-
+http://chara-redif.vpnuser.lan:8055/items/article
 ###
 # Récuparation d'un user 
-http://chara-redif.vpnuser.lan:8055/users/
+http://chara-redif.vpnuser.lan:8055/items/article?fields=user_id
+
+###
+http://chara-redif.vpnuser.lan:8055/users/fb2f60c3-7553-4c36-8445-71f64d6d3891
+
+
+
+###
+POST http://chara-redif.vpnuser.lan:8055/users HTTP/1.1
+Content-Type: application/json
+
+{
+      "first_name": "Gilou",
+      "last_name": "Jean",
+      "pseudo": "JG",
+      "email": "JG@gmail.com",
+      "password": "1234",
+      "role": "f3bb8d0e-b035-4c9c-8ce7-928dd1171be9",
+    }
+
 
 ###
 #se connecter en tant qu utilisateur de directus
@@ -51,15 +69,15 @@ http://chara-redif.vpnuser.lan:8055/items/commentary?filter=[article_id][_eq]=ar
 
 
 ###
-http://chara-redif.vpnuser.lan:8055/users/
+http://chara-redif.vpnuser.lan:8055/items/commentary?filter=[user_id][_eq]=adcca067-dc11-498c-a0f1-303ed8d1bc53
 
 ###
 POST  HTTP://chara-redif.vpnuser.lan:8055/users/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjQ5NzQ1OSwiZXhwIjoxNjgyNDk4MzU5LCJpc3MiOiJkaXJlY3R1cyJ9.miHyiyGfEkNrvOkiWCmxCzZuWHDnxTM1peNOrNyzJVM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY4MzgxOSwiZXhwIjoxNjgyNjg0NzE5LCJpc3MiOiJkaXJlY3R1cyJ9.XVUdHxnapZNIiR2GIvspra8ce817ibOhAcu-dIwndi0
 content-type: application/json
 
-{
-    "first_name": "Olivier",
+{       "id":"",
+        "first_name": "Gilou",
       "last_name": "Olivier",
       "email": "oliv@msn.com",
       "password": "1234",
@@ -79,7 +97,9 @@ content-type: application/json
       "provider": "default",
       "external_identifier": null,
       "auth_data": null,
-      "email_notifications": true
+      "email_notifications": true,
+      "user_name": "Giloliv",
+      "commentary": [],
 }
 
 ###
