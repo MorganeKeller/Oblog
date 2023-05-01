@@ -12,7 +12,6 @@
         &#x27BD; Ici racontez nous vos périples, anecdotes, ce qui vous a
         émerveillé ou déçu, interpellé ou instruit...
     </p>
-    <button on:click={goBack}>Retour</button>
 
     <form class="create-form" action="" method="POST">
         <div class="input-create">

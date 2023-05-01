@@ -12,7 +12,7 @@
 </script>
 
 <footer>
-    <ul>
+    <ul id="footer-bloc">
         <div class="foot-elem">
             <li>nous contacter</li>
             <a use:link href="/contact" aria-label="redirection vers formulaire de contact"
