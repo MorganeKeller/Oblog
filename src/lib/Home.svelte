@@ -24,7 +24,6 @@
 </script>
 
 <section class="home-background">
-
     <h1>Bienvenue dans nos Carnets de Voyages!</h1>
 
     <p>
@@ -43,12 +42,14 @@
                 <h2>{article.title}</h2>
                 <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
                 <div class="article-bloc">
-                    <img
-                        src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
-                            article.pictures +
-                            ".jpg"}
-                        alt="illustration"
-                    />
+                    <a use:link href="/article/{article.id}"
+                        ><img
+                            src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
+                                article.pictures +
+                                ".jpg"}
+                            alt="illustration"
+                        /></a
+                    >
                     <!-- import.meta.env.UPLOAD_DIRECTUS  -->
 
                     <p class="overflow">{article.content}</p>
@@ -56,7 +57,9 @@
                 <div class="home-writer-date">
                     <p><strong>{article.author}</strong></p>
                     <time datetime={article.created_at}
-                        >{new Date(article.created_at).toLocaleDateString("fr-FR")}</time
+                        >{new Date(article.created_at).toLocaleDateString(
+                            "fr-FR"
+                        )}</time
                     >
                 </div>
                 <a use:link href="/article/{article.id}">Lire la suite...</a>

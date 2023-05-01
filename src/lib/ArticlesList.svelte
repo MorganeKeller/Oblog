@@ -47,11 +47,11 @@
       <h2>{article.title}</h2>
 
       <div class="phototext">
-        <img
+        <a use:link href="/article/{article.id}"><img
           class="taille"
           src={article.pictures}
           alt="Illustration en rapport avec l'article concerné"
-        />
+        /></a>
         <p class="overflow-ellipsis">{article.content}</p>
       </div>
 
