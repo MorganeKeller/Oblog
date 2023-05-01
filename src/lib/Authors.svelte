@@ -4,11 +4,12 @@
 
    const getAuthors = async function () {
       const endpoint =
-         import.meta.env.VITE_URL_DIRECTUS + "items/article?fields=user_id";
+         import.meta.env.VITE_URL_DIRECTUS + "users";
+
       const response = await fetch(endpoint);
 
       const json = await response.json();
-
+   
       return json.data;
    };
 </script>
@@ -19,11 +20,11 @@
    {:then articleAuthor}
       <h1>Les Auteurs</h1>
       <div class="author-column">
-         {#each articleAuthor as article}
+         {#each articleAuthor as users}
             <div class="one-author">
-               <h2>{article.author}</h2>
+               <h2>{users.user_name}</h2>
 
-               <a use:link href="/articlesList">Liste des articles</a>
+               <a use:link href="/authorArticles/{users.user_name}">Liste des articles</a>
             </div>
          {/each}
       </div>

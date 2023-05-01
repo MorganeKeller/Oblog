@@ -43,7 +43,7 @@
         </div>
         <div class="foot-elem">
             <li>votre article</li>
-            <a use:link href="/createArticle"><img src={LogoPen} alt="Logo de stylo" /></a>
+            <a use:link href="/createArticle" aria-label="Redirection vers la création d'un article"><img src={LogoPen} alt="Logo de stylo" /></a>
         </div>
     </ul>
 </footer>

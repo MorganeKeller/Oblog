@@ -74,10 +74,7 @@ footer {
     font-size: 1.5em;
   }
 
-  @include mixins.large {
-    font-size: 2em;
-  }
-
+ 
   #footer-bloc {
     list-style-type: none;
     display: flex;

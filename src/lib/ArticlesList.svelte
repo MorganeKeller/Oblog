@@ -12,7 +12,7 @@
   const getArticles = async () => {
     const endpoint =
       import.meta.env.VITE_URL_DIRECTUS +
-      "items/article?fields=*&sort=created_at";
+      "items/article?fields=*&sort=-created_at";
     const response = await fetch(endpoint);
     const json = await response.json();
     articles = json.data.map((article) => {
@@ -43,16 +43,24 @@
 
   {#each articles as article}
     <article class="each_articleList">
+      
       <h2>{article.title}</h2>
 
-      <img class="taille" src={article.pictures} alt="illustration" />
+      <div class="phototext">
+        <img
+          class="taille"
+          src={article.pictures}
+          alt="Illustration en rapport avec l'article concerné"
+        />
+        <p class="overflow-ellipsis">{article.content}</p>
+      </div>
+
       <div class="infos">
         <b>{article.author}</b>
         <time datetime={article.created_at}>
           {new Date(article.created_at).toLocaleDateString("fr-FR")}
         </time>
       </div>
-      <p class="overflow-ellipsis">{article.content}</p>
 
       <a use:link href="/article/{article.id}">Lire la suite...</a>
     </article>

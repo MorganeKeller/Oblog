@@ -3,12 +3,12 @@
   import "../assets/scss/register.scss";
 
   // Fonction pour créer un nouvel utilisateur
-  async function createUser(first_name, last_name, pseudo, email, password) {
+  async function createUser(first_name, last_name, user_name, email, password) {
     const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
     const data = {
       first_name: first_name,
       last_name: last_name,
-      pseudo: pseudo,
+      pseudo: user_name,
       email: email,
       password: password,
       role: "f3bb8d0e-b035-4c9c-8ce7-928dd1171be9",
@@ -32,12 +32,12 @@
   async function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
-    const { first_name, last_name, pseudo, email, password } = form.elements;
+    const { first_name, last_name, user_name, email, password } = form.elements;
 
     const user = await createUser(
       first_name.value,
       last_name.value,
-      pseudo.value,
+      user_name.value,
       email.value,
       password.value
     );

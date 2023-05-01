@@ -61,64 +61,63 @@
         border: 1px solid $brown;
       }
     }
+  }
 
-    .each_articleList {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.8em;
-      margin-bottom: 2em;
-      width: 90%;
-      margin: auto;
+  .each_articleList {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    @include mixins.tablet {
+      width: 70%;
+    }
+
+    @include mixins.large {
+      width: 60%;
+    }
+
+    h2 {
+      font-family: 'Amatic SC', sans-serif;
+      font-size: 2em;
+      margin: 0.5em 0 0.3em 0;
 
       @include mixins.tablet {
-        width: 70%;
+        font-size: 2.2em;
       }
 
       @include mixins.large {
-        width: 60%;
+        font-size: 2.5em;
       }
 
-      h2 {
-        font-family: 'Amatic SC', sans-serif;
-        font-size: 2em;
-        margin-bottom: 0 0 1em 0;
+    }
 
-        @include mixins.tablet {
-          font-size: 2.2em;
-        }
+    .phototext {
+      display: flex;
+      width: 90%;
+      margin-bottom: 0.5em;
 
-        @include mixins.large {
-          font-size: 2.5em;
-        }
+      .taille {
+        height: 100px;
+        border-radius: 2rem;
+        margin: auto 1em;
 
-      }
-
-      img {
-        width: 10%;
-      }
-
-      // .taille {
-      //   
-      //   height:10%;
-      //   border-radius: 2rem;
-      //   margin: auto;
-
-      // }
-
-      .infos {
-        font-size: 0.9em;
-
-        @include mixins.tablet {
-          font-size: 1.2em;
-        }
       }
 
       .overflow-ellipsis {
+        width: 55%;
+        height: 4em;
+
         text-overflow: ellipsis;
-        white-space: nowrap;
         overflow: hidden;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.9em;
-        max-width: 90%;
+        max-width: 80%;
         margin: auto;
 
         @include mixins.tablet {
@@ -126,15 +125,28 @@
         }
 
       }
+    }
 
-      a {
-        color: $black;
-        font-size: 1.1em;
+    .infos {
+      font-size: 0.9em;
 
-        &:hover {
-          color: $yellow;
-        }
+      @include mixins.tablet {
+        font-size: 1.2em;
+      }
+    }
+
+    a {
+      color: $black;
+      font-size: 1.3em;
+      margin-bottom: 2em;
+
+      &:hover {
+        color: $yellow;
+      }
+      &:visited{
+        color:$green;
       }
     }
   }
+
 }

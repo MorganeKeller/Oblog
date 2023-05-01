@@ -47,7 +47,7 @@
                 "Content-Type": "application/json",
             },
         });
-
+console.log(response);
         // response error handling
         if (response.ok !== true) {
             error= 'Adresse e-mail ou mot de passe incorrect';

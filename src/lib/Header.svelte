@@ -43,7 +43,7 @@
                     use:link
                     href="/home"
                     title="Carnets de voyages"
-                    aria-label="accueil du site"
+                    aria-label="lien vers la page d'accueil du site"
                 >
                     <img src={logo} alt="Logo du site" />
                 </a>
