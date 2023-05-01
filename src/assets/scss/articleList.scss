@@ -8,53 +8,6 @@
 
   background-color: $blue;
   min-height: 100vh;
-<<<<<<< HEAD
-  margin-top: -1.9vh;
-
-  .content-center {
-    padding: .5em;
-
-    a {
-      margin-left: 4.5vw;
-      color: red;
-
-      @include mixins.ultra_wide {
-        font-size: 1.35em;
-        margin-left: 25vw;
-      }
-    }
-
-
-
-
-    h1 {
-      font-size: 2em;
-      text-align: center;
-
-      @include mixins.ultra_wide {
-        font-size: 2.5em;
-      }
-
-    }
-
-    h2 {
-      font-size: 2em;
-      margin-left: 4.5vw;
-
-      @include mixins.ultra_wide {
-        font-size: 2em;
-        margin-left: 25vw;
-      }
-    }
-
-    p {
-      margin-left: 4.5vw;
-
-      @include mixins.ultra_wide {
-        font-size: 1.8em;
-        margin-left: 25vw;
-        margin-right: 25vw;
-=======
   font-family: 'Amatic SC', sans-serif;
   display: flex;
   flex-direction: column;
@@ -106,152 +59,81 @@
         box-shadow: inset 0 0 1em $brown;
         background-color: $yellow;
         border: 1px solid $brown;
->>>>>>> Fixes
       }
     }
 
-<<<<<<< HEAD
-    .overflow-ellipsis {
-      text-overflow: ellipsis;
-      width: 85vw;
-      height: 15vh;
-      white-space: nowrap;
-      overflow: hidden;
-
-      @include mixins.tablet {
-        height: 10.5vh;
-      }
-
-      @include mixins.large {
-        height: 8.5vh;
-      }
-
-      @include mixins.ultra_wide {
-        height: 11.5vh;
-        width: 49vw;
-      }
-
-      ;
-    }
-
-=======
-  .each_articleList {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8em;
-    margin-bottom: 2em;
-    width: 90%;
-    margin: auto;
-
-    @include mixins.tablet {
-      width: 70%;
-    }
-
-    @include mixins.large {
-      width: 60%;
-    }
-
-    h2 {
-      font-family: 'Amatic SC', sans-serif;
-      font-size: 2em;
-      margin-bottom: 0 0 1em 0;
->>>>>>> Fixes
-
-      @include mixins.tablet {
-        font-size: 2.2em;
-      }
-
-<<<<<<< HEAD
-  .each_articleList {
-
-    margin: 3vh auto auto auto;
-
-    .taille {
-      width: 95%;
-      border-radius: 2rem;
-      margin: auto;
-
-      @include mixins.tablet {
-        width: 75%;
-        ;
-      }
-
-      @include mixins.large {
-        width: 55%;
-      }
-
-      @include mixins.ultra_wide {
-        height: 75vh;
-        width: 50%;
-=======
-      @include mixins.large {
-        font-size: 2.5em;
->>>>>>> Fixes
-      }
-
-    }
-
-<<<<<<< HEAD
-    h3 {
-      font-size: 1.5em;
-      margin-left: 4.5vw;
-
-      @include mixins.ultra_wide {
-        font-size: 2em;
-        margin-left: 25vw;
-      }
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-
-    }
-
-    time {
-
-      margin-left: 4.5vw;
-
-      @include mixins.ultra_wide {
-        font-size: 1.15em;
-        margin-left: 25vw;
-=======
-    .taille {
-      width: 90%;
-      border-radius: 2rem;
-      margin: auto;
-
-    }
-
-    .infos {
-      font-size: 0.9em;
-
-      @include mixins.tablet {
-        font-size: 1.2em;
-      }
-    }
-
-    .overflow-ellipsis {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
+    .each_articleList {
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.9em;
-      max-width: 90%;
+      font-size: 0.8em;
+      margin-bottom: 2em;
+      width: 90%;
       margin: auto;
 
       @include mixins.tablet {
-        font-size: 1.2em;
+        width: 70%;
       }
 
-    }
+      @include mixins.large {
+        width: 60%;
+      }
 
-    a {
-      color: $black;
-      font-size: 1.1em;
+      h2 {
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 2em;
+        margin-bottom: 0 0 1em 0;
 
-      &:hover {
-        color: $yellow;
->>>>>>> Fixes
+        @include mixins.tablet {
+          font-size: 2.2em;
+        }
+
+        @include mixins.large {
+          font-size: 2.5em;
+        }
+
+      }
+
+      img {
+        width: 10%;
+      }
+
+      // .taille {
+      //   
+      //   height:10%;
+      //   border-radius: 2rem;
+      //   margin: auto;
+
+      // }
+
+      .infos {
+        font-size: 0.9em;
+
+        @include mixins.tablet {
+          font-size: 1.2em;
+        }
+      }
+
+      .overflow-ellipsis {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9em;
+        max-width: 90%;
+        margin: auto;
+
+        @include mixins.tablet {
+          font-size: 1.2em;
+        }
+
+      }
+
+      a {
+        color: $black;
+        font-size: 1.1em;
+
+        &:hover {
+          color: $yellow;
+        }
       }
     }
   }
