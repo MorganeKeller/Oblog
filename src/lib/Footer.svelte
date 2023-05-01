@@ -5,13 +5,14 @@
     import LogoInsta from "../assets/img/instagram(1).svg";
     import LogoFile from "../assets/img/file-text(1).svg";
     import LogoUser from "../assets/img/user(1).svg";
+    import LogoPen from "../assets/img/pen-tool.svg";
 
     import { link } from "svelte-spa-router";
 
 </script>
 
 <footer>
-    <ul>
+    <ul id="footer-bloc">
         <div class="foot-elem">
             <li>nous contacter</li>
             <a use:link href="/contact" aria-label="redirection vers formulaire de contact"
@@ -41,8 +42,8 @@
             >
         </div>
         <div class="foot-elem">
-            <li>connexion</li>
-            <a use:link href="/login"><img src={LogoUser} alt="Logo de connexion" /></a>
+            <li>votre article</li>
+            <a use:link href="/createArticle"><img src={LogoPen} alt="Logo de stylo" /></a>
         </div>
     </ul>
 </footer>

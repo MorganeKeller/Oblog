@@ -12,10 +12,11 @@
             pas été trouvée...
         </p>
         <p>
-            Pour retourner à l'accueil c'est <a
+            Pour retourner à l'accueil c'est 
+            <a
                 use:link
                 href="/home"
-                aria-label="retour vers l'accueil">par ici</a
+                aria-label="retour vers l'accueil">&#x27BD; par ici</a
             >
         </p>
     </div>

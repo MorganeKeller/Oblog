@@ -9,8 +9,12 @@
 
   background-image: url(../img/sky.webp);
   background-size: cover;
+<<<<<<< HEAD
   background-repeat: repeat;
   //height: 100vh;
+=======
+  min-height: 100vh;
+>>>>>>> Fixes
   width: 100%;
   margin: auto;
 
@@ -19,24 +23,81 @@
   }
 
   h1 {
+<<<<<<< HEAD
     font-family: 'Amatic SC', sans-serif;
     text-align: center;
     font-size: 3em;
   }
   h2 {
+=======
+>>>>>>> Fixes
     font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+  }
+
+  p {
     text-align: center;
 
     @include mixins.tablet {
-      font-size: 2.5em;
+      font-size: 1.1em;
     }
 
     @include mixins.ultra_wide {
+<<<<<<< HEAD
       font-size: 3.5em;
+=======
+      font-size: 1.3em;
+>>>>>>> Fixes
     }
   }
 
+  .home-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+    width: 90%;
+    margin: auto;
+    background-color: $green;
+    border: solid 10px rgb(136,163,136, 0.1);
 
+    .article-bloc {
+     
+      
+
+      display: flex;
+      align-items: center;
+      width: 90%;
+      justify-content: space-between;
+      padding: 1em;
+
+      img {
+        width: 40%;
+        border-radius: 0.5rem;
+
+        // @include mixins.tablet {
+        //   height: 15vh;
+        //   width: 30vw;
+        // }
+
+        // @include mixins.large {
+        //   height: 20vh;
+        //   width: 30vw;
+        // }
+
+        // @include mixins.ultra_wide {
+        //   margin-left: 25vw;
+        //   height: 22.5vh;
+        //   width: 19vw;
+        // }
+      }
+
+<<<<<<< HEAD
 
 
 
@@ -103,6 +164,39 @@
       @include mixins.ultra_wide {
         margin: 0.5vh 5vw auto 46vw;
         font-size: 1.35em;
+=======
+      .overflow {
+        width: 55%;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 5em;
+
+        // @include mixins.tablet {
+        //   height: 15vh;
+        // }
+
+        // @include mixins.large {
+        //   height: 13.5vh;
+        // }
+
+        // @include mixins.ultra_wide {
+        //   height: 12vh;
+        //   width: 30vw;
+        // }
+
+      }
+    }
+
+    .home-writer-date {
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      p {
+        margin: 0;
+        padding: 0;
+>>>>>>> Fixes
       }
     }
   }

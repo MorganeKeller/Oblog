@@ -4,13 +4,11 @@
 @import url('https://fonts.bunny.net/css?family=amatic-sc:700');
 
 
-.aurore-boreale_background {
+.articleList-background {
 
   background-color: $blue;
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
   min-height: 100vh;
+<<<<<<< HEAD
   margin-top: -1.9vh;
 
   .content-center {
@@ -56,9 +54,63 @@
         font-size: 1.8em;
         margin-left: 25vw;
         margin-right: 25vw;
+=======
+  font-family: 'Amatic SC', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+
+    @include mixins.tablet {
+      font-size: 2.5em;
+    }
+
+    @include mixins.large {
+      font-size: 2.8em;
+    }
+  }
+
+  .content-center {
+    margin-bottom: 2em;
+
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8em;
+
+      @include mixins.tablet {
+        font-size: 1em;
+      }
+
+      @include mixins.large {
+        font-size: 1.1em;
       }
     }
 
+    a {
+      color: $black;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 0.5em;
+      border: none;
+      background-color: $blue;
+      box-shadow: inset 0 0 1em $brown;
+      padding: 0.5em;
+      text-decoration: none;
+      margin-bottom: 2em;
+
+      &:hover {
+        box-shadow: inset 0 0 1em $brown;
+        background-color: $yellow;
+        border: 1px solid $brown;
+>>>>>>> Fixes
+      }
+    }
+
+<<<<<<< HEAD
     .overflow-ellipsis {
       text-overflow: ellipsis;
       width: 85vw;
@@ -82,9 +134,33 @@
       ;
     }
 
+=======
+  .each_articleList {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+    width: 90%;
+    margin: auto;
 
-  }
+    @include mixins.tablet {
+      width: 70%;
+    }
 
+    @include mixins.large {
+      width: 60%;
+    }
+
+    h2 {
+      font-family: 'Amatic SC', sans-serif;
+      font-size: 2em;
+      margin-bottom: 0 0 1em 0;
+>>>>>>> Fixes
+
+      @include mixins.tablet {
+        font-size: 2.2em;
+      }
+
+<<<<<<< HEAD
   .each_articleList {
 
     margin: 3vh auto auto auto;
@@ -106,10 +182,15 @@
       @include mixins.ultra_wide {
         height: 75vh;
         width: 50%;
+=======
+      @include mixins.large {
+        font-size: 2.5em;
+>>>>>>> Fixes
       }
 
     }
 
+<<<<<<< HEAD
     h3 {
       font-size: 1.5em;
       margin-left: 4.5vw;
@@ -133,6 +214,44 @@
       @include mixins.ultra_wide {
         font-size: 1.15em;
         margin-left: 25vw;
+=======
+    .taille {
+      width: 90%;
+      border-radius: 2rem;
+      margin: auto;
+
+    }
+
+    .infos {
+      font-size: 0.9em;
+
+      @include mixins.tablet {
+        font-size: 1.2em;
+      }
+    }
+
+    .overflow-ellipsis {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9em;
+      max-width: 90%;
+      margin: auto;
+
+      @include mixins.tablet {
+        font-size: 1.2em;
+      }
+
+    }
+
+    a {
+      color: $black;
+      font-size: 1.1em;
+
+      &:hover {
+        color: $yellow;
+>>>>>>> Fixes
       }
     }
   }
