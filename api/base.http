@@ -15,16 +15,15 @@ http://chara-redif.vpnuser.lan:8055/users/fb2f60c3-7553-4c36-8445-71f64d6d3891
 
 
 ###
-POST http://chara-redif.vpnuser.lan:8055/users HTTP/1.1
+POST http://chara-redif.vpnuser.lan:8055/items/article HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliMGFkMjNkLWZmOTAtNDQxOC05MjM2LWFkNmM5MTU1ZTBhMiIsInJvbGUiOiI2ZjYxMmVjMS1lODU2LTQzZjQtYjJhNS1mOTNmOGI4NjY2MWIiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzAzODMwNiwiZXhwIjoxNjgzMDM5MjA2LCJpc3MiOiJkaXJlY3R1cyJ9.s20yJGFygX6_VqoSNK_QTdFBHUUdRNkSpttoOn1nUz4
 Content-Type: application/json
 
-{
-      "first_name": "Gilou",
-      "last_name": "Jean",
-      "pseudo": "JG",
-      "email": "JG@gmail.com",
-      "password": "1234",
-      "role": "f3bb8d0e-b035-4c9c-8ce7-928dd1171be9",
+{       
+        
+      "title": "La France et Avignon",
+      "content": "Avignon, c'est beau, mais malgré son beau palais des papes, son pont d'avignon est une arnaque",
+      "category_id": 1
     }
 
 
@@ -104,3 +103,5 @@ content-type: application/json
 
 ###
 HTTP://chara-redif.vpnuser.lan:8055/items/article_id
+
+
