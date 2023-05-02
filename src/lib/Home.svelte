@@ -55,10 +55,10 @@
                 <div class="article-bloc">
                     <a use:link href="/article/{article.id}"
                         ><img
-                            src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
-                                article.pictures +
-                                ".jpg"}
-                            alt="illustration"
+                            src={import.meta.env.VITE_URL_DIRECTUS + "assets/"+
+                                article.pictures 
+                                }
+                            aria-hidden=true alt="illustration"
                         /></a
                     >
                     <!-- import.meta.env.UPLOAD_DIRECTUS  -->

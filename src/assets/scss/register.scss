@@ -12,19 +12,18 @@
   align-items: center;
   background-image: url("../img/wood.jpg");
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   object-fit: cover;
   font-size: 1.2em;
   color: $yellow;
 
   @include mixins.large {
     font-size: 1.5em;
-
   }
 
   h1 {
-    font-size: 2em;
-    margin: 1em 0 0 0;
+    font-size: 3em;
+    margin: 0.5em 0 0 0;
     color: $yellow;
     text-shadow: #FC0 1px 0 10px;
 
@@ -40,16 +39,14 @@
     margin: 0.2em 0 0 0;
 
     p {
-      margin: 0.2em 0 0 0;
-
+      margin: 0.5em 0 0 0;
+      font-size: 1.5em;
+      margin: auto;
+      width: 95%;
     }
 
     a {
       color: $yellow;
-    }
-
-    a:hover {
-      text-decoration: dotted;
     }
 
   }
@@ -60,10 +57,22 @@
     flex-direction: column;
     margin: 1em;
     padding: 1em;
-background-color: $black;
+    background-color: $black;
+    width: 70%;
+
+    @include mixins.tablet {
+      width: 50%;
+    }
+
     label,
     input {
       margin: 0.2em 0;
+      font-size: 1em;
+
+      @include mixins.tablet {
+        font-size: 1.4em;
+      }
+
     }
   }
 
@@ -91,5 +100,16 @@ background-color: $black;
 
   button {
     margin: 2em;
+  }
+
+  p {
+    font-size: 2em;
+    text-align: center;
+    margin: 0.3em 0 1em 0;
+
+    a {
+      color: $yellow;
+
+    }
   }
 }

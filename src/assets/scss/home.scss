@@ -28,11 +28,11 @@
     text-align: center;
 
     @include mixins.tablet {
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
 
     @include mixins.ultra_wide {
-      font-size: 1.3em;
+      font-size: 1.4em;
     }
   }
 
@@ -48,7 +48,7 @@
     h2 {
       margin-bottom: 0.2em;
       font-family: 'Amatic SC', sans-serif;
-      font-size: 2em;
+      font-size: 3em;
 
       @include mixins.tablet {
 
@@ -64,14 +64,14 @@
 
     .article-bloc {
       display: flex;
-      align-items: center;
       width: 90%;
       justify-content: space-between;
       padding: 1em;
+      align-items:center;
 
       a {
         width: 40%;
-
+      margin:auto;
 
         img {
           width: 100%;
@@ -89,16 +89,16 @@
         text-overflow: ellipsis;
         overflow: hidden;
         height: 4.5em;
-        font-size: 1em;
+        font-size: 1.3em;
 
         @include mixins.tablet {
           height: 7em;
-          font-size: 1.2em;
+          font-size: 1.4em;
         }
 
         @include mixins.large {
-          height: 10.5vh;
-          font-size: 1.4em;
+          height: 10.5em;
+          font-size: 2em;
         }
 
       }
@@ -108,7 +108,7 @@
       display: flex;
       align-items: center;
       margin: 0;
-
+font-size: 1em;
       p {
         margin: 0;
         padding: 0;

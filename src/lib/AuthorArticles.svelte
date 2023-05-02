@@ -2,6 +2,7 @@
     import { link } from "svelte-spa-router";
     import "../assets/scss/authorArticles.scss";
 
+export let params={};
     var tabAuthor = [];
 
   const getAuthors = async function () {
@@ -21,8 +22,7 @@
     const getArticlesByAuthor = async () => {
         const endpoint =
             import.meta.env.VITE_URL_DIRECTUS +
-            "items/article?fields=*";
-        endpoint += "?filter[author.id][_eq]=" + author.id;
+            "items/article?filter[author][_eq]=" + params.id ;
 
         const response = await fetch(endpoint);
 
@@ -52,9 +52,8 @@
                 <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
                 <div class="article-bloc">
                     <img
-                        src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
-                            article.pictures +
-                            ".jpg"}
+                        src={import.meta.env.VITE_URL_DIRECTUS + "assets/"+
+                        article.pictures }
                         alt="illustration"
                     />
                     <!-- import.meta.env.UPLOAD_DIRECTUS  -->

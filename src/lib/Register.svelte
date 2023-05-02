@@ -64,8 +64,8 @@
     </p>
   </div>
 
-  <form on:submit={handleSubmit} aria-label="Informations d'enregistrement">
-    <div class="register-form">
+  <form on:submit={handleSubmit} aria-label="Informations d'enregistrement" class="register-form">
+   
       <label for="first_name">Nom</label>
       <input required name="first_name" placeholder="ex : NEWTON" />
       <label for="last_name">Prénom</label>
@@ -85,11 +85,11 @@
       <input required type="password" name="password" placeholder="********" />
 
       <button class="btn-primary" type="submit">Créer mon compte</button>
-    </div>
+   
   </form>
-  <div class="footer-register">
+  
     <p>
-      Tu as déjà un compte ? Connecte-toi <a use:link href="/login">ici</a>
+      Tu as déjà un compte ? Connecte-toi <a use:link href="/login">&#x27BD; ici</a>
     </p>
-  </div>
+  
 </section>

@@ -42,7 +42,7 @@ Content-Type: application/json
 
 ###
 # Chargement list article trié chronologiquement et affichage limité à 3
-http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
+http://chara-redif.vpnuser.lan:8055/items/article?sort=-created_at&limit=3&fields=*.*,pictures
 
 ###
 http://chara-redif.vpnuser.lan:8055/items/commentary?filter[article_id][_eq]=article_id HTTP/1.1
@@ -104,7 +104,7 @@ content-type: application/json
 
 ###
 
-http://chara-redif.vpnuser.lan:8055/users?fields=id
+http://chara-redif.vpnuser.lan:8055/users
 
 ###
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*?filter[users.id][_eq]=users.id
