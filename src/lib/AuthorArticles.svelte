@@ -1,21 +1,28 @@
 <script>
     import { link } from "svelte-spa-router";
     import "../assets/scss/authorArticles.scss";
-    import Article from "./Article.svelte";
 
-    // export const params = {};
-    // let users_id = params.id;
-    //export let users;
-export let users;
-let articles = [];
-articles = [...articles]
+    var tabAuthor = [];
+
+  const getAuthors = async function () {
+        const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
+
+        const response = await fetch(endpoint);
+
+        const json = await response.json();
+        let authors = json.data;
+        for (var index in authors) {
+            tabAuthor[authors[index].id] = authors[index].user_name;
+        }
+        return json.data;
+    };
+    getAuthors();
 
     const getArticlesByAuthor = async () => {
-       
-        let endpoint =
+        const endpoint =
             import.meta.env.VITE_URL_DIRECTUS +
-            "items/article?fields=*&sort=users.user_name";
-            // endpoint += "?filter[users.user_name][_eq]=" + users.user_name ;
+            "items/article?fields=*";
+        endpoint += "?filter[author.id][_eq]=" + author.id;
 
         const response = await fetch(endpoint);
 
@@ -26,6 +33,8 @@ articles = [...articles]
         // Gestion des erreurs d'extraction
         return json.data;
     };
+
+  
 </script>
 
 <section class="AuthorArticle-background">
@@ -53,9 +62,11 @@ articles = [...articles]
                     <p class="overflow">{article.content}</p>
                 </div>
                 <div class="home-writer-date">
-                    <p><strong>{article.author}</strong></p>
+                    <p><strong>{tabAuthor[article.author]}</strong></p>
                     <time datetime={article.created_at}
-                        >{new Date(article.created_at).toLocaleDateString("fr-FR")}</time
+                        >{new Date(article.created_at).toLocaleDateString(
+                            "fr-FR"
+                        )}</time
                     >
                 </div>
                 <a use:link href="/article/{article.id}">Lire la suite...</a>

@@ -2,10 +2,6 @@
     import { link } from "svelte-spa-router";
     import "../assets/scss/home.scss";
 
-    export let params = {};
-   
-    // Extrait l'id issue de la route
-    let article_id = params.id;
     var tabAuthor = [];
 
     const getArticles = async () => {
