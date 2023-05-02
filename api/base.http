@@ -108,3 +108,6 @@ http://chara-redif.vpnuser.lan:8055/users?fields=id
 
 ###
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*?filter[users.id][_eq]=users.id
+
+###
+http://chara-redif.vpnuser.lan:8055/items/article?fields=category_id

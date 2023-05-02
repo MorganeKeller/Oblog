@@ -1,6 +1,7 @@
 <script>
     import { link } from "svelte-spa-router";
     import "../assets/scss/authorArticles.scss";
+    import Article from "./Article.svelte";
 
     // export const params = {};
     // let users_id = params.id;
@@ -10,10 +11,7 @@ let articles = [];
 articles = [...articles]
 
     const getArticlesByAuthor = async () => {
-        if (articles.length == 0) {
-            return "Cet auteur n'a pas encore écrit d'article";
-        }
-
+       
         let endpoint =
             import.meta.env.VITE_URL_DIRECTUS +
             "items/article?fields=*&sort=users.user_name";

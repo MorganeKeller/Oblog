@@ -3,9 +3,10 @@
     import "../assets/scss/home.scss";
 
     export let params = {};
-
+   
     // Extrait l'id issue de la route
     let article_id = params.id;
+    var tabAuthor = [];
 
     const getArticles = async () => {
         // ?fields=*&sort=created_at&limit=3"
@@ -21,6 +22,20 @@
         // Gestion des erreurs d'extraction
         return json.data;
     };
+
+    const getAuthors = async function () {
+        const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
+
+        const response = await fetch(endpoint);
+
+        const json = await response.json();
+        let authors1 = json.data;
+        for (var index in authors1){
+            tabAuthor[authors1[index].id]=authors1[index].user_name;
+        }
+        return json.data;
+    };
+    getAuthors();
 </script>
 
 <section class="home-background">
@@ -55,7 +70,7 @@
                     <p class="overflow">{article.content}</p>
                 </div>
                 <div class="home-writer-date">
-                    <p><strong>{article.author}</strong></p>
+                    <p><strong>{tabAuthor[article.author]}</strong></p>
                     <time datetime={article.created_at}
                         >{new Date(article.created_at).toLocaleDateString(
                             "fr-FR"

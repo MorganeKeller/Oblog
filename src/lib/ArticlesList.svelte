@@ -6,6 +6,7 @@
 
   // Extrait l'id issue de la route
   let article_id = params.id;
+  var tabAuthor = [];
 
   let articles = [];
 
@@ -27,6 +28,19 @@
   };
 
   getArticles();
+  const getAuthors = async function () {
+        const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
+
+        const response = await fetch(endpoint);
+
+        const json = await response.json();
+        let authors1 = json.data;
+        for (var index in authors1){
+            tabAuthor[authors1[index].id]=authors1[index].user_name;
+        }
+        return json.data;
+    };
+    getAuthors();
 </script>
 
 <section class="articleList-background">
@@ -56,7 +70,7 @@
       </div>
 
       <div class="infos">
-        <b>{article.author}</b>
+        <b>{tabAuthor[article.author]}</b>
         <time datetime={article.created_at}>
           {new Date(article.created_at).toLocaleDateString("fr-FR")}
         </time>

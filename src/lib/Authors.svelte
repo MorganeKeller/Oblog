@@ -24,7 +24,7 @@
             <div class="one-author">
                <h2>{users.user_name}</h2>
 
-               <a use:link href="/authorArticles/{users.user_name}">Liste des articles</a>
+               <a use:link href="/authorArticles/{users.id}">Liste des articles</a>
             </div>
          {/each}
       </div>
