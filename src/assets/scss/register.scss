@@ -26,6 +26,7 @@
     font-size: 2em;
     margin: 1em 0 0 0;
     color: $yellow;
+    text-shadow: #FC0 1px 0 10px;
 
     @include mixins.large {
       font-size: 3em;
@@ -53,15 +54,13 @@
 
   }
 
-
-
   .register-form {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 1em;
-    //padding: 1em;
-
+    padding: 1em;
+background-color: $black;
     label,
     input {
       margin: 0.2em 0;

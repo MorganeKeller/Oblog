@@ -59,10 +59,11 @@
     <p>
       Avant de te créer un compte on souhaiterait que tu jettes un oeil à nos <a
         use:link
-        href="/cgu">&#x27BD; Conditions Générales</a
+        href="/cgu" aria-label="Redirection vers les Conditions Générales d'Utilisation">&#x27BD; Conditions Générales</a
       >
     </p>
   </div>
+
   <form on:submit={handleSubmit} aria-label="Informations d'enregistrement">
     <div class="register-form">
       <label for="first_name">Nom</label>

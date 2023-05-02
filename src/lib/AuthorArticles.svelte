@@ -1,7 +1,6 @@
 <script>
     import { link } from "svelte-spa-router";
     import "../assets/scss/authorArticles.scss";
-    import Article from "./Article.svelte";
 
     // export const params = {};
     // let users_id = params.id;
