@@ -27,7 +27,7 @@
 
 <article class="art">
     {#await getPublication()}
-    <!-- <h1>Le Japon</h1> -->
+    <p>Chargement en cours...</p>
     {:then publication}
         <h2>{publication.title}</h2>
         <p>
@@ -58,10 +58,7 @@
     <Comments {article_id} />
 </article>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> b581fa53c74234b20e42839d1e411f17ff7c1a78
 <style>
 </style>

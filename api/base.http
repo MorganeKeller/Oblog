@@ -16,7 +16,7 @@ http://chara-redif.vpnuser.lan:8055/users/fb2f60c3-7553-4c36-8445-71f64d6d3891
 
 ###
 POST http://chara-redif.vpnuser.lan:8055/items/article HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliMGFkMjNkLWZmOTAtNDQxOC05MjM2LWFkNmM5MTU1ZTBhMiIsInJvbGUiOiI2ZjYxMmVjMS1lODU2LTQzZjQtYjJhNS1mOTNmOGI4NjY2MWIiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzAzODMwNiwiZXhwIjoxNjgzMDM5MjA2LCJpc3MiOiJkaXJlY3R1cyJ9.s20yJGFygX6_VqoSNK_QTdFBHUUdRNkSpttoOn1nUz4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzExMzAzNiwiZXhwIjoxNjgzMTEzOTM2LCJpc3MiOiJkaXJlY3R1cyJ9.7ypnP-7ugSCTafA2t8OvpKuCv5QDMlTVgD2ScTzwxp8
 Content-Type: application/json
 
 {       
@@ -75,7 +75,7 @@ POST  HTTP://chara-redif.vpnuser.lan:8055/users/ HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY4MzgxOSwiZXhwIjoxNjgyNjg0NzE5LCJpc3MiOiJkaXJlY3R1cyJ9.XVUdHxnapZNIiR2GIvspra8ce817ibOhAcu-dIwndi0
 content-type: application/json
 
-{       "id":"",
+{      "id":"",
         "first_name": "Gilou",
       "last_name": "Olivier",
       "email": "oliv@msn.com",
@@ -100,5 +100,22 @@ content-type: application/json
       "user_name": "Giloliv",
       "commentary": [],
 }
+
+### Test comments
+POST  HTTP://chara-redif.vpnuser.lan:8055/items/commentary HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzEyMTc2MywiZXhwIjoxNjgzMTIyNjYzLCJpc3MiOiJkaXJlY3R1cyJ9.o7I6WYUUiezx8lxkXvALCNoPaBzq9UgKpBwIOZ5Wl-I
+content-type: application/json
+
+    {
+     
+        "text": "marion n'en a pas vu",
+        "article_id":"32",
+      
+        "author": "f6d187d8-d9d1-42a4-9da6-97e50ab1055b"
+    }
+
+###
+http://chara-redif.vpnuser.lan:8055/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzExOTIzMiwiZXhwIjoxNjgzMTIwMTMyLCJpc3MiOiJkaXJlY3R1cyJ9.6Fqkddh_Hh5r6wAHdGEfW7qW2xOmKCMCfsq-RzbJs7k
 
 
