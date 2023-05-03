@@ -32,7 +32,7 @@
     "/register": Register,
     "/404": Error,
     "/createArticle": CreateArticle,
-    "/categoryArticles/:id": CategoryArticles,
+    "/category/:categoryId": CategoryArticles,
     "*": Error,
     
   };

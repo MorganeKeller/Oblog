@@ -1,6 +1,7 @@
 <script>
     import "../assets/scss/comments.scss";
     import { link } from "svelte-spa-router";
+    import Article from "./Article.svelte";
     
 
     let commentary = [];
@@ -35,7 +36,7 @@
             return commentary;
         }
 
-        let endpoint = import.meta.env.VITE_URL_DIRECTUS + 'items/commentary';
+        let endpoint = import.meta.env.VITE_URL_DIRECTUS + 'items/commentary/';
 
         //endpoint modification to filter on the article id only
         endpoint += "?filter[article_id][_eq]=" + article_id;
@@ -64,7 +65,7 @@
     // Adding a comment in BDD with the API
     const postComment = async () => {
         const response = await fetch(
-            import.meta.env.VITE_URL_DIRECTUS + "items/commentary",
+            import.meta.env.VITE_URL_DIRECTUS + "items/commentary/",
             {
                 method: "POST",
                 headers: {
@@ -73,8 +74,9 @@
                 },
                 body: JSON.stringify({
                     text: commentText,
-                    author: commentAuthor,
-                    created_at: commentDate,
+                    article_id: article_id,
+                    author: localStorage.getItem("id"),
+                
                 }),
             }
         );
@@ -82,7 +84,7 @@
         const json = await response.json();
         return json.data;
     };
-    //console.log(postComment);
+    console.log(postComment);
 </script>
 
 <section class="comments" aria-labelledby="comments-title">
@@ -103,20 +105,11 @@
             <div aria-labelledby="comment-{commentary.id}" class="div-comment">
                 <p id="comment-{commentary.id}">{commentary.text}</p>
             </div>
-        {/each}
+        {/each};
 
         <form on:submit={handleSubmitForm} aria-labelledby="form-title">
             <h3 id="form-title">Votre commentaire</h3>
 
-            <label for="author">Votre pseudo</label>
-            <input type="text" required bind:value={commentAuthor} />
-
-            <label for="date">Date</label>
-            <input
-                type="date"
-                required
-                bind:value={commentDate}
-            />
 
             <label for="Commentary">Commentaire</label>
             <textarea

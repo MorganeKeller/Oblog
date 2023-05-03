@@ -82,5 +82,4 @@
     {/await}
 </section>
 
-<style>
-</style>
+
