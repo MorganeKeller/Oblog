@@ -70,7 +70,7 @@
     <h1>Connexion</h1>
     {#if isLoggedIn}
         <!-- on vérifie l'état de connexion pour afficher le bouton de déconnexion -->
-        <button on:click={handleLogout}>Se déconnecter</button>
+        <button class="unlog" on:click={handleLogout}>Se déconnecter</button>
     {:else}
         <section class="section-form">
             <form

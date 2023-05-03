@@ -1,6 +1,7 @@
 <script>
     import "../assets/scss/createArticle.scss";
     import { link } from "svelte-spa-router";
+    
     export let article_id;
 
     let article = [];
@@ -15,12 +16,12 @@
         event.preventDefault();
         console.log(articleDestination, articleTitle, articleText, articleDate);
 
-        //create a new comment
+        //create a new article
         const new_article = await postArticle();
-        //Adds a new comment to the list in order to trigger Svelte's watcher
+        //Adds a new article to the list in order to trigger Svelte's watcher
         //Regenerate the particle of DOM that depends on it
         article.push(new_article);
-        //Refresh the commentary list officially
+        //Refresh the article list officially
         article = [...article];
 
         //Empty the textarea
@@ -30,7 +31,7 @@
         articleTitle = "";
     };
 
-    //Function to retrieve comments
+    //Function to retrieve article
     const getArticle = async (article) => {
         //In order to avoid an useless request, we return directly the list
         if (article.length !== 0) {
@@ -39,7 +40,7 @@
 
         let endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/article";
 
-        //endpoint modification to filter on the articleicle id only
+        //endpoint modification to filter on the article_id id only
         endpoint += "?filter=[article_id][_eq]=" + article_id;
 
         const response = await fetch(endpoint, {
@@ -61,7 +62,7 @@
         return json.data;
     };
 
-    // Adding a article in BDD with the API
+    // Adding an article in BDD with the API
     const postArticle = async () => {
         const response = await fetch(
             import.meta.env.VITE_URL_DIRECTUS + "items/article/",
@@ -82,13 +83,14 @@
         const json = await response.json();
         return json.data;
     };
- 
 </script>
+
 
 <section id="create-article">
     {#await getArticle}
-        <h1>Votre article</h1>
+        <p>Chargement en cours...</p>
     {:then article}
+    <h1>Votre article</h1>
         <p>
             &#x27BD; Ici racontez nous vos périples, anecdotes, ce qui vous a
             émerveillé ou déçu, interpellé ou instruit...
@@ -100,11 +102,6 @@
             action=""
             method="POST"
         >
-            <!-- <div class="input-create" >
-                    <label for="date" >Date de rédaction</label>
-                    <input type="date" required bind:value={articleDate} pattern="\d{2}-\d{2}-\d{4}"/>
-            </div> -->
-
             <div class="input-create">
                 <label for="title">Titre de votre article</label>
                 <input
@@ -118,7 +115,7 @@
 
             <div class="input-create">
                 <label for="text" class="input-creat-textarea"
-                    >Et pour nous particleager votre aventure, c'est par là:</label
+                    >Et pour nous partager votre aventure, c'est par là:</label
                 >
                 <textarea
                     required
