@@ -91,9 +91,9 @@
         on:submit={handleSubmit}
       >
         <div class="register-form">
-          <label for="first_name">Nom</label>
+          <label for="first_name">Prénom</label>
           <input required name="first_name" placeholder="ex : NEWTON" />
-          <label for="last_name">Prénom</label>
+          <label for="last_name">Nom</label>
           <input required name="last_name" placeholder="ex : Isaac" />
           <label for="pseudo">Pseudo</label>
           <input required name="pseudo" placeholder="ex=Isaacnewton23" />

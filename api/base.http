@@ -103,7 +103,7 @@ content-type: application/json
 }
 
 ###
-<<<<<<< HEAD
+
 
 http://chara-redif.vpnuser.lan:8055/users
 
@@ -111,9 +111,7 @@ http://chara-redif.vpnuser.lan:8055/users
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*?filter[users.id][_eq]=users.id
 
 ###
-<<<<<<< HEAD
 http://chara-redif.vpnuser.lan:8055/items/article?fields=category_id
-=======
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*?filter[users.id][_eq]=users.id
 =======
 HTTP://chara-redif.vpnuser.lan:8055/items/article_id
@@ -172,5 +170,4 @@ content-type: application/json
 
 
 
->>>>>>> register
 >>>>>>> a105798fc45825580732257959671b904c76ecef

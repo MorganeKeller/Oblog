@@ -42,7 +42,7 @@
         publiés
     </p>
 
-    <!-- Appel de la fonciton pour récupérer les données -->
+    <!-- Appel de la fonction pour récupérer les données -->
     {#await getArticles()}
         <p>Chargement en cours...</p>
 

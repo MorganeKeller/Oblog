@@ -55,8 +55,6 @@
 
         //Extract error handling
         commentary = json.data;
-
-        
         return json.data;
     };
 
@@ -82,7 +80,7 @@
         const json = await response.json();
         return json.data;
     };
-    //console.log(postComment);
+   
 </script>
 
 <section class="comments" aria-labelledby="comments-title">
