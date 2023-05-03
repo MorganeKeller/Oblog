@@ -1,23 +1,32 @@
 <script>
   import { link } from "svelte-spa-router";
-  import "../assets/scss/categoryArticles.scss";
+  
 
   export let categoryId;
 
-  let articles = [];
+  let continents = ["Europe", "Asie", "Afrique", "Amérique du Nord", "Amérique du Sud", "Océanie"];
+  let articlesByContinent = {};
+
+  const getArticlesByContinent = async (continent) => {
+    const endpoint =
+      import.meta.env.VITE_URL_DIRECTUS +
+      `items/article?fields=*&filter[category_id][_eq]=${categoryId}&filter[continent][_eq]=${continent}&sort=-created_at`;
+    const response = await fetch(endpoint);
+    const json = await response.json();
+    articlesByContinent[continent] = json.data.map((article) => {
+      return {
+        ...article,
+        pictures:
+          import.meta.env.VITE_URL_DIRECTUS + "assets/" + article.pictures,
+      };
+    });
+  };
 
   const getArticlesByCategory = async () => {
-    try {
-      const response = await fetch(`${import.meta.env.VITE_URL_DIRECTUS}/items/article?fields=*&filter[category_id][_eq]=${categoryId}&sort=-created_at`);
-      if (response.ok) {
-        const json = await response.json();
-        articles = json.data;
-      } else {
-        console.error('Server returned ' + response.status + ' ' + response.statusText);
-      }
-    } catch (e) {
-      console.error('An error occurred while fetching articles', e);
-    }
+    const promises = continents.map(async (continent) => {
+      await getArticlesByContinent(continent);
+    });
+    await Promise.all(promises);
   };
 
   getArticlesByCategory();
@@ -26,21 +35,25 @@
 <section class="category-articles">
   <h1>Articles de la catégorie</h1>
 
-  <div class="articles-grid">
-    {#if articles.length > 0}
-      {#each articles as article}
-        <div class="article-card" use:link={`/article/${article.id}`}>
-          <h2>{article.title}</h2>
-          <div class="author-date">
-            <p>
-              Par: <b>{article.author}</b>
-              Le: <b><time datetime={article.created_at}>{new Date(article.created_at).toLocaleDateString('fr-FR')}</time></b>
-            </p>
+  {#each continents as continent}
+    <div class="articles-continent">
+      <h2>{continent}</h2>
+      {#if articlesByContinent[continent] && articlesByContinent[continent].length > 0}
+        {#each articlesByContinent[continent] as article}
+          <div class="article-card" use:link={`/article/${article.id}`}>
+            <h3>{article.title}</h3>
+            <img src={article.pictures} alt={article.title} />
+            <div class="author-date">
+              <p>
+                Par: <b>{article.author}</b>
+                Le: <b><time datetime={article.created_at}>{new Date(article.created_at).toLocaleDateString('fr-FR')}</time></b>
+              </p>
+            </div>
           </div>
-        </div>
-      {/each}
-    {:else}
-      <p>Aucun article trouvé.</p>
-    {/if}
-  </div>
+        {/each}
+      {:else}
+        <p>Aucun article trouvé pour ce continent.</p>
+      {/if}
+    </div>
+  {/each}
 </section>
