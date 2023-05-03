@@ -2,7 +2,7 @@
 <script>
     import { link } from "svelte-spa-router";
     import { push } from "svelte-spa-router";
-    import login from "../assets/scss/login.scss";
+    import "../assets/scss/login.scss";
 
     let email;
     let password;

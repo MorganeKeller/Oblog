@@ -16,6 +16,9 @@
   import CreateArticle from "./lib/CreateArticle.svelte";
 
   import Welcome from "./lib/Welcome.svelte";
+  //
+  import CategoryArticles from "./lib/CategoryArticles.svelte";
+  //
 
   const routes = {
     "/": Welcome,
@@ -30,7 +33,9 @@
     "/login": Login,
     "/register": Register,
     "/createArticle": CreateArticle,
+    "/categoryArticles/:id": CategoryArticles,
     "*": Error,
+    
   };
 </script>
 

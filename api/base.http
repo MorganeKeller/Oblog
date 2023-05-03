@@ -42,9 +42,6 @@ http://chara-redif.vpnuser.lan:8055/items/article?fields=id
 http://chara-redif.vpnuser.lan:8055/items/article
 
 ###
-<<<<<<< HEAD
-http://chara-redif.vpnuser.lan:8055/items/commentary?filter[article_id][_eq]=article_id
-=======
 http://chara-redif.vpnuser.lan:8055/items/article?fields=id, title, pictures, author, content, category_id
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
 
@@ -86,4 +83,58 @@ content-type: application/json
 
 ###
 HTTP://chara-redif.vpnuser.lan:8055/items/article_id
->>>>>>> 5ab6527c19b651898ee154ba2d284a3484cb85ca
+
+###
+http://chara-redif.vpnuser.lan:8055/items/category
+
+
+###
+http://chara-redif.vpnuser.lan:8055/items/article
+
+###
+GET  HTTP://chara-redif.vpnuser.lan:8055/users/me HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY5NDg1NSwiZXhwIjoxNjgyNjk1NzU1LCJpc3MiOiJkaXJlY3R1cyJ9.JUao4-s1A4XqLzTeX9yt7jiMJmcMJguVsTcweWfD5MY
+content-type: application/json
+
+###
+POST  HTTP://chara-redif.vpnuser.lan:8055/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "admin@example.com",
+    "password": "1234"
+}
+
+
+###
+POST HTTP://chara-redif.vpnuser.lan:8055/items/article HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzAyNzUzOSwiZXhwIjoxNjgzMDI4NDM5LCJpc3MiOiJkaXJlY3R1cyJ9.RnYIQpOj5d1hF6wyjUvMEUPTo36BV8HelDRipUlCceY
+content-type: application/json
+
+{
+    "title":"test",
+    "user_id":"2ca67595-d9d1-404c-9d80-2195ff2b93ad"
+}
+
+###
+
+GET HTTP://chara-redif.vpnuser.lan:8055/items/article?filter[category_id][_eq]=1 HTTP/1.1
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY5NDg1NSwiZXhwIjoxNjgyNjk1NzU1LCJpc3MiOiJkaXJlY3R1cyJ9.JUao4-s1A4XqLzTeX9yt7jiMJmcMJguVsTcweWfD5MY
+content-type: application/json
+
+///ajouter un auteur 
+
+###
+POST HTTP://chara-redif.vpnuser.lan:8055/items/commentary HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY5NjE4MiwiZXhwIjoxNjgyNjk3MDgyLCJpc3MiOiJkaXJlY3R1cyJ9.XkYLiAZNDgrHIVv_0N-4auONFOEow-0bkLYRwMf5S88
+content-type: application/json
+
+{
+    "text":"test",
+    "author":"chacha",
+    "user_id":"2ca67595-d9d1-404c-9d80-2195ff2b93ad"
+}
+
+
+
+
