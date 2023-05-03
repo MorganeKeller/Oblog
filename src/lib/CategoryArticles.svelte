@@ -1,10 +1,10 @@
 <script>
   import { link } from "svelte-spa-router";
-  
+  import { onMount } from 'svelte';
 
   export let categoryId;
 
-  let continents = ["Europe", "Asie", "Afrique", "Amérique du Nord", "Amérique du Sud", "Océanie"];
+  const continents = ["Europe", "Asie", "Afrique", "Amérique du Nord", "Amérique du Sud", "Océanie"];
   let articlesByContinent = {};
 
   const getArticlesByContinent = async (continent) => {
@@ -23,13 +23,14 @@
   };
 
   const getArticlesByCategory = async () => {
-    const promises = continents.map(async (continent) => {
-      await getArticlesByContinent(continent);
-    });
-    await Promise.all(promises);
+    for (let i = 0; i < continents.length; i++) {
+      await getArticlesByContinent(continents[i]);
+    }
   };
 
-  getArticlesByCategory();
+  onMount(() => {
+    getArticlesByCategory();
+  });
 </script>
 
 <section class="category-articles">
