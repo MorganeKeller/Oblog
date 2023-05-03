@@ -41,7 +41,7 @@ Content-Type: application/json
 
 ###
 # Chargement list article trié chronologiquement et affichage limité à 3
-http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
+http://chara-redif.vpnuser.lan:8055/items/article?sort=-created_at&limit=3&fields=*.*,pictures
 
 ###
 http://chara-redif.vpnuser.lan:8055/items/commentary?filter[article_id][_eq]=article_id HTTP/1.1
@@ -100,8 +100,5 @@ content-type: application/json
       "user_name": "Giloliv",
       "commentary": [],
 }
-
-###
-HTTP://chara-redif.vpnuser.lan:8055/items/article_id
 
 

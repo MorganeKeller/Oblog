@@ -8,8 +8,8 @@
 <section class="welcome-img">
   <div class="text-over">
     <h1>CARNETS DE VOYAGES</h1>
-    <a use:link class="button" href="/home"
-      >Entrer...<img src={plane} alt="logo illustratif d'avion" /></a
+    <a use:link href="/home" aria-label="Entrer dans le site" 
+      >Entrer...<img src={plane} alt="logo d'avion" /></a
     >
   </div>
 </section>
