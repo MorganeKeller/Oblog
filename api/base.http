@@ -101,6 +101,7 @@ content-type: application/json
       "commentary": [],
 }
 
+
 ### Test comments
 POST  HTTP://chara-redif.vpnuser.lan:8055/items/commentary HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzEyMTc2MywiZXhwIjoxNjgzMTIyNjYzLCJpc3MiOiJkaXJlY3R1cyJ9.o7I6WYUUiezx8lxkXvALCNoPaBzq9UgKpBwIOZ5Wl-I
@@ -118,4 +119,8 @@ content-type: application/json
 http://chara-redif.vpnuser.lan:8055/users/me
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzExOTIzMiwiZXhwIjoxNjgzMTIwMTMyLCJpc3MiOiJkaXJlY3R1cyJ9.6Fqkddh_Hh5r6wAHdGEfW7qW2xOmKCMCfsq-RzbJs7k
 
+
+
+###
+HTTP://chara-redif.vpnuser.lan:8055/items/category
 
