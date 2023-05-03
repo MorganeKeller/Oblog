@@ -1,17 +1,17 @@
 <script>
-    import '../assets/scss/createArticle.scss';
+    import "../assets/scss/createArticle.scss";
     import { link } from "svelte-spa-router";
-    export let article_id
+    export let article_id;
 
     let article = [];
 
-    let articleDestination= "";
+    let articleDestination = "";
     let articleTitle = "";
     let articleText = "";
     let articleDate = "";
     // let articlePictures = "";
 
-const handleSubmitForm = async (event) => {
+    const handleSubmitForm = async (event) => {
         event.preventDefault();
         console.log(articleDestination, articleTitle, articleText, articleDate);
 
@@ -24,7 +24,7 @@ const handleSubmitForm = async (event) => {
         article = [...article];
 
         //Empty the textarea
-        articleDestination="";
+        articleDestination = "";
         articleText = "";
         articleDate = "";
         articleTitle = "";
@@ -75,7 +75,6 @@ const handleSubmitForm = async (event) => {
                     title: articleTitle,
                     content: articleText,
                     category_id: articleDestination,
-                  
                 }),
             }
         );
@@ -83,63 +82,76 @@ const handleSubmitForm = async (event) => {
         const json = await response.json();
         return json.data;
     };
-console.log(postArticle);
-
+ 
 </script>
 
-
 <section id="create-article">
-
-
     {#await getArticle}
-        
         <h1>Votre article</h1>
+    {:then article}
+        <p>
+            &#x27BD; Ici racontez nous vos périples, anecdotes, ce qui vous a
+            émerveillé ou déçu, interpellé ou instruit...
+        </p>
 
-    {:then article} 
-            <p>
-                &#x27BD; Ici racontez nous vos périples, anecdotes, ce qui vous a
-                émerveillé ou déçu, interpellé ou instruit...
-            </p>
-
-            <form on:submit={handleSubmitForm} class="create-form" action="" method="POST">
-                
-        
-
-                <!-- <div class="input-create" >
+        <form
+            on:submit={handleSubmitForm}
+            class="create-form"
+            action=""
+            method="POST"
+        >
+            <!-- <div class="input-create" >
                     <label for="date" >Date de rédaction</label>
                     <input type="date" required bind:value={articleDate} pattern="\d{2}-\d{2}-\d{4}"/>
             </div> -->
 
-                <div class="input-create">
-                    <label for="title">Titre de votre article</label>
-                    <input type="text" minlength="2" maxlength="50" required bind:value={articleTitle}/>
-                </div>
+            <div class="input-create">
+                <label for="title">Titre de votre article</label>
+                <input
+                    type="text"
+                    minlength="2"
+                    maxlength="50"
+                    required
+                    bind:value={articleTitle}
+                />
+            </div>
 
-                <div class="input-create">
-                    <label for="text" class="input-creat-textarea"
-                        >Et pour nous particleager votre aventure, c'est par là:</label>
-                    <textarea required minlength="30" maxlength="800" bind:value={articleText}/>
-                </div>
+            <div class="input-create">
+                <label for="text" class="input-creat-textarea"
+                    >Et pour nous particleager votre aventure, c'est par là:</label
+                >
+                <textarea
+                    required
+                    minlength="30"
+                    maxlength="800"
+                    bind:value={articleText}
+                />
+            </div>
 
-                <div class="input-create">
-                    <label for="continent-select">Choisissez une destination: </label>
-                    <select name="destination" id="" required bind:value={articleDestination}>
-                        <option value="">----</option>
-                        <option value="1">Afrique</option>/>
-                        <option value="2">Europe</option>/>
-                        <option value="3">Amérique</option>/>
-                        <option value="4">Asie</option>/>
-                        <option value="5">Océanie</option>/>
-                    </select>
-                </div>
+            <div class="input-create">
+                <label for="continent-select"
+                    >Choisissez une destination:
+                </label>
+                <select
+                    name="destination"
+                    id=""
+                    required
+                    bind:value={articleDestination}
+                >
+                    <option value="">----</option>
+                    <option value="1">Afrique</option>/>
+                    <option value="2">Europe</option>/>
+                    <option value="3">Amérique</option>/>
+                    <option value="4">Asie</option>/>
+                    <option value="5">Océanie</option>/>
+                </select>
+            </div>
 
-                <input type="submit" value="Envoyer" class="input-create-submit" />
-            </form>
-            {:catch error}
+            <input type="submit" value="Envoyer" class="input-create-submit" />
+        </form>
+    {:catch error}
         <a use:link href="/login">Connectez-vous pour poster votre article</a>
-    {/await}        
-
-    
+    {/await}
 </section>
 
 <style>

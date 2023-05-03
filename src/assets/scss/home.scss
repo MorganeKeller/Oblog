@@ -13,15 +13,13 @@
   width: 100%;
   margin: auto;
 
-  @include mixins.large {
-    height: 1550px;
-  }
 
   h1 {
     font-family: 'Amatic SC', sans-serif;
     text-align: center;
     font-size: 3em;
     margin: 0 0 0.5em 0;
+    padding-top: 1em;
 
     @include mixins.tablet {
       font-size: 3.5em;
@@ -55,12 +53,9 @@
       font-size: 2.5em;
 
       @include mixins.tablet {
-        font-size: 3em;
+        font-size: 3.2em;
       }
 
-      @include mixins.large {
-        font-size: 3em;
-      }
     }
 
     .article-bloc {

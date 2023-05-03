@@ -28,19 +28,20 @@
   };
 
   getArticles();
+
   const getAuthors = async function () {
-        const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
+    const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
 
-        const response = await fetch(endpoint);
+    const response = await fetch(endpoint);
 
-        const json = await response.json();
-        let authors1 = json.data;
-        for (var index in authors1){
-            tabAuthor[authors1[index].id]=authors1[index].user_name;
-        }
-        return json.data;
-    };
-    getAuthors();
+    const json = await response.json();
+    let authors1 = json.data;
+    for (var index in authors1) {
+      tabAuthor[authors1[index].id] = authors1[index].user_name;
+    }
+    return json.data;
+  };
+  getAuthors();
 </script>
 
 <section class="articleList-background">
@@ -57,28 +58,26 @@
 
   {#each articles as article}
     <article class="each_articleList">
-      
       <h2>{article.title}</h2>
 
       <div class="phototext">
-        <a use:link href="/article/{article.id}"><img
-          class="taille"
-          src={article.pictures}
-          alt="Illustration en rapport avec l'article concerné"
-        /></a>
+        <a use:link href="/article/{article.id}"
+          ><img
+            class="taille"
+            src={article.pictures}
+            alt="Illustration en rapport avec l'article concerné"
+          /></a
+        >
         <p class="overflow-ellipsis">{article.content}</p>
       </div>
+      <a use:link href="/article/{article.id}">Lire la suite...</a>
 
       <div class="infos">
-        <b>{tabAuthor[article.author]}</b>
+        <p><strong>{tabAuthor[article.author]}</strong></p>
         <time datetime={article.created_at}>
           {new Date(article.created_at).toLocaleDateString("fr-FR")}
         </time>
       </div>
-
-      <a use:link href="/article/{article.id}">Lire la suite...</a>
     </article>
   {/each}
-
-  
 </section>

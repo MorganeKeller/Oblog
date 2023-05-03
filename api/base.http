@@ -4,7 +4,8 @@ http://chara-redif.vpnuser.lan:8055/items/commentary/1
 
 ###
 # Récupération du premier article
-http://chara-redif.vpnuser.lan:8055/items/article
+http://chara-redif.vpnuser.lan:8055/users
+
 ###
 # Récuparation d'un user 
 http://chara-redif.vpnuser.lan:8055/items/article?fields=user_id
