@@ -82,4 +82,4 @@ content-type: application/json
 }
 
 ###
-HTTP://chara-redif.vpnuser.lan:8055/items/article_id
+HTTP://chara-redif.vpnuser.lan:8055/items/category
