@@ -14,6 +14,8 @@
   import Register from "./lib/Register.svelte";
   import Error from "./lib/404.svelte";
   import CreateArticle from "./lib/CreateArticle.svelte";
+  import CategoryArticles from "./lib/CategoryArticles.svelte";
+
 
   import Welcome from "./lib/Welcome.svelte";
 
@@ -30,6 +32,7 @@
     "/login": Login,
     "/register": Register,
     "/createArticle": CreateArticle,
+    "/category/:categoryId": CategoryArticles,
     "*": Error,
   };
 </script>

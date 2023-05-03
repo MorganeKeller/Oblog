@@ -42,9 +42,6 @@ http://chara-redif.vpnuser.lan:8055/items/article?fields=id
 http://chara-redif.vpnuser.lan:8055/items/article
 
 ###
-<<<<<<< HEAD
-http://chara-redif.vpnuser.lan:8055/items/commentary?filter[article_id][_eq]=article_id
-=======
 http://chara-redif.vpnuser.lan:8055/items/article?fields=id, title, pictures, author, content, category_id
 http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
 
@@ -86,4 +83,3 @@ content-type: application/json
 
 ###
 HTTP://chara-redif.vpnuser.lan:8055/items/article_id
->>>>>>> 5ab6527c19b651898ee154ba2d284a3484cb85ca
