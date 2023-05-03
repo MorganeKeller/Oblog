@@ -26,7 +26,7 @@
     align-items: center;
     justify-content: center;
     font-size: 3em;
-   text-decoration: underline;
+    text-decoration: underline;
     margin: 0 0 0 0.7em;
 
     @include mixins.tablet {
@@ -45,14 +45,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin:0;
+    margin: 0;
 
     a {
       text-decoration: none;
       color: black;
       text-shadow: 0 0 20px white;
       margin: 1em;
-      display:flex;
+      display: flex;
       justify-content: center;
       cursor: pointer;
 
@@ -72,7 +72,7 @@
     a:hover {
       box-shadow: 0 0 40px $brown;
       border-radius: 1em;
-      padding:0;
+      padding: 0;
 
       span {
         display: block;

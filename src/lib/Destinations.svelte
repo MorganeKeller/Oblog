@@ -15,10 +15,20 @@
   <h1>Destinations</h1>
   <div class="destinations">
     <!-- Utiliser la fonction redirectToFilteredArticles avec l'ID de la catégorie correspondante -->
-    <a role="menuitem" on:click={() => redirectToFilteredArticles(1)}><span>&#x27BD;</span>Afrique</a>
-    <a role="menuitem" on:click={() => redirectToFilteredArticles(2)}><span>&#x27BD;</span>Europe</a>
-    <a role="menuitem" on:click={() => redirectToFilteredArticles(3)}><span>&#x27BD;</span>Amerique</a>
-    <a role="menuitem" on:click={() => redirectToFilteredArticles(4)}><span>&#x27BD;</span>Asie</a>
-    <a role="menuitem" on:click={() => redirectToFilteredArticles(5)}><span>&#x27BD;</span>Océanie</a>
+    <a role="menuitem" on:click={() => redirectToFilteredArticles(1)}
+      ><span>&#x27BD;</span>Afrique</a
+    >
+    <a role="menuitem" on:click={() => redirectToFilteredArticles(2)}
+      ><span>&#x27BD;</span>Europe</a
+    >
+    <a role="menuitem" on:click={() => redirectToFilteredArticles(3)}
+      ><span>&#x27BD;</span>Amerique</a
+    >
+    <a role="menuitem" on:click={() => redirectToFilteredArticles(4)}
+      ><span>&#x27BD;</span>Asie</a
+    >
+    <a role="menuitem" on:click={() => redirectToFilteredArticles(5)}
+      ><span>&#x27BD;</span>Océanie</a
+    >
   </div>
 </section>
