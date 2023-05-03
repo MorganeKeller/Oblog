@@ -42,9 +42,6 @@ http://chara-redif.vpnuser.lan:8055/items/article?fields=id
 http://chara-redif.vpnuser.lan:8055/items/article
 
 ###
-<<<<<<< HEAD
-http://chara-redif.vpnuser.lan:8055/items/commentary?filter[article_id][_eq]=article_id
-=======
 http://chara-redif.vpnuser.lan:8055/items/article?fields=id, title, pictures, author, content, category_id
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,7 +67,7 @@ http://chara-redif.vpnuser.lan:8055/users/
 
 ###
 POST  HTTP://chara-redif.vpnuser.lan:8055/users/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjQyNjczNywiZXhwIjoxNjgyNDI3NjM3LCJpc3MiOiJkaXJlY3R1cyJ9.HQmPYSADCOvqXqUDqa6xxki0l-hZ-uMoD5G_jG6kGNE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjQ5NzQ1OSwiZXhwIjoxNjgyNDk4MzU5LCJpc3MiOiJkaXJlY3R1cyJ9.miHyiyGfEkNrvOkiWCmxCzZuWHDnxTM1peNOrNyzJVM
 content-type: application/json
 
 {
@@ -100,7 +97,10 @@ content-type: application/json
 ###
 HTTP://chara-redif.vpnuser.lan:8055/items/article_id
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ab2b2d07687e67799ca1f5373d70bfda2705fb82
 =======
 >>>>>>> 5ab6527c19b651898ee154ba2d284a3484cb85ca
 >>>>>>> 7a43db67b1bae42a6425dc3973d73ce4fba194f3
+=======
+>>>>>>> 45d646324aab53af855d569fd63df23c6d011214

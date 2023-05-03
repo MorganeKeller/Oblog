@@ -26,90 +26,114 @@
       }
     }
 
-  }
 
 
-  h1 {
-    font-size: 2em;
-    text-align: center;
 
-    @include mixins.ultra_wide {
-      font-size: 2.5em;
-    }
-
-  }
-
-  h2 {
-    font-size: 2em;
-    margin-left: 4.5vw;
-
-    @include mixins.ultra_wide {
+    h1 {
       font-size: 2em;
-      margin-left: 25vw;
+      text-align: center;
+
+      @include mixins.ultra_wide {
+        font-size: 2.5em;
+      }
+
     }
-  }
 
+    h2 {
+      font-size: 2em;
+      margin-left: 4.5vw;
 
-  p {
-    margin-left: 4.5vw;
-
-    @include mixins.ultra_wide {
-      font-size: 1.5em;
-      margin-left: 25vw;
-      margin-right: 25vw;
+      @include mixins.ultra_wide {
+        font-size: 2em;
+        margin-left: 25vw;
+      }
     }
-  }
 
-}
+    p {
+      margin-left: 4.5vw;
 
-.each_articleList {
+      @include mixins.ultra_wide {
+        font-size: 1.8em;
+        margin-left: 25vw;
+        margin-right: 25vw;
+      }
+    }
 
-  margin: 3vh auto auto auto;
+    .overflow-ellipsis {
+      text-overflow: ellipsis;
+      width: 85vw;
+      height: 15vh;
+      white-space: nowrap;
+      overflow: hidden;
 
-  .taille {
-    width: 95%;
-    border-radius: 2rem;
-    margin: auto;
+      @include mixins.tablet {
+        height: 10.5vh;
+      }
 
-    @include mixins.tablet {
-      width: 75%;
+      @include mixins.large {
+        height: 8.5vh;
+      }
+
+      @include mixins.ultra_wide {
+        height: 11.5vh;
+        width: 49vw;
+      }
+
       ;
     }
 
-    @include mixins.large {
-      width: 55%;
-    }
-
-    @include mixins.ultra_wide {
-      height: 75vh;
-      width: 50%;
-    }
 
   }
 
-  h3 {
-    font-size: 1.5em;
-    margin-left: 4.5vw;
+  .each_articleList {
 
-    @include mixins.ultra_wide {
-      font-size: 2em;
-      margin-left: 25vw;
+    margin: 3vh auto auto auto;
+
+    .taille {
+      width: 95%;
+      border-radius: 2rem;
+      margin: auto;
+
+      @include mixins.tablet {
+        width: 75%;
+        ;
+      }
+
+      @include mixins.large {
+        width: 55%;
+      }
+
+      @include mixins.ultra_wide {
+        height: 75vh;
+        width: 50%;
+      }
+
     }
-  }
 
-  div {
-    display: flex;
-    flex-direction: column;
+    h3 {
+      font-size: 1.5em;
+      margin-left: 4.5vw;
 
-  }
+      @include mixins.ultra_wide {
+        font-size: 2em;
+        margin-left: 25vw;
+      }
+    }
 
-  time {
+    div {
+      display: flex;
+      flex-direction: column;
 
-    margin-left: 4.5vw;
+    }
 
-    @include mixins.ultra_wide {
-      font-size: 1.15em;
-      margin-left: 25vw;
+    time {
+
+      margin-left: 4.5vw;
+
+      @include mixins.ultra_wide {
+        font-size: 1.15em;
+        margin-left: 25vw;
+      }
     }
   }
 }
