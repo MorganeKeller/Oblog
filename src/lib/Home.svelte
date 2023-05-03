@@ -26,9 +26,19 @@
     console.log(getArticles);
 </script>
 
-<section class="home-background">
+
 
     <h1>Bienvenue dans nos Carnets de Voyages!</h1>
+<form action="#">
+    <select name="Tri" id="">
+      <option value="">Auteur</option>
+      <option value="">Date</option>
+
+    </select>
+    <input type="submit" value="Submit" />
+</form>
+   
+    <section class="home-background">
 
     <p>
         Vous voici arrivés à destination: ici découvrez les derniers articles
