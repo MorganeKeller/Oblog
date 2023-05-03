@@ -7,105 +7,150 @@
 //AUTHORARTICLES
 
 .AuthorArticle-background {
+  background-color: $blue;
+  min-height: 100vh;
+  margin: auto;
 
-    background-color:$blue;
-    min-height: 100vh;
-    margin: auto;
-  
-    @include mixins.large {
-      height: 1550px;
-    }
-  
-    h1 {
-      font-family: 'Amatic SC', sans-serif;
-      text-align: center;
-      font-size: 3em;
-      margin-top: 0;
-    }
-  
-    p {
-      text-align: center;
-  
-      @include mixins.tablet {
-        font-size: 1.1em;
-      }
-  
-      @include mixins.ultra_wide {
-        font-size: 1.3em;
-      }
-    }
-  
-    .home-article {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      justify-content: space-between;
-      font-size: 0.8em;
-      margin-bottom: 2em;
-      width: 90%;
-      margin: auto;
-  
-      h2 {
-        margin-bottom: 0.2em;
-      }
-  
-      .article-bloc {
-        display: flex;
-        align-items: center;
-        width: 90%;
-        justify-content: space-between;
-        padding: 1em;
-  
-        img {
-          width: 40%;
-          border-radius: 0.5rem;
-  
-          @include mixins.tablet {
-           
-            width: 35%;
-          }
-  
-          @include mixins.large {
-            width: 30%;
-          }
-  
-        }
-  
-        .overflow {
-          width: 55%;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          height: 4.5em;
-  
-          @include mixins.tablet {
-            height: 7em;
-          }
-  
-          @include mixins.large {
-            height: 11vh;
-          }
-  
-          // @include mixins.ultra_wide {
-          //   height: 12vh;
-          //   width: 30vw;
-          // }
-  
-        }
-      }
-  
-      .home-writer-date {
-        display: flex;
-        align-items: center;
-        margin: 0;
-  
-        p {
-          margin: 0;
-          padding: 0;
-        }
-      }
-      a{
-        margin-bottom: 1em;
-      }
+
+  h1 {
+    font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+
+    @include mixins.tablet {
+      font-size: 4.2em;
     }
   }
+
+  p {
+    text-align: center;
+
+    @include mixins.tablet {
+      font-size: 1.3em;
+    }
+
+    @include mixins.large {
+      font-size: 1.7em;
+    }
+  }
+
+  .home-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1em;
+    width: 90%;
+    margin: auto;
+
+    h2 {
+      font-family: 'Amatic SC', sans-serif;
+      margin-bottom: 0.2em;
+      font-size: 2em;
+
+      @include mixins.tablet {
+        font-size: 3em;
+      }
+
+      @include mixins.large {
+        font-size: 3.5em;
+      }
+
+    }
+
+    .article-bloc {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      padding: 1em;
+
+      a {
+        width: 45%;
+        margin: auto;
+        text-align: center;
+
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+
+          @include mixins.tablet {
+
+            width: 80%;
+          }
+
+          @include mixins.large {
+            width: 60%;
+          }
+
+        }
+      }
+
+      .overflow {
+        width: 55%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 3.7em;
+        line-height: 1.2em;
+
+        @include mixins.tablet {
+          height: 8em;
+          line-height: 1.5em;
+
+        }
+
+        @include mixins.large {
+          height: 15vh;
+          line-height: 2em;
+        }
+
+      }
+    }
+
+    a {
+      font-size: 1em;
+      color: $black;
+      width: 90%;
+      text-align: right;
+
+      @include mixins.tablet {
+
+        font-size: 1.5em;
+      }
+
+      &:hover {
+        color: $brown;
+      }
+    }
+
+  }
+
+  .home-writer-date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    justify-content: center;
+
+    @include mixins.tablet {
+      font-size: 1.2em;
+    }
+
+    p,
+    time {
+      font-size: 1.3em;
+      margin: 0;
+      padding: 0.5em;
+
+      @include mixins.tablet {
+        font-size: 1.5em;
+      }
+    }
+
+    p {
+      color: $black;
+    }
+
+  }
+
+}

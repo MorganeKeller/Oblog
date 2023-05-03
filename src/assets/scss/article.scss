@@ -8,7 +8,6 @@
 
 .art {
   font-family: 'Amatic SC', sans-serif;
-  font-size: 1.5em;
   background-image: linear-gradient(rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.5)), url("../img/Tokyo.jpg");
   background-size: cover;
@@ -16,7 +15,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
- 
+  font-size: 1.5em;
+
 
 
   @include mixins.mobile {
@@ -26,29 +26,18 @@
   }
 
   h1 {
-    text-shadow: #FC0 1px 0 10px;
     text-align: center;
     font-size: 3em;
     margin-bottom: 1rem;
   }
 
-  h2 {
-    margin: 3vh 3vw auto 4.5vw;
-    text-decoration: underline;
-    font-size: 1.5em;
 
-    @include mixins.large {
-      margin-top: 5vh;
-      font-size: 2em;
-
-    }
-  }
 
   p {
     font-family: Arial, Helvetica, sans-serif;
     margin: 3vh 3vw 1vh 4.5vw;
     font-size: 0.6em;
-    width:80%;
+    width: 80%;
 
 
     @include mixins.tablet {
@@ -71,12 +60,23 @@
   }
 
   .author_date {
-    width:80%;
+    width: 80%;
     display: flex;
     align-items: center;
-    //justify-content: space-evenly;
     margin-bottom: 1em;
 
+    button {
+      background-color: $blue;
+      padding: 0.4em;
+
+      @include mixins.tablet {
+
+        font-size: 1.1em;
+
+
+      }
+
+    }
   }
 
 }

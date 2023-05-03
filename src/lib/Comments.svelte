@@ -130,7 +130,7 @@
             <input type="submit" />
         </form>
     {:catch error}
-        <a use:link href="/login">Connectez-vous pour commenter</a>
+        <a class="logToComment" use:link href="/login">Connectez-vous pour commenter</a>
     {/await}
 </section>
 
