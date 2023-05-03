@@ -45,7 +45,7 @@
                 "Content-Type": "application/json",
             },
         });
-        console.log(response);
+    
         // response error handling
         if (response.ok !== true) {
             error = "Adresse e-mail ou mot de passe incorrect";
@@ -59,7 +59,6 @@
         return json.data.access_token;
     };
 
-    console.log(error);
 
     // on vérifie l'état de connexion pour afficher le bouton de déconnexion
     const token = window.localStorage.getItem("token");
@@ -67,9 +66,6 @@
         isLoggedIn = true;
     }
 
-    function goBack() {
-        window.history.back();
-    }
 </script>
 
 <div class="login-background">
@@ -109,7 +105,7 @@
                 </div>
 
                 <input
-                    on:click={goBack}
+                    
                     class="connexion"
                     aria-label="Se connecter"
                     type="submit"
