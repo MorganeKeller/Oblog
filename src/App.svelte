@@ -18,8 +18,6 @@
   import CreateArticle from "./lib/CreateArticle.svelte";
   import CategoryArticles from "./lib/CategoryArticles.svelte";
 
-
-
   const routes = {
     "/": Welcome,
     "/home": Home,
