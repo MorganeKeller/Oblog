@@ -48,7 +48,7 @@
         //Handling response errors
         if (response.ok === false) {
             //We trigger an error to enter the Svelte's catch
-            throw new Error("Erreur de récupération des commentarys");
+            throw new Error("Erreur de récupération des commentaries");
         }
 
         const json = await response.json();
@@ -56,12 +56,10 @@
         //Extract error handling
         commentary = json.data;
 
-        console.log(commentary);
         
         return json.data;
     };
 
-    console.log(getComments);
 
     // Adding a comment in BDD with the API
     const postComment = async () => {
@@ -110,14 +108,13 @@
         <form on:submit={handleSubmitForm} aria-labelledby="form-title">
             <h3 id="form-title">Votre commentaire</h3>
 
-            <label for="author">Nom/Pseudo</label>
+            <label for="author">Votre pseudo</label>
             <input type="text" required bind:value={commentAuthor} />
 
             <label for="date">Date</label>
             <input
                 type="date"
                 required
-                pattern="\d{4}-\d{2}-\d{2}"
                 bind:value={commentDate}
             />
 

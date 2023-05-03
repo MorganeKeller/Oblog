@@ -9,8 +9,7 @@
 
   background-image: url(../img/sky.webp);
   background-size: cover;
-  background-repeat: repeat;
-  //height: 100vh;
+  min-height: 100vh;
   width: 100%;
   margin: auto;
 
@@ -22,87 +21,111 @@
     font-family: 'Amatic SC', sans-serif;
     text-align: center;
     font-size: 3em;
+    margin-top: 0;
   }
-  h2 {
-    font-family: 'Amatic SC', sans-serif;
+
+  p {
     text-align: center;
 
     @include mixins.tablet {
-      font-size: 2.5em;
+      font-size: 1.1em;
     }
 
     @include mixins.ultra_wide {
-      font-size: 3.5em;
+      font-size: 1.3em;
     }
   }
 
+  .home-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+    width: 90%;
+    margin: auto;
 
+    h2 {
+      margin-bottom: 0.2em;
+      font-family: 'Amatic SC', sans-serif;
+      font-size: 2em;
 
+      @include mixins.tablet {
 
+        font-size: 2.5em;
+      }
 
+      @include mixins.large {
 
+        font-size: 3em;
+      }
 
-  img {
-    position: absolute;
-    height: 10vh;
-    width: 30vw;
-    margin: 0.5vh auto auto 1.5vw;
-    border-radius: 0.5rem;
-
-    @include mixins.tablet {
-      height: 15vh;
-      width: 30vw;
     }
 
-    @include mixins.large {
-      height: 20vh;
-      width: 30vw;
+    .article-bloc {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      justify-content: space-between;
+      padding: 1em;
+
+      a {
+        width: 40%;
+
+
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+
+          @include mixins.tablet {
+            width: 80%;
+          }
+
+        }
+      }
+
+      .overflow {
+        width: 55%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 4.5em;
+        font-size: 1em;
+
+        @include mixins.tablet {
+          height: 7em;
+          font-size: 1.2em;
+        }
+
+        @include mixins.large {
+          height: 10.5vh;
+          font-size: 1.4em;
+        }
+
+      }
     }
 
-    @include mixins.ultra_wide {
-      margin-left: 25vw;
-      height: 22.5vh;
-      width: 19vw;
-    }
-  }
+    .home-writer-date {
+      display: flex;
+      align-items: center;
+      margin: 0;
 
-  .overflow {
-    text-overflow: ellipsis;
-    width: 55vw;
-    height: 20.5vh;
-    overflow: hidden;
-
-    @include mixins.tablet {
-      height: 15vh;
+      p {
+        margin: 0;
+        padding: 0;
+      }
     }
 
-    @include mixins.large {
-      height: 13.5vh;
-    }
+    a {
+      margin-bottom: 1em;
+      font-size: 1.3em;
+      color: $black;
 
-    @include mixins.ultra_wide {
-      height: 12vh;
-      width: 30vw;
-    }
+      &:hover {
+        color: $brown;
+      }
 
-    ;
-  }
-
-  p,
-  a,
-  time {
-    position: relative;
-    margin: 0.5vh auto auto 34vw;
-    text-transform: lowercase;
-
-    @include mixins.tablet {
-      margin: 0.5vh 5vw auto 34vw;
-      padding-top: 0.8vh;
-      text-transform: none;
-
-      @include mixins.ultra_wide {
-        margin: 0.5vh 5vw auto 46vw;
-        font-size: 1.35em;
+      &:visited {
+        color: $green;
       }
     }
   }

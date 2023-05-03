@@ -70,21 +70,17 @@ footer {
   padding: 0.1em;
   position: sticky;
 
-
-
   @include mixins.tablet {
     font-size: 1.5em;
   }
 
-  @include mixins.large {
-    font-size: 2em;
-  }
-
-  ul {
+ 
+  #footer-bloc {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    //margin-left: -2em;
+    padding: 0;
+    margin:0.3em;
 
     .foot-elem {
       display: flex;
@@ -115,7 +111,3 @@ footer {
     }
   }
 }
-
-
-  
-  

@@ -1,17 +1,24 @@
 <script>
     import { link } from "svelte-spa-router";
-    import "../assets/scss/home.scss";
+    import "../assets/scss/authorArticles.scss";
 
-    export let params = {};
+    // export const params = {};
+    // let users_id = params.id;
+    //export let users;
+export let users;
+let articles = [];
+articles = [...articles]
 
-    // Extrait l'id issue de la route
-    let article_id = params.id;
+    const getArticlesByAuthor = async () => {
+        if (articles.length == 0) {
+            return "Cet auteur n'a pas encore écrit d'article";
+        }
 
-    const getArticles = async () => {
-        // ?fields=*&sort=created_at&limit=3"
-        const endpoint =
+        let endpoint =
             import.meta.env.VITE_URL_DIRECTUS +
-            "items/article?fields=*&limit=3&sort=-created_at";
+            "items/article?fields=*&sort=users.user_name";
+            // endpoint += "?filter[users.user_name][_eq]=" + users.user_name ;
+
         const response = await fetch(endpoint);
 
         // Gestion des erreurs de réponse
@@ -23,16 +30,11 @@
     };
 </script>
 
-<section class="home-background">
-    <h1>Bienvenue dans nos Carnets de Voyages!</h1>
+<section class="AuthorArticle-background">
+    <h1>Les articles</h1>
 
-    <p>
-        Vous voici arrivés à destination: ici découvrez les derniers articles
-        publiés
-    </p>
-
-    <!-- Appel de la fonciton pour récupérer les données -->
-    {#await getArticles()}
+    <p>Voici tous les articles de l'auteur</p>
+    {#await getArticlesByAuthor()}
         <p>Chargement en cours...</p>
 
         <!-- Des que les données sont prêtes, je les range dans la variable articles -->
@@ -42,14 +44,12 @@
                 <h2>{article.title}</h2>
                 <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
                 <div class="article-bloc">
-                    <a use:link href="/article/{article.id}"
-                        ><img
-                            src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
-                                article.pictures +
-                                ".jpg"}
-                            alt="illustration"
-                        /></a
-                    >
+                    <img
+                        src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
+                            article.pictures +
+                            ".jpg"}
+                        alt="illustration"
+                    />
                     <!-- import.meta.env.UPLOAD_DIRECTUS  -->
 
                     <p class="overflow">{article.content}</p>
@@ -57,9 +57,7 @@
                 <div class="home-writer-date">
                     <p><strong>{article.author}</strong></p>
                     <time datetime={article.created_at}
-                        >{new Date(article.created_at).toLocaleDateString(
-                            "fr-FR"
-                        )}</time
+                        >{new Date(article.created_at).toLocaleDateString("fr-FR")}</time
                     >
                 </div>
                 <a use:link href="/article/{article.id}">Lire la suite...</a>
@@ -67,6 +65,3 @@
         {/each}
     {/await}
 </section>
-
-<style>
-</style>

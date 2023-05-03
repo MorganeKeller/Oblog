@@ -4,136 +4,161 @@
 @import url('https://fonts.bunny.net/css?family=amatic-sc:700');
 
 
-.aurore-boreale_background {
+.articleList-background {
 
   background-color: $blue;
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
   min-height: 100vh;
-  margin-top: -1.9vh;
+  font-family: 'Amatic SC', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+
+    @include mixins.tablet {
+      font-size: 3.5em;
+    }
+
+    @include mixins.large {
+      font-size: 3.8em;
+    }
+  }
 
   .content-center {
-    padding: .5em;
+    margin-bottom: 2em;
 
-    a {
-      margin-left: 4.5vw;
-      color: red;
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8em;
 
-      @include mixins.ultra_wide {
-        font-size: 1.35em;
-        margin-left: 25vw;
+      @include mixins.tablet {
+        font-size: 1em;
+      }
+
+      @include mixins.large {
+        font-size: 1.1em;
       }
     }
 
+    a {
+      color: $black;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 0.5em;
+      border: none;
+      background-color: $blue;
+      box-shadow: inset 0 0 1em $brown;
+      padding: 0.5em;
+      text-decoration: none;
+      margin-bottom: 2em;
 
+      &:hover {
+        box-shadow: inset 0 0 1em $brown;
+        background-color: $yellow;
+        border: 1px solid $brown;
+      }
+    }
+  }
 
+  .each_articleList {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    @include mixins.tablet {
+      width: 80%;
+    }
 
-    h1 {
+    @include mixins.large {
+      width: 70%;
+    }
+
+    h2 {
+      font-family: 'Amatic SC', sans-serif;
       font-size: 2em;
-      text-align: center;
+      margin: 0.5em 0 0.3em 0;
 
-      @include mixins.ultra_wide {
+      @include mixins.tablet {
+        font-size: 2.2em;
+      }
+
+      @include mixins.large {
         font-size: 2.5em;
       }
 
     }
 
-    h2 {
-      font-size: 2em;
-      margin-left: 4.5vw;
-
-      @include mixins.ultra_wide {
-        font-size: 2em;
-        margin-left: 25vw;
-      }
-    }
-
-    p {
-      margin-left: 4.5vw;
-
-      @include mixins.ultra_wide {
-        font-size: 1.8em;
-        margin-left: 25vw;
-        margin-right: 25vw;
-      }
-    }
-
-    .overflow-ellipsis {
-      text-overflow: ellipsis;
-      width: 85vw;
-      height: 15vh;
-      white-space: nowrap;
-      overflow: hidden;
-
-      @include mixins.tablet {
-        height: 10.5vh;
-      }
-
-      @include mixins.large {
-        height: 8.5vh;
-      }
-
-      @include mixins.ultra_wide {
-        height: 11.5vh;
-        width: 49vw;
-      }
-
-      ;
-    }
-
-
-  }
-
-  .each_articleList {
-
-    margin: 3vh auto auto auto;
-
-    .taille {
-      width: 95%;
-      border-radius: 2rem;
-      margin: auto;
-
-      @include mixins.tablet {
-        width: 75%;
-        ;
-      }
-
-      @include mixins.large {
-        width: 55%;
-      }
-
-      @include mixins.ultra_wide {
-        height: 75vh;
-        width: 50%;
-      }
-
-    }
-
-    h3 {
-      font-size: 1.5em;
-      margin-left: 4.5vw;
-
-      @include mixins.ultra_wide {
-        font-size: 2em;
-        margin-left: 25vw;
-      }
-    }
-
-    div {
+    .phototext {
       display: flex;
-      flex-direction: column;
+      margin-bottom: 0.5em;
+      align-items: center;
 
+      .taille {
+        height: 100px;
+        border-radius: 2rem;
+        margin: auto 1em;
+        @include mixins.tablet {
+          height: 200px;
+
+        }
+  
+        @include mixins.large {
+         height: 250px;
+        }
+  
+      }
+
+      .overflow-ellipsis {
+        width: 55%;
+        height: 4em;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9em;
+        max-width: 80%;
+        margin: 1em;
+
+        @include mixins.tablet {
+          font-size: 1.2em;
+          height: 7em;
+
+        }
+        @include mixins.large {
+          height: 8em;
+         }
+ 
+      }
     }
 
-    time {
+    .infos {
+      font-size: 0.9em;
 
-      margin-left: 4.5vw;
+      @include mixins.tablet {
+        font-size: 1.2em;
+      }
+    }
 
-      @include mixins.ultra_wide {
-        font-size: 1.15em;
-        margin-left: 25vw;
+    a {
+      color: $black;
+      font-size: 1.3em;
+      margin-bottom: 2em;
+
+      &:hover {
+        color: $yellow;
+      }
+      &:visited{
+        color:$green;
       }
     }
   }
+
 }

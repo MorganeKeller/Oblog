@@ -1,68 +1,68 @@
 <script>
-    import { link } from "svelte-spa-router";
-    import "../assets/scss/articleList.scss";
-  
-    export let params = {};
-  
-    // Extrait l'id issue de la route
-    let article_id = params.id;
-  
-    let articles = [];
-  
-    const getArticles = async () => {
-      const endpoint =
-        import.meta.env.VITE_URL_DIRECTUS +
-        "items/article?fields=*&sort=created_at";
-      const response = await fetch(endpoint);
-      const json = await response.json();
-      articles = json.data.map((article) => {
-        return {
-          ...article,
-          pictures:
-            "http://chara-redif.vpnuser.lan/directus/uploads/" +
-            article.pictures +
-            ".jpg",
-        };
-      });
-    };
-  
-    getArticles();
-  </script>
-  
-  <section class="aurore-boreale_background">
+  import { link } from "svelte-spa-router";
+  import "../assets/scss/articleList.scss";
 
-    <div class="content-center">
+  export let params = {};
 
-      <h1>Nos expériences</h1>
-  
-      <p>
-        C'est ici que nous partageons nos expériences. Raconte-nous aussi tes
-        aventures!
-      </p>
-  
-      <a use:link href="/createArticle"> A ta plume!</a>
-  
-      {#each articles as article}
+  // Extrait l'id issue de la route
+  let article_id = params.id;
 
-        <article class="each_articleList">
+  let articles = [];
 
-          <h2>{article.title}</h2>
+  const getArticles = async () => {
+    const endpoint =
+      import.meta.env.VITE_URL_DIRECTUS +
+      "items/article?fields=*&sort=-created_at";
+    const response = await fetch(endpoint);
+    const json = await response.json();
+    articles = json.data.map((article) => {
+      return {
+        ...article,
+        pictures:
+          "http://chara-redif.vpnuser.lan/directus/uploads/" +
+          article.pictures +
+          ".jpg",
+      };
+    });
+  };
 
-          <div class="alignement">
-            <img class="taille" src={article.pictures} alt="illustration" />
-            <p><strong>{article.author}</strong></p>
-            <time datetime={article.created_at}
-              >{new Date(article.created_at).toLocaleDateString("fr-FR")}</time
-            >
-            <p class="overflow-ellipsis">{article.content}</p>
-        
+  getArticles();
+</script>
 
-            <a use:link href="/article/{article.id}">Lire la suite</a>
-          </div>
+<section class="articleList-background">
+  <h1>Nos expériences</h1>
 
-        </article>
+  <div class="content-center">
+    <p>
+      C'est ici que nous partageons nos expériences. N'hésite pas toi aussi à
+      nous raconter tes aventures!
+    </p>
 
-      {/each}
-    </div>
+    <a use:link href="/createArticle"> &#x27BD; A ta plume!</a>
+  </div>
 
-  </section>
+  {#each articles as article}
+    <article class="each_articleList">
+      
+      <h2>{article.title}</h2>
+
+      <div class="phototext">
+        <a use:link href="/article/{article.id}"><img
+          class="taille"
+          src={article.pictures}
+          alt="Illustration en rapport avec l'article concerné"
+        /></a>
+        <p class="overflow-ellipsis">{article.content}</p>
+      </div>
+
+      <div class="infos">
+        <b>{article.author}</b>
+        <time datetime={article.created_at}>
+          {new Date(article.created_at).toLocaleDateString("fr-FR")}
+        </time>
+      </div>
+
+      <a use:link href="/article/{article.id}">Lire la suite...</a>
+    </article>
+  {/each}
+</section>
