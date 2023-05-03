@@ -39,6 +39,7 @@
 
     <h1>Bienvenue dans nos Carnets de Voyages!</h1>
 
+
     <p>
         Vous voici arrivés à destination: ici découvrez les derniers articles
         publiés

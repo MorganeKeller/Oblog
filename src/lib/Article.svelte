@@ -27,7 +27,7 @@
 
 <article class="art">
     {#await getPublication()}
-    <!-- <h1>Le Japon</h1> -->
+    <p>Chargement en cours...</p>
     {:then publication}
         <h2>{publication.title}</h2>
         <p>
