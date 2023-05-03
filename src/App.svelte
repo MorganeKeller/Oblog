@@ -17,6 +17,12 @@
   import Error from "./lib/404.svelte";
   import CreateArticle from "./lib/CreateArticle.svelte";
   import CategoryArticles from "./lib/CategoryArticles.svelte";
+<<<<<<< HEAD
+=======
+
+
+  import Welcome from "./lib/Welcome.svelte";
+>>>>>>> categoryarticles
 
   const routes = {
     "/": Welcome,
@@ -32,7 +38,11 @@
     "/register": Register,
     "/404": Error,
     "/createArticle": CreateArticle,
+<<<<<<< HEAD
     "/categoryArticles/:id": CategoryArticles,
+=======
+    "/category/:categoryId": CategoryArticles,
+>>>>>>> categoryarticles
     "*": Error,
     
   };

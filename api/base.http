@@ -101,4 +101,5 @@ content-type: application/json
       "commentary": [],
 }
 
-
+###
+HTTP://chara-redif.vpnuser.lan:8055/items/category
