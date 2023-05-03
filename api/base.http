@@ -15,16 +15,15 @@ http://chara-redif.vpnuser.lan:8055/users/fb2f60c3-7553-4c36-8445-71f64d6d3891
 
 
 ###
-POST http://chara-redif.vpnuser.lan:8055/users HTTP/1.1
+POST http://chara-redif.vpnuser.lan:8055/items/article HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliMGFkMjNkLWZmOTAtNDQxOC05MjM2LWFkNmM5MTU1ZTBhMiIsInJvbGUiOiI2ZjYxMmVjMS1lODU2LTQzZjQtYjJhNS1mOTNmOGI4NjY2MWIiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzAzODMwNiwiZXhwIjoxNjgzMDM5MjA2LCJpc3MiOiJkaXJlY3R1cyJ9.s20yJGFygX6_VqoSNK_QTdFBHUUdRNkSpttoOn1nUz4
 Content-Type: application/json
 
-{
-      "first_name": "Gilou",
-      "last_name": "Jean",
-      "pseudo": "JG",
-      "email": "JG@gmail.com",
-      "password": "1234",
-      "role": "f3bb8d0e-b035-4c9c-8ce7-928dd1171be9",
+{       
+        
+      "title": "La France et Avignon",
+      "content": "Avignon, c'est beau, mais malgré son beau palais des papes, son pont d'avignon est une arnaque",
+      "category_id": 1
     }
 
 
@@ -102,75 +101,4 @@ content-type: application/json
       "commentary": [],
 }
 
-###
-<<<<<<< HEAD
 
-http://chara-redif.vpnuser.lan:8055/users
-
-###
-http://chara-redif.vpnuser.lan:8055/items/article?fields=*?filter[users.id][_eq]=users.id
-
-###
-<<<<<<< HEAD
-http://chara-redif.vpnuser.lan:8055/items/article?fields=category_id
-=======
-http://chara-redif.vpnuser.lan:8055/items/article?fields=*?filter[users.id][_eq]=users.id
-=======
-HTTP://chara-redif.vpnuser.lan:8055/items/article_id
-
-###
-http://chara-redif.vpnuser.lan:8055/items/category
-
-
-###
-http://chara-redif.vpnuser.lan:8055/items/article
-
-###
-GET  HTTP://chara-redif.vpnuser.lan:8055/users/me HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY5NDg1NSwiZXhwIjoxNjgyNjk1NzU1LCJpc3MiOiJkaXJlY3R1cyJ9.JUao4-s1A4XqLzTeX9yt7jiMJmcMJguVsTcweWfD5MY
-content-type: application/json
-
-###
-POST  HTTP://chara-redif.vpnuser.lan:8055/auth/login HTTP/1.1
-content-type: application/json
-
-{
-    "email": "admin@example.com",
-    "password": "1234"
-}
-
-
-###
-POST HTTP://chara-redif.vpnuser.lan:8055/items/article HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzAyNzUzOSwiZXhwIjoxNjgzMDI4NDM5LCJpc3MiOiJkaXJlY3R1cyJ9.RnYIQpOj5d1hF6wyjUvMEUPTo36BV8HelDRipUlCceY
-content-type: application/json
-
-{
-    "title":"test",
-    "user_id":"2ca67595-d9d1-404c-9d80-2195ff2b93ad"
-}
-
-###
-
-GET HTTP://chara-redif.vpnuser.lan:8055/items/article?filter[category_id][_eq]=1 HTTP/1.1
-//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY5NDg1NSwiZXhwIjoxNjgyNjk1NzU1LCJpc3MiOiJkaXJlY3R1cyJ9.JUao4-s1A4XqLzTeX9yt7jiMJmcMJguVsTcweWfD5MY
-content-type: application/json
-
-///ajouter un auteur 
-
-###
-POST HTTP://chara-redif.vpnuser.lan:8055/items/commentary HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY5NjE4MiwiZXhwIjoxNjgyNjk3MDgyLCJpc3MiOiJkaXJlY3R1cyJ9.XkYLiAZNDgrHIVv_0N-4auONFOEow-0bkLYRwMf5S88
-content-type: application/json
-
-{
-    "text":"test",
-    "author":"chacha",
-    "user_id":"2ca67595-d9d1-404c-9d80-2195ff2b93ad"
-}
-
-
-
-
->>>>>>> register
->>>>>>> a105798fc45825580732257959671b904c76ecef
