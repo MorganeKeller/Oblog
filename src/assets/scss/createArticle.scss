@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   background-color: $green;
-  min-height: 90vh;
+  min-height: 80vh;
   font-size: 1em;
   color: black;
 
@@ -38,7 +38,6 @@
       font-size: 1.5em;
       margin: 0.5em;
     }
-
   }
 
   button {
@@ -71,7 +70,6 @@
         padding: 0.5em;
         width: 50%;
         font-size: 1em;
-
       }
 
       textarea {
@@ -94,11 +92,19 @@
     max-width: 30%;
     margin: 1em auto;
 
-
     @include mixins.tablet {
       width: 60%;
       padding: 1em;
       font-size: 1.2em;
+    }
+  }
+
+  a {
+    color: black;
+    margin: 1em;
+
+    @include mixins.tablet {
+      font-size: 1.3em;
     }
   }
 }

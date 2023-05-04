@@ -81,6 +81,7 @@
 
   button {
     margin: 2em;
+    padding: 0.2em;
 
     @include mixins.tablet {
       font-size: 1em;

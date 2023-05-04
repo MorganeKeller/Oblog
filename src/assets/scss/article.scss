@@ -30,22 +30,22 @@
   }
 
   p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 3vh 3vw 1vh 4.5vw;
-    font-size: 0.6em;
-    width: 80%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.8em;
+    width: 70%;
+    text-align: center;
 
 
     @include mixins.tablet {
       margin-top: 3vh;
       margin-right: 4.5vw;
       text-transform: none;
-      font-size: 0.7em;
+      font-size: 1em;
     }
 
     @include mixins.large {
       text-transform: none;
-      font-size: 0.8em;
+      font-size: 1.5em;
       margin-top: 5vh;
     }
   }

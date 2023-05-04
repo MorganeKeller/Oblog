@@ -113,7 +113,7 @@
             placeholder="********"
           />
 
-          <button class="btn-primary" type="submit">Créer mon compte</button>
+          <button class="btn-creation" type="submit">Créer mon compte</button>
         </div>
       </form>
       <div class="footer-register">

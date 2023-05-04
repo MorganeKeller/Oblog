@@ -20,14 +20,17 @@
 
     i {
         margin: 1em 2em 0 2em;
-        font-size: 0.5em;
-
+        font-size: 0.6em;
     }
 
     p {
-        font-size: 0.6em;
-        margin-top: 0;
+        font-size: 0.7em;
+        margin: 0 0 0 1em;
         color: white;
+
+        @include mixins.tablet {
+            font-size: 1.1em;
+        }
     }
 
     a {
@@ -62,32 +65,46 @@
 
         label {
             font-size: 1.3em;
-        }
-
-        input {
-            margin: 0.5em 0 1em 0;
-            font-size: 1.5em;
-        }
-
-        .input-comment {
-            width: 200px;
-            height: 150px;
-            margin: 0.5em 0 1em 0;
 
             @include mixins.tablet {
-                width: 300px;
-                height: 170px;
-
+                font-size: 1.6em;
             }
+        }
 
-            @include mixins.large {
-                width: 500px;
-                height: 200px;
+        .submit {
+            font-size: 1em;
+            padding:0.5em;
+            margin:1em;
+            @include mixins.tablet {
+              
+                font-size: 1.5em;
+    
             }
+    
+        }
+    }
+
+    .input-comment {
+        width: 70%;
+        height: 80px;
+        font-size: 1em;
+        margin: 0.5em 0 1em 0;
+
+        @include mixins.tablet {
+            height: 110px;
+            font-size: 1.5em;
+
+        }
+
+        @include mixins.large {
+            height: 150px;
+            font-size: 1.7em;
+
         }
     }
 
     .logToComment {
         margin: 1em auto;
+
     }
 }

@@ -98,18 +98,11 @@
             <div aria-labelledby="comment-{commentary.id}" class="div-comment">
                 <p id="comment-{commentary.id}">{commentary.text}</p>
             </div>
-        {/each};
+        {/each}
 
         <form on:submit={handleSubmitForm} aria-labelledby="form-title">
             <h3 id="form-title">Votre commentaire</h3>
-
-            <label for="author">Votre pseudo</label>
-            <input type="text" required bind:value={commentAuthor} />
-
-            <label for="date">Date</label>
-            <input type="date" required bind:value={commentDate} />
-
-            <label for="Commentary">Commentaire</label>
+            <label for="Commentary"></label>
             <textarea
                 required
                 class="input-comment"
@@ -118,7 +111,7 @@
                 placeholder="Votre commentaire"
             />
 
-            <input type="submit" />
+            <input class="submit" type="submit" />
         </form>
     {:catch error}
         <a class="logToComment" use:link href="/login"

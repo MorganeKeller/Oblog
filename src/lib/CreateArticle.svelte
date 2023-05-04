@@ -144,7 +144,6 @@
 
             <input type="submit" value="Envoyer" class="input-create-submit" />
         </form>
-    {:catch error}
         <a use:link href="/login">Connectez-vous pour poster votre article</a>
     {/await}
 </section>

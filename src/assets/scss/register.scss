@@ -81,6 +81,13 @@
         font-size: 1.4em;
       }
     }
+    .btn-creation{
+      font-size:0.8em ;
+      @include mixins.tablet {
+        font-size: 1.4em;
+      }
+
+    }
   }
 
   .register-validation {
