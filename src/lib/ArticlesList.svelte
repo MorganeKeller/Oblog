@@ -57,6 +57,7 @@
   </div>
 
   {#each articles as article}
+  
     <article class="each_articleList">
       <h2>{article.title}</h2>
 
@@ -70,6 +71,7 @@
         >
         <p class="overflow-ellipsis">{article.content}</p>
       </div>
+
       <a use:link href="/article/{article.id}">Lire la suite...</a>
 
       <div class="infos">
