@@ -10,10 +10,9 @@
   }
 }
 
-
 @mixin ultra_wide {
   @media (min-width: 1440px) {
-      @content;
+    @content;
   }
 }
 

@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   background-color: $green;
-  min-height: 100vh;
+  min-height: 90vh;
   font-size: 1em;
   color: black;
 
@@ -23,7 +23,7 @@
     margin: 0.5em 0 0.5em 0;
 
     @include mixins.tablet {
-      font-size: 3em;
+      font-size: 4em;
       margin: 0.5em;
     }
   }
@@ -33,6 +33,12 @@
     opacity: 0.8;
     font-weight: bold;
     max-width: 70%;
+
+    @include mixins.tablet {
+      font-size: 1.5em;
+      margin: 0.5em;
+    }
+
   }
 
   button {
@@ -44,12 +50,6 @@
     display: flex;
     flex-direction: column;
     margin: 1.5em 0 1.5em 0;
-   
-
-    @include mixins.large {
-      font-size: 1.5em;
-      margin-top: 2.5em;
-    }
 
     .input-create {
       display: flex;
@@ -57,17 +57,48 @@
       align-items: center;
       margin: 0em 1em 1em 1em;
 
-      textarea {
-        height: 100px;
-        line-height: 15px;
-        padding: 10px;
-        width: 250%;
+      @include mixins.tablet {
+        font-size: 1.5em;
+        margin-top: 2.5em;
+      }
+
+      @include mixins.large {
+        font-size: 1.8em;
+        margin-top: 2.5em;
+      }
+
+      input {
+        padding: 0.5em;
+        width: 50%;
         font-size: 1em;
+
+      }
+
+      textarea {
+        height: 3em;
+        line-height: 1em;
+        padding: 10px;
+        width: 150%;
+        font-size: 1em;
+        padding: 1em;
+      }
+
+      select {
+        padding: 0.5em;
+        font-size: 1.2em;
       }
     }
+  }
 
-    .input-create-submit {
-      max-width: 30%;
+  .input-create-submit {
+    max-width: 30%;
+    margin: 1em auto;
+
+
+    @include mixins.tablet {
+      width: 60%;
+      padding: 1em;
+      font-size: 1.2em;
     }
   }
 }

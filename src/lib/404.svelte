@@ -1,6 +1,5 @@
 <script>
     import { link } from "svelte-spa-router";
-
     import "../assets/scss/error.scss";
 </script>
 
@@ -12,11 +11,9 @@
             pas été trouvée...
         </p>
         <p>
-            Pour retourner à l'accueil c'est 
-            <a
-                use:link
-                href="/home"
-                aria-label="retour vers l'accueil">&#x27BD; par ici</a
+            Pour retourner à l'accueil c'est
+            <a use:link href="/home" aria-label="retour vers l'accueil"
+                >&#x27BD; par ici</a
             >
         </p>
     </div>

@@ -72,7 +72,7 @@
                 "Content-Type": "application/json",
             },
         });
-    
+
         // response error handling
         if (response.ok !== true) {
             error = "Adresse e-mail ou mot de passe incorrect";
@@ -86,20 +86,18 @@
         return json.data.access_token;
     };
 
-
     // on vérifie l'état de connexion pour afficher le bouton de déconnexion
     const token = window.localStorage.getItem("token");
     if (token) {
         isLoggedIn = true;
     }
-
 </script>
 
 <div class="login-background">
     <h1>Connexion</h1>
     {#if isLoggedIn}
         <!-- on vérifie l'état de connexion pour afficher le bouton de déconnexion -->
-        <button on:click={handleLogout}>Se déconnecter</button>
+        <button class="unlog" on:click={handleLogout}>Se déconnecter</button>
     {:else}
         <section class="section-form">
             <form
@@ -108,7 +106,7 @@
                 aria-label="Informations de connexion"
             >
                 <div class="input-login">
-                    <label for="email" >E-mail: </label>
+                    <label for="email">E-mail: </label>
                     <input
                         bind:value={email}
                         required
@@ -132,7 +130,6 @@
                 </div>
 
                 <input
-                    
                     class="connexion"
                     aria-label="Se connecter"
                     type="submit"

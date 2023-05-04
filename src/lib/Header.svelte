@@ -28,16 +28,14 @@
 
 <header>
     <nav class="nav">
-        
-            <a
-                use:link
-                href="/home"
-                title="Carnets de voyages"
-                aria-label="lien vers la page d'accueil du site"
-            >
-                <img src={logo} alt="Logo du site" />
-            </a>
-       
+        <a
+            use:link
+            href="/home"
+            title="Carnets de voyages"
+            aria-label="lien vers la page d'accueil du site"
+        >
+            <img src={logo} alt="Logo du site" />
+        </a>
 
         <div class="nav-links">
             {#each links as item}

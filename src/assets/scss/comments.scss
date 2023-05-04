@@ -17,15 +17,17 @@
         margin-bottom: 1em;
         text-align: center;
     }
+
     i {
         margin: 1em 2em 0 2em;
         font-size: 0.5em;
-        
+
     }
+
     p {
         font-size: 0.6em;
         margin-top: 0;
-        color:white;
+        color: white;
     }
 
     a {
@@ -56,7 +58,6 @@
             font-size: 3em;
             font-family: 'Amatic SC', sans-serif;
             margin-bottom: 0.5em;
-
         }
 
         label {
@@ -66,13 +67,12 @@
         input {
             margin: 0.5em 0 1em 0;
             font-size: 1.5em;
-
         }
 
         .input-comment {
             width: 200px;
             height: 150px;
-            margin: 0.5em 0 1em 0 ;
+            margin: 0.5em 0 1em 0;
 
             @include mixins.tablet {
                 width: 300px;
@@ -83,10 +83,11 @@
             @include mixins.large {
                 width: 500px;
                 height: 200px;
-
             }
-
         }
     }
 
+    .logToComment {
+        margin: 1em auto;
+    }
 }

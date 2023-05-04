@@ -7,25 +7,28 @@
 
 .main-register {
   font-family: 'Amatic SC', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../img/wood.jpg");
   background-size: cover;
-  min-height: 100vh;
   object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   font-size: 1.2em;
   color: $yellow;
 
-  @include mixins.large {
+  @include mixins.tablet {
     font-size: 1.5em;
   }
 
   h1 {
-    font-size: 3em;
-    margin: 0.5em 0 0 0;
+    font-size: 2.8em;
+    margin: 0;
+    padding: 0.5em;
     color: $yellow;
     text-shadow: #FC0 1px 0 10px;
+    text-align: center;
 
     @include mixins.large {
       font-size: 3em;
@@ -39,10 +42,15 @@
     margin: 0.2em 0 0 0;
 
     p {
-      margin: 0.5em 0 0 0;
-      font-size: 1.5em;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0.5em auto;
+      font-size: 1em;
       margin: auto;
       width: 95%;
+
+      @include mixins.tablet {
+        font-size: 1.5em;
+      }
     }
 
     a {
@@ -55,7 +63,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 1em;
+    margin: 1em auto;
     padding: 1em;
     background-color: $black;
     width: 70%;
@@ -72,7 +80,6 @@
       @include mixins.tablet {
         font-size: 1.4em;
       }
-
     }
   }
 

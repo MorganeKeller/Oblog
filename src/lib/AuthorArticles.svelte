@@ -2,10 +2,10 @@
     import { link } from "svelte-spa-router";
     import "../assets/scss/authorArticles.scss";
 
-export let params={};
+    export let params = {};
     var tabAuthor = [];
 
-  const getAuthors = async function () {
+    const getAuthors = async function () {
         const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
 
         const response = await fetch(endpoint);
@@ -22,7 +22,8 @@ export let params={};
     const getArticlesByAuthor = async () => {
         const endpoint =
             import.meta.env.VITE_URL_DIRECTUS +
-            "items/article?filter[author][_eq]=" + params.id ;
+            "items/article?filter[author][_eq]=" +
+            params.id;
 
         const response = await fetch(endpoint);
 
@@ -33,8 +34,6 @@ export let params={};
         // Gestion des erreurs d'extraction
         return json.data;
     };
-
-  
 </script>
 
 <section class="AuthorArticle-background">
@@ -51,15 +50,18 @@ export let params={};
                 <h2>{article.title}</h2>
                 <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
                 <div class="article-bloc">
-                    <img
-                        src={import.meta.env.VITE_URL_DIRECTUS + "assets/"+
-                        article.pictures }
-                        alt="illustration"
-                    />
-                    <!-- import.meta.env.UPLOAD_DIRECTUS  -->
+                    <a use:link href="/article/{article.id}"
+                        ><img
+                            src={import.meta.env.VITE_URL_DIRECTUS +
+                                "assets/" +
+                                article.pictures}
+                            alt="illustration"
+                        /></a
+                    >
 
                     <p class="overflow">{article.content}</p>
                 </div>
+                <a use:link href="/article/{article.id}">Lire la suite...</a>
                 <div class="home-writer-date">
                     <p><strong>{tabAuthor[article.author]}</strong></p>
                     <time datetime={article.created_at}
@@ -68,7 +70,6 @@ export let params={};
                         )}</time
                     >
                 </div>
-                <a use:link href="/article/{article.id}">Lire la suite...</a>
             </article>
         {/each}
     {/await}

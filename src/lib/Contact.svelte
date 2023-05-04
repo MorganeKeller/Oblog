@@ -6,37 +6,38 @@
   }
 </script>
 
-<section>
-  <div class="container">
-    <h1>Formulaire de contact</h1>
+<section class="container">
+  <h1>Formulaire de contact</h1>
 
-    <p>
-      Voici notre page de contact! Si tu aperçois une coquille, une erreur, un
-      propos un peu déplacé avant qu'on ait pu mettre la main dessus, fais-le
-      nous savoir ici. Ou alors, si tu veux juste nous envoyer un petit message
-      pour nous dire ô combien on est chouette, ça marche aussi!
-    </p>
+  <p>
+    Voici notre page de contact! Si tu aperçois une coquille, une erreur, un
+    propos un peu déplacé avant qu'on ait pu mettre la main dessus, fais-le nous
+    savoir ici. Ou alors, si tu veux juste nous envoyer un petit message pour
+    nous dire ô combien on est chouettes, ça marche aussi!
+  </p>
 
-    <form>
-      <label>
-        Votre nom :
-        <input type="text" name="name" required />
-      </label>
+  <form>
+    <label for="name"> Votre nom :</label>
+    <input
+      type="text"
+      name="name"
+      required
+      aria-label="Veuillez entrer votre nom"
+    />
 
-      <label>
-        E-mail :
-        <input type="email" name="email" required />
-      </label>
+    <label for="email"> E-mail :</label>
+    <input
+      type="email"
+      name="email"
+      required
+      aria-label="Renseignez votre e-mail"
+    />
 
-      <label>
-        Votre message :
-        <textarea name="message" required />
-      </label>
+    <label for="text"> Votre message : </label>
+    <textarea name="message" required aria-label="Rédigez ici votre texte" />
 
-      <button type="submit">Envoyer</button>
-    </form>
+    <button type="submit">Envoyer</button>
+  </form>
 
-    
-    <button on:click={goBack}>Retour</button>
-  </div>
+  <button on:click={goBack}>Retour</button>
 </section>

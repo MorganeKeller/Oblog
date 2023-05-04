@@ -26,19 +26,16 @@
 
         const json = await response.json();
         let authors1 = json.data;
-        for (var index in authors1){
-            tabAuthor[authors1[index].id]=authors1[index].user_name;
+        for (var index in authors1) {
+            tabAuthor[authors1[index].id] = authors1[index].user_name;
         }
         return json.data;
     };
     getAuthors();
 </script>
 
-
 <section class="home-background">
-
     <h1>Bienvenue dans nos Carnets de Voyages!</h1>
-
 
     <p>
         Vous voici arrivés à destination: ici découvrez les derniers articles
@@ -54,20 +51,19 @@
         {#each articles as article}
             <article class="home-article">
                 <h2>{article.title}</h2>
-                <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
                 <div class="article-bloc">
                     <a use:link href="/article/{article.id}"
                         ><img
-                            src={import.meta.env.VITE_URL_DIRECTUS + "assets/"+
-                                article.pictures 
-                                }
-                            aria-hidden=true alt="illustration"
+                            src={import.meta.env.VITE_URL_DIRECTUS +
+                                "assets/" +
+                                article.pictures}
+                            aria-hidden="true"
+                            alt="illustration"
                         /></a
                     >
-                    <!-- import.meta.env.UPLOAD_DIRECTUS  -->
-
                     <p class="overflow">{article.content}</p>
                 </div>
+                <a use:link href="/article/{article.id}">Lire la suite...</a>
                 <div class="home-writer-date">
                     <p><strong>{tabAuthor[article.author]}</strong></p>
                     <time datetime={article.created_at}
@@ -76,7 +72,6 @@
                         )}</time
                     >
                 </div>
-                <a use:link href="/article/{article.id}">Lire la suite...</a>
             </article>
         {/each}
     {/await}

@@ -11,15 +11,20 @@
   background-image: url("../img/library.jpg");
   background-size: cover;
   object-fit: cover;
-  font-size: 2em;
   color: $yellow;
-  min-height: 80vh;
+  min-height: 100vh;
 
   h1 {
     margin: 0;
     text-shadow: #FC0 1px 0 10px;
     text-align: center;
     margin-bottom: 1em;
+    font-size: 3em;
+    padding-top: 1em;
+
+    @include mixins.tablet {
+      font-size: 3.5em;
+    }
   }
 
   p {
@@ -36,44 +41,35 @@
     }
 
     @include mixins.large {
-      columns:2;
+      columns: 3;
     }
 
     .one-author {
       display: inline-block;
-      width: 70%;
+      width: 60%;
       text-align: center;
       background-color: $black;
       opacity: 0.9;
-      font-size: 0.6em;
+      font-size: 1.1em;
       color: $yellow;
       border-radius: 1em;
       padding: 0;
       margin: auto auto 1em auto;
 
-
       @include mixins.tablet {
-        width: 60%;
-
+        font-size: 1.4em;
       }
 
       @include mixins.large {
-        width: 50%;
-
+        font-size: 1.6em;
       }
 
-      h2 {
-        margin: 0.1em;
-      }
+      a {
+        color: $yellow;
 
-      p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: small;
-
-        @include mixins.large {
-          font-size: medium;
+        h2 {
+          margin: 0.3em 0;
         }
-
       }
 
     }
