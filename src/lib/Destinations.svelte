@@ -12,10 +12,20 @@
   <h1>Destinations</h1>
   <div class="destinations">
     <!-- Utiliser la fonction redirectToFilteredArticles avec l'ID de la catégorie correspondante -->
-    <button type="button" on:click={() => redirectToFilteredArticles(1)}>Afrique</button>
-    <button type="button" on:click={() => redirectToFilteredArticles(2)}>Europe</button>
-    <button type="button" on:click={() => redirectToFilteredArticles(3)}>Amérique</button>
-    <button type="button" on:click={() => redirectToFilteredArticles(4)}>Asie</button>
-    <button type="button" on:click={() => redirectToFilteredArticles(5)}>Océanie</button>
+    <button type="button" on:click={() => redirectToFilteredArticles(1)}
+      ><span>&#x27BD;</span> Afrique</button
+    >
+    <button type="button" on:click={() => redirectToFilteredArticles(2)}
+      ><span>&#x27BD;</span> Europe</button
+    >
+    <button type="button" on:click={() => redirectToFilteredArticles(3)}
+      ><span>&#x27BD;</span> Amérique</button
+    >
+    <button type="button" on:click={() => redirectToFilteredArticles(4)}
+      ><span>&#x27BD;</span> Asie</button
+    >
+    <button type="button" on:click={() => redirectToFilteredArticles(5)}
+      ><span>&#x27BD;</span> Océanie</button
+    >
   </div>
 </section>

@@ -44,17 +44,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0;
 
-    a {
-      text-decoration: none;
-      color: black;
-      text-shadow: 0 0 20px white;
-      margin: 1em;
+    button {
       display: flex;
-      justify-content: center;
+      font-family: 'Amatic SC', sans-serif;
+      margin: auto;
+      background-color: transparent;
+      text-shadow: inset 0 0 20px white;
+      color: black;
+      font-size: 1em;
+      text-decoration: none;
+      opacity: 0.8;
+      border-radius: 1em;
+      border: none;
       cursor: pointer;
-
 
       span {
         display: none;
@@ -63,12 +66,16 @@
       @include mixins.tablet {
         font-size: 1.7em;
         padding: 0em;
-        margin: 0.5em;
         text-align: center;
+        justify-content: center;
+        margin: auto;
+        width: 90%;
+
+
       }
     }
 
-    a:hover {
+    button:hover {
       box-shadow: 0 0 40px $brown;
       border-radius: 1em;
       padding: 0;
