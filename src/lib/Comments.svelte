@@ -1,7 +1,6 @@
 <script>
     import "../assets/scss/comments.scss";
     import { link } from "svelte-spa-router";
-    
 
     let commentary = [];
     export let article_id;
@@ -35,7 +34,7 @@
             return commentary;
         }
 
-        let endpoint = import.meta.env.VITE_URL_DIRECTUS + 'items/commentary';
+        let endpoint = import.meta.env.VITE_URL_DIRECTUS + "items/commentary";
 
         //endpoint modification to filter on the article id only
         endpoint += "?filter[article_id][_eq]=" + article_id;
@@ -56,10 +55,8 @@
         //Extract error handling
         commentary = json.data;
 
-        
         return json.data;
     };
-
 
     // Adding a comment in BDD with the API
     const postComment = async () => {
@@ -82,15 +79,12 @@
         const json = await response.json();
         return json.data;
     };
-    //console.log(postComment);
 </script>
 
 <section class="comments" aria-labelledby="comments-title">
     <h2>Commentaires</h2>
     <!-- Function calling -->
     {#await getComments(commentary)}
-        <!-- {@debug commentary} -->
-
         <p>chargement en cours...</p>
         <!-- Once the promise is kept, we store the function's result in the variable "comments" -->
     {:then comments}
@@ -112,11 +106,7 @@
             <input type="text" required bind:value={commentAuthor} />
 
             <label for="date">Date</label>
-            <input
-                type="date"
-                required
-                bind:value={commentDate}
-            />
+            <input type="date" required bind:value={commentDate} />
 
             <label for="Commentary">Commentaire</label>
             <textarea
@@ -130,7 +120,9 @@
             <input type="submit" />
         </form>
     {:catch error}
-        <a class="logToComment" use:link href="/login">Connectez-vous pour commenter</a>
+        <a class="logToComment" use:link href="/login"
+            >Connectez-vous pour commenter</a
+        >
     {/await}
 </section>
 

@@ -8,34 +8,46 @@
     import LogoPen from "../assets/img/pen-tool.svg";
 
     import { link } from "svelte-spa-router";
-
 </script>
 
 <footer>
     <ul id="footer-bloc">
         <div class="foot-elem">
             <li>nous contacter</li>
-            <a use:link href="/contact" aria-label="redirection vers formulaire de contact"
+            <a
+                use:link
+                href="/contact"
+                aria-label="redirection vers formulaire de contact"
                 ><img src={LogoMail} alt="Logo Contact" /></a
             >
         </div>
         <div class="foot-elem">
             <li>nous suivre</li>
             <div class="foot-rs">
-                <a use:link href="/error" aria-label="Redirection vers notre page Twitter"
+                <a
+                    use:link
+                    href="/error"
+                    aria-label="Redirection vers notre page Twitter"
                     ><img src={LogoTwitter} alt="Logo Twitter" /></a
                 >
-                <a use:link href="/error" aria-label="Redirection vers notre page Tiktok"
+                <a
+                    use:link
+                    href="/error"
+                    aria-label="Redirection vers notre page Tiktok"
                     ><img src={LogoTiktok} alt="Logo Tiktok" /></a
                 >
-                <a use:link href="/error" aria-label="Redirection vers notre page Instagram"
+                <a
+                    use:link
+                    href="/error"
+                    aria-label="Redirection vers notre page Instagram"
                     ><img src={LogoInsta} alt="Logo Instagram" /></a
                 >
             </div>
         </div>
         <div class="foot-elem">
             <li>CGU</li>
-            <a use:link
+            <a
+                use:link
                 href="/cgu"
                 aria-label="Redirection vers les Conditions générales d'utilisation"
                 ><img src={LogoFile} alt="Logo documents" /></a
@@ -43,7 +55,12 @@
         </div>
         <div class="foot-elem">
             <li>votre article</li>
-            <a use:link href="/createArticle" aria-label="Redirection vers la création d'un article"><img src={LogoPen} alt="Logo de stylo" /></a>
+            <a
+                use:link
+                href="/createArticle"
+                aria-label="Redirection vers la création d'un article"
+                ><img src={LogoPen} alt="Logo de stylo" /></a
+            >
         </div>
     </ul>
 </footer>

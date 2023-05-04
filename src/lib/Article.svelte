@@ -8,7 +8,6 @@
     let article_id = params.id;
 
     const getPublication = async () => {
-        // ?fields=*.*.*&sort=created_at&limit=3"
         const endpoint =
             import.meta.env.VITE_URL_DIRECTUS + "items/article/" + article_id;
         const response = await fetch(endpoint);
@@ -27,7 +26,7 @@
 
 <article class="art">
     {#await getPublication()}
-    <p>Chargement en cours...</p>
+        <p>Chargement en cours...</p>
     {:then publication}
         <h1>{publication.title}</h1>
         <p>
@@ -57,8 +56,6 @@
     {/await}
     <Comments {article_id} />
 </article>
-
-
 
 <style>
 </style>

@@ -1,5 +1,6 @@
 <script>
   import Router from "svelte-spa-router";
+
   import Header from "./lib/Header.svelte";
   import Footer from "./lib/Footer.svelte";
 
@@ -34,7 +35,6 @@
     "/createArticle": CreateArticle,
     "/categoryArticles/:id": CategoryArticles,
     "*": Error,
-    
   };
 </script>
 

@@ -1,7 +1,7 @@
 <script>
   import { link } from "svelte-spa-router";
   import "../assets/scss/articleList.scss";
-  
+
   export let params = {};
 
   let category_id = params.category_id;
@@ -13,11 +13,11 @@
         import.meta.env.VITE_URL_DIRECTUS +
         `items/article?fields=*&filter[category_id][_eq]=${category_id}&sort=created_at`;
       const response = await fetch(endpoint);
-      
+
       if (!response.ok) {
         throw new Error(`API request failed: ${response.status}`);
       }
-      
+
       const json = await response.json();
 
       if (json.data) {
@@ -31,16 +31,15 @@
           };
         });
       } else {
-        console.error('Invalid API response:', json);
+        console.error("Invalid API response:", json);
       }
     } catch (error) {
-      console.error('Error fetching articles:', error);
+      console.error("Error fetching articles:", error);
     }
   };
 
   // Utilisez la fonction reactive de Svelte pour mettre à jour les articles lors de la modification de category_id
   $: category_id && getArticlesByCategory(category_id);
-
 </script>
 
 <section class="articles">
@@ -53,7 +52,8 @@
         <div class="author-date">
           <p>
             Par: <b>{article.author}</b>
-            Le: <b
+            Le:
+            <b
               ><time datetime={article.created_at}
                 >{new Date(article.created_at).toLocaleDateString(
                   "fr-FR"

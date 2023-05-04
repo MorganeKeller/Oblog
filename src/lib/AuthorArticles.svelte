@@ -52,12 +52,12 @@
                 <div class="article-bloc">
                     <a use:link href="/article/{article.id}"
                         ><img
-                        src={import.meta.env.VITE_URL_DIRECTUS +
-                            "assets/" +
-                            article.pictures}
-                        alt="illustration"
-                    /></a>
-                    <!-- import.meta.env.UPLOAD_DIRECTUS  -->
+                            src={import.meta.env.VITE_URL_DIRECTUS +
+                                "assets/" +
+                                article.pictures}
+                            alt="illustration"
+                        /></a
+                    >
 
                     <p class="overflow">{article.content}</p>
                 </div>

@@ -1,7 +1,7 @@
 <script>
     import "../assets/scss/createArticle.scss";
     import { link } from "svelte-spa-router";
-    
+
     export let article_id;
 
     let article = [];
@@ -10,7 +10,6 @@
     let articleTitle = "";
     let articleText = "";
     let articleDate = "";
-    // let articlePictures = "";
 
     const handleSubmitForm = async (event) => {
         event.preventDefault();
@@ -85,12 +84,11 @@
     };
 </script>
 
-
 <section id="create-article">
     {#await getArticle}
         <p>Chargement en cours...</p>
     {:then article}
-    <h1>Votre article</h1>
+        <h1>Votre article</h1>
         <p>
             &#x27BD; Ici racontez nous vos périples, anecdotes, ce qui vous a
             émerveillé ou déçu, interpellé ou instruit...

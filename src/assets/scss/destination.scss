@@ -15,7 +15,6 @@
   font-family: 'Amatic SC', sans-serif;
   text-shadow: 0 0 15px white;
 
-
   @include mixins.tablet {
     flex-direction: column;
     justify-content: space-evenly;
