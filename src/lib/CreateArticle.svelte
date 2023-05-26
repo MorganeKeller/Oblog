@@ -118,7 +118,7 @@
                 <textarea
                     required
                     minlength="30"
-                    maxlength="800"
+                    maxlength="3000"
                     bind:value={articleText}
                 />
             </div>

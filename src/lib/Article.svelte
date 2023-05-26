@@ -33,9 +33,8 @@
             {publication.content}
         </p>
         <img
-            src={"http://chara-redif.vpnuser.lan/directus/uploads/" +
-                publication.pictures +
-                ".jpg"}
+            src={import.meta.env.VITE_URL_DIRECTUS +
+               "assets/" + publication.pictures }
             alt=""
         />
 
