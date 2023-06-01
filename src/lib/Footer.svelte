@@ -1,11 +1,9 @@
 <script>
-    import LogoMail from "../assets/img/mail(1).svg";
-    import LogoTwitter from "../assets/img/twitter(1).svg";
-    import LogoTiktok from "../assets/img/tiktok.svg";
-    import LogoInsta from "../assets/img/instagram(1).svg";
-    import LogoFile from "../assets/img/file-text(1).svg";
-    import LogoUser from "../assets/img/user(1).svg";
-    import LogoPen from "../assets/img/pen-tool.svg";
+    import LogoMail from "../assets/img/mail.png" ;
+    import LogoTwitter from "../assets/img/twitter.png";
+    import LogoInsta from "../assets/img/instagram.png";
+    import LogoFile from "../assets/img/google-docs.png";
+    import LogoPen from "../assets/img/signature.png";
 
     import { link } from "svelte-spa-router";
 </script>
@@ -30,12 +28,7 @@
                     aria-label="Redirection vers notre page Twitter"
                     ><img src={LogoTwitter} alt="Logo Twitter" /></a
                 >
-                <a
-                    use:link
-                    href="/error"
-                    aria-label="Redirection vers notre page Tiktok"
-                    ><img src={LogoTiktok} alt="Logo Tiktok" /></a
-                >
+               
                 <a
                     use:link
                     href="/error"
@@ -64,3 +57,6 @@
         </div>
     </ul>
 </footer>
+<style>
+    
+</style>

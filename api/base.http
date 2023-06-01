@@ -3,6 +3,9 @@
 http://chara-redif.vpnuser.lan:8055/items/commentary/1
 
 ###
+https://oblogback-production.up.railway.app/assets/article?field=pictures
+
+###
 # Récupération du premier article
 http://chara-redif.vpnuser.lan:8055/users
 

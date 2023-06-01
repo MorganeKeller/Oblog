@@ -18,7 +18,7 @@
       return {
         ...article,
         pictures:
-          "http://chara-redif.vpnuser.lan/directus/uploads/" +
+        "https://oblogback-production.up.railway.app/assets/" +
           article.pictures +
           ".jpg",
       };

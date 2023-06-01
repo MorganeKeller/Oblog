@@ -30,7 +30,7 @@
     <nav class="nav">
         <a
             use:link
-            href="/home"
+            href="/"
             title="Carnets de voyages"
             aria-label="lien vers la page d'accueil du site"
         >
@@ -46,4 +46,5 @@
 </header>
 
 <style>
+    
 </style>

@@ -20,9 +20,8 @@
       return {
         ...article,
         pictures:
-          "http://chara-redif.vpnuser.lan/directus/uploads/" +
-          article.pictures +
-          ".jpg",
+          "https://oblogback-production.up.railway.app/assets/" +
+          article.pictures,
       };
     });
   };
