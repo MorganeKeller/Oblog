@@ -8,15 +8,13 @@
 .home-background {
   background-color: $yellow;
   min-height: 100%;
-
   margin: auto;
-
 
   h1 {
     font-family: 'Amatic SC', sans-serif;
     text-align: center;
     font-size: 4em;
-    margin: 0 0 0.5em 0;
+    margin: 1em 0 0.5em 0;
     padding-top: 1em;
 
     @include mixins.tablet {
@@ -122,7 +120,7 @@
     p,
     time {
       font-size: 1.3em;
-      margin: 0;
+      margin: 0 0 3.5em 0;
       padding: 0.5em;
 
       @include mixins.tablet {
