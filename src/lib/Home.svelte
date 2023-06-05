@@ -35,7 +35,7 @@
 </script>
 
 <section class="home-background">
-    <h1>Bienvenue dans nos Carnets de Voyages!</h1>
+    <h1>Bienvenue dans nos Carnets de Voyages! coucou</h1>
 
     <p>
         Vous voici arrivés à destination: ici découvrez les derniers articles

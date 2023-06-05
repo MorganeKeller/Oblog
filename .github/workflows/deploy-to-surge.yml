@@ -1,0 +1,36 @@
+name: Deploy to surge
+
+on:
+  push:
+    branches:
+      - main # Lorsqu'un push advient sur main, on lance le workflow
+      - PostProjectSCSS
+jobs:
+  build-deploy: 
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      # On récupère le code du dépôt Github dans l'environnement du runner
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Installe Node.js version 18
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      # Build the frontend
+      - name: Build
+        run: |
+          npm install
+          npm run build
+
+      # Deploy to surge
+      - name: Deploy
+        # SURGE_DEPLOY_URL et SURGE_TOKEN à configurer dans le fichier `.env` à la racine du dépôt
+        # On pourra trouver les valeurs dans l'interface surge.sh
+        run: | 
+          npm install --global surge
+          surge  ./dist --domain ${{ vars.SURGE_DEPLOY_URL }} --token ${{ secrets.SURGE_TOKEN }}
