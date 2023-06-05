@@ -35,7 +35,7 @@
 </script>
 
 <section class="home-background">
-    <h1>Bienvenue dans nos Carnets de Voyages! coucou</h1>
+    <h1>Bienvenue dans nos Carnets de Voyages!</h1>
 
     <p>
         Vous voici arrivés à destination: ici découvrez les derniers articles
@@ -57,10 +57,8 @@
                                 article.pictures}
                             aria-hidden="true"
                             alt="illustration"/></a>
-                        </div>
-                        <h2>{article.title}</h2>
-                        <!-- <p class="overflow">{article.content}</p> -->
-                <!-- <a use:link href="/article/{article.id}">Lire l'article...</a> -->
+                </div>
+                <h2>{article.title}</h2>
                 <div class="home-writer-date">
                     <strong>{tabAuthor[article.author]}</strong>
                     <time datetime={article.created_at}

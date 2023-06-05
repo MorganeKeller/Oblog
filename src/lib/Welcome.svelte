@@ -1,5 +1,5 @@
 <script>
-  import plane from "../assets/img/plane.png";
+  import plane from "../assets/img/avion.png";
 
   import { link } from "svelte-spa-router";
   import "../assets/scss/welcome.scss";
