@@ -10,21 +10,25 @@
   font-family: 'Amatic SC', sans-serif;
   background-image: url("../img/library.jpg");
   background-size: cover;
-  object-fit: cover;
   color: $yellow;
   min-height: 100vh;
 
   h1 {
-    margin: 0;
-    text-shadow: #FC0 1px 0 10px;
     text-align: center;
-    margin: 1em 0 0.5em 0;
+    color: $black;
     font-size: 3em;
     padding-top: 1em;
+    margin-top: 1em;
+    background: rgba(250, 250, 250, 0.4);
 
     @include mixins.tablet {
-      font-size: 3.5em;
+      font-size: 4em;
     }
+
+    @include mixins.large {
+      font-size: 5em;
+    }
+
   }
 
   p {
