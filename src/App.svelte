@@ -17,6 +17,7 @@
   import Register from "./lib/Register.svelte";
   import Error from "./lib/404.svelte";
   import CreateArticle from "./lib/CreateArticle.svelte";
+  import Quotes from "./lib/Quotes.svelte";
   import CategoryArticles from "./lib/CategoryArticles.svelte";
 
   const routes = {
@@ -34,6 +35,7 @@
     "/404": Error,
     "/createArticle": CreateArticle,
     "/category/:categoryId": CategoryArticles,
+    "/quotes": Quotes,
     "*": Error,
   };
 </script>

@@ -3,6 +3,7 @@
     import LogoTwitter from "../assets/img/twitter.png";
     import LogoInsta from "../assets/img/instagram.png";
     import LogoFile from "../assets/img/google-docs.png";
+    import LogoCita from "../assets/img/citation.png"
     import LogoPen from "../assets/img/signature.png";
 
     import { link } from "svelte-spa-router";
@@ -46,6 +47,16 @@
                 ><img src={LogoFile} alt="Logo documents" /></a
             >
         </div>
+        <div class="foot-elem">
+            <li>citations</li>
+            <a
+                use:link
+                href="/quotes"
+                aria-label="Redirection vers la page de citations"
+                ><img src={LogoCita} alt="Logo bulle de discussion" /></a
+            >
+        </div>
+
         <div class="foot-elem">
             <li>votre article</li>
             <a

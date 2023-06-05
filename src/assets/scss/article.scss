@@ -20,21 +20,19 @@
   @include mixins.mobile {
     background-image: linear-gradient(rgba(255, 255, 255, 0.7),
         rgba(255, 255, 255, 0.7)), url("../img/Tokyo.jpg");
-
   }
 
   h1 {
     text-align: center;
     font-size: 3em;
-    margin-bottom: 1rem;
+    margin: 2em 0 0 0;
   }
 
   p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 0.8em;
     width: 70%;
     text-align: center;
-
 
     @include mixins.tablet {
       margin-top: 3vh;

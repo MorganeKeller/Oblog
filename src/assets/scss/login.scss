@@ -21,7 +21,7 @@
 
   h1 {
     font-size: 3em;
-    margin: 0;
+    margin: 2em 0 0 0;
 
     @include mixins.tablet {
       font-size: 4em;
