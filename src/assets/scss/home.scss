@@ -6,19 +6,21 @@
 //HOME
 
 .home-background {
-  background-color: $yellow;
-  min-height: 100%;
-  margin: auto;
+  background: linear-gradient($yellow, white);
+  min-height: 100vh;
+  margin-top: 1em;
+  width: 100%;
 
   h1 {
     font-family: 'Amatic SC', sans-serif;
     text-align: center;
-    font-size: 4em;
-    margin: 1em 0 0.5em 0;
-    padding-top: 1em;
+    font-size: 3em;
+    margin: 2em 0 0 0;
+
+    background: rgba(250, 250, 250, 0.4);
 
     @include mixins.tablet {
-      font-size: 5em;
+      font-size: 4em;
     }
   }
 
@@ -39,9 +41,11 @@
     align-items: center;
     flex-direction: column;
     font-size: 0.8em;
-    margin-bottom: 2em;
     width: 90%;
     margin: auto;
+    border: solid 1px grey;
+    margin-bottom: 4em;
+
 
     h2 {
       margin: 0em;
@@ -56,10 +60,10 @@
 
     .article-bloc {
       display: flex;
-      width: 90%;
+      width: 100%;
 
       a {
-        width: 45%;
+        width: 100%;
         margin: auto;
         text-align: center;
 
@@ -68,33 +72,34 @@
           border-radius: 0.5rem;
 
           @include mixins.tablet {
-            width: 80%;
+            width: 50%;
           }
         }
       }
 
-      .overflow {
-        width: 50%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        height: 4.7em;
-        font-size: 1.3em;
-        display: flex;
-
-        @include mixins.tablet {
-          height: 7em;
-          font-size: 1.4em;
-        }
-
-        @include mixins.large {
-          height: 10.5em;
-          font-size: 2em;
-        }
-      }
     }
 
+    // .overflow {
+    //   width: 90%;
+    //   text-overflow: ellipsis;
+    //   white-space: nowrap;
+    //   overflow: hidden;
+    //   font-size: 1em;
+
+
+    //   @include mixins.tablet {
+    //     height: 7em;
+    //     font-size: 1.4em;
+    //   }
+
+    //   @include mixins.large {
+    //     height: 10.5em;
+    //     font-size: 2em;
+    //   }
+    // }
+
     a {
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: $black;
       width: 90%;
       text-align: right;
@@ -112,15 +117,13 @@
 
   .home-writer-date {
     display: flex;
-    align-items: center;
-    margin-bottom: 1.5em;
+    text-align: left;
     font-size: 1em;
     justify-content: space-evenly;
 
-    p,
+    strong,
     time {
       font-size: 1.3em;
-      margin: 0 0 3.5em 0;
       padding: 0.5em;
 
       @include mixins.tablet {
@@ -129,7 +132,7 @@
       }
     }
 
-    p {
+    strong {
       color: $brown;
     }
   }

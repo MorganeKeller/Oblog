@@ -1,0 +1,35 @@
+@use 'variables'as *;
+@use 'mixins';
+
+@import url('https://fonts.bunny.net/css?family=amatic-sc:700');
+
+//QUOTES
+.quotes {
+    background: linear-gradient($brown, white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+width:100%;
+    h1 {
+        background: rgba(250, 250, 250, 0.4);
+        font-size: 3em;
+        font-family: 'Amatic SC', sans-serif;
+        text-align: center;
+        margin: 2em 0 0 0;
+    }
+
+    .quote-p {
+        width: 90%;
+        margin:2em auto 2em auto;
+    }
+
+    .phrases {
+        margin-bottom: 4em;
+
+        .quote {
+            width: 80%;
+            margin: auto;
+            padding:0.5em;
+        }
+    }
+}

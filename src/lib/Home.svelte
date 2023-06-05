@@ -50,22 +50,19 @@
     {:then articles}
         {#each articles as article}
             <article class="home-article">
-                <h2>{article.title}</h2>
                 <div class="article-bloc">
-                    <a use:link href="/article/{article.id}"
-                        ><img
-                            src={import.meta.env.VITE_URL_DIRECTUS +
+                    <a use:link href="/article/{article.id}">
+                        <img src={import.meta.env.VITE_URL_DIRECTUS +
                                 "assets/" +
                                 article.pictures}
                             aria-hidden="true"
-                            alt="illustration"
-                        /></a
-                    >
-                    <p class="overflow">{article.content}</p>
-                </div>
-                <a use:link href="/article/{article.id}">Lire la suite...</a>
+                            alt="illustration"/></a>
+                        </div>
+                        <h2>{article.title}</h2>
+                        <!-- <p class="overflow">{article.content}</p> -->
+                <!-- <a use:link href="/article/{article.id}">Lire l'article...</a> -->
                 <div class="home-writer-date">
-                    <p><strong>{tabAuthor[article.author]}</strong></p>
+                    <strong>{tabAuthor[article.author]}</strong>
                     <time datetime={article.created_at}
                         >{new Date(article.created_at).toLocaleDateString(
                             "fr-FR"
@@ -76,5 +73,3 @@
         {/each}
     {/await}
 </section>
-
-
