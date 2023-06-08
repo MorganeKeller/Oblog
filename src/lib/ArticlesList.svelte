@@ -44,41 +44,42 @@
 </script>
 
 <section class="articleList-background">
-  <h1>Nos expériences</h1>
+  <h1>Tous nos articles</h1>
 
   <div class="content-center">
     <p>
-      C'est ici que nous partageons nos expériences. N'hésite pas toi aussi à
-      nous raconter tes aventures!
+      C'est ici que tu trouveras recensés tous nos articles!<br /> N'hésite pas toi
+      aussi à nous raconter tes ressentis. (Pas d'inquiétude nous n'attendons pas
+      de textes à rallonge ou de mémoire de fin d'études, on aime les petits articles
+      faciles et agréables à parcourir.) Pour participer c'est:
     </p>
 
-    <a use:link href="/createArticle"> &#x27BD; A ta plume!</a>
+    <a use:link href="/createArticle"> &#x27BD; Par ici!</a>
   </div>
+  <article class="each_articleList">
+    {#each articles as article}
+      <div class="one-article">
+        <div class="phototext">
+          <a use:link href="/article/{article.id}"
+            ><img
+              class="taille"
+              src={article.pictures}
+              alt="Illustration en rapport avec l'article concerné"
+            /></a
+          >
+        </div>
 
-  {#each articles as article}
-  
-    <article class="each_articleList">
-      <h2>{article.title}</h2>
-
-      <div class="phototext">
-        <a use:link href="/article/{article.id}"
-          ><img
-            class="taille"
-            src={article.pictures}
-            alt="Illustration en rapport avec l'article concerné"
-          /></a
-        >
+        <h2>{article.title}</h2>
         <p class="overflow-ellipsis">{article.content}</p>
-      </div>
+        <a use:link href="/article/{article.id}">Lire la suite...</a>
 
-      <a use:link href="/article/{article.id}">Lire la suite...</a>
-
-      <div class="infos">
-        <p><strong>{tabAuthor[article.author]}</strong></p>
-        <time datetime={article.created_at}>
-          {new Date(article.created_at).toLocaleDateString("fr-FR")}
-        </time>
+        <div class="infos">
+          <p><strong>{tabAuthor[article.author]}</strong></p>
+          <time datetime={article.created_at}>
+            {new Date(article.created_at).toLocaleDateString("fr-FR")}
+          </time>
+        </div>
       </div>
-    </article>
-  {/each}
+    {/each}
+  </article>
 </section>

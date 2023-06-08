@@ -5,7 +5,7 @@
 
 //QUOTES
 .quotes {
-    background: linear-gradient($brown, white);
+    background: linear-gradient($brown, $yellow);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,6 +32,8 @@
         width: 90%;
         margin: 2em auto 2em auto;
         text-align: center;
+        font-family: 'delius', 'serif';
+
         @include mixins.tablet {
             font-size: 1.7em;
         }
@@ -39,7 +41,6 @@
         @include mixins.large {
             font-size: 2em;
         }
-
     }
 
     .phrases {

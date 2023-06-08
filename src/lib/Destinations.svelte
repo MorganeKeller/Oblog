@@ -12,6 +12,7 @@
 <section class="destinationsimg">
   <h1>Destinations</h1>
   <img class="direction" src={LogoDirect} alt="panneau indicateur" />
+  <p>Choisissez le continent où se situe votre prochaine escapade!</p>
   <div class="destinations">
     <!-- Utiliser la fonction redirectToFilteredArticles avec l'ID de la catégorie correspondante -->
     <button type="button" on:click={() => redirectToFilteredArticles(1)}

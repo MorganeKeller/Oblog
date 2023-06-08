@@ -2,20 +2,21 @@
 @use 'mixins';
 
 @import url('https://fonts.bunny.net/css?family=amatic-sc:700');
+@import url('https://fonts.bunny.net/css?family=delius:400');
 
 
 .articleList-background {
-
   background-color: $blue;
   min-height: 100vh;
-  font-family: 'Amatic SC', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin: auto;
+  font-family: 'delius', 'serif';
 
   h1 {
+    font-family: 'Amatic SC', sans-serif;
     font-size: 3em;
     margin-top: 1em;
     padding-top: 1em;
@@ -24,18 +25,19 @@
     @include mixins.tablet {
       font-size: 4em;
     }
+
     @include mixins.large {
       font-size: 5em;
     }
-
   }
 
   .content-center {
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 
     p {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      width: 80%;
       font-size: 1em;
+      margin: auto auto 1.5em auto;
 
       @include mixins.tablet {
         font-size: 1.5em;
@@ -44,14 +46,13 @@
 
     a {
       color: $black;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'delius', 'serif';
       border-radius: 0.5em;
       border: none;
       background-color: $blue;
       box-shadow: inset 0 0 1em $brown;
       padding: 0.5em;
       text-decoration: none;
-      margin-bottom: 2em;
 
 
       &:hover {
@@ -67,115 +68,125 @@
   }
 
   .each_articleList {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'delius', 'serif';
     margin-bottom: 2em;
     width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+    margin: auto auto 2em auto;
+   
 
     @include mixins.tablet {
-      width: 80%;
+      width: 70%;
+      columns: 2;
     }
 
-    h2 {
-      font-family: 'Amatic SC', sans-serif;
-      font-size: 2em;
-
+    .one-article {
+      display: inline-block;
+      border: solid 3px $black;
+      font-family: 'delius', 'serif';
+      margin-bottom: 2em;
+      width: 90%;
+      border-radius: 0.5rem;
+      margin-bottom: 6em; display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: auto auto 3em auto;
+      background: linear-gradient($yellow, $blue);
       @include mixins.tablet {
-        font-size: 2.5em;
+        margin: auto auto 8em auto;
+
       }
+  
+      .phototext {
+        display: flex;
+        margin-bottom: 0.5em;
+        align-items: center;
+        padding: 0;
+        width: 100%;
 
-      @include mixins.large {
-        font-size: 3em;
-      }
-    }
-
-    .phototext {
-      display: flex;
-      margin-bottom: 0.5em;
-      align-items: center;
-      padding: 0;
-
-      a {
-        width: 45%;
-        margin: auto;
-        text-align: center;
-
-        img {
+        a {
           width: 100%;
-          border-radius: 0.5rem;
+          margin: auto;
+          text-align: center;
 
-          @include mixins.tablet {
+          img {
+            width: 100%;
+            border-radius: 0.5rem;
 
-            width: 80%;
           }
+        }
+      }
 
-          @include mixins.large {
-            width: 60%;
-          }
+      h2 {
+        font-family: 'Amatic SC', sans-serif;
+        font-size: 2em;
+        margin: auto;
+
+        @include mixins.tablet {
+          font-size: 3em;
+        }
+
+        @include mixins.large {
+          font-size: 4em;
         }
       }
 
       .overflow-ellipsis {
-        width: 55%;
-        height: 4em;
+        font-family: 'delius', 'serif';
+        font-size: 0.9em;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.9em;
-        max-width: 80%;
-        margin: 1em;
+        white-space: nowrap;
+        width: 90%;
+        margin: auto;
 
         @include mixins.tablet {
-          font-size: 1.4em;
-          height: 7em;
+          font-size: 1.2em;
+
         }
       }
-    }
 
-    .infos {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.5em;
-      font-size: 1em;
-      justify-content: center;
-
-      @include mixins.tablet {
-        font-size: 1.2em;
-      }
-
-      p,
-      time {
-        font-size: 1.3em;
-        margin: 0;
-        padding: 0.5em;
+      a {
+        font-size: 1em;
+        color: $black;
+        width: 90%;
+        text-align: right;
+        margin-bottom: 1em;
 
         @include mixins.tablet {
           font-size: 1.5em;
         }
+
+        &:hover {
+          color: $brown;
+        }
       }
 
-      p {
-        color: $black;
-      }
-    }
+      .infos {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5em;
+        font-size: 0.8em;
+        justify-content: center;
 
-    a {
-      font-size: 1em;
-      color: $black;
-      width: 90%;
-      text-align: right;
+        @include mixins.tablet {
+          font-size: 1.2em;
+        }
 
-      @include mixins.tablet {
+        p,
+        time {
+          font-size: 1.3em;
+          margin: 0;
+          padding: 0.5em;
 
-        font-size: 1.5em;
-      }
+          @include mixins.tablet {
+            font-size: 1.5em;
+          }
+        }
 
-      &:hover {
-        color: $brown;
+        p {
+          color: $black;
+        }
       }
     }
   }

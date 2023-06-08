@@ -6,7 +6,7 @@
 //DESTINATIONS
 
 .destinationsimg {
-  background-image: url("../img/oldpaper.jpg");
+  background-image: url("../img/foot.png");
   background-size: cover;
   min-height: 100vh;
   font-family: 'Amatic SC', sans-serif;
@@ -14,21 +14,8 @@
   margin-top: 1em;
   margin-bottom: 1em;
 
-  .direction {
-    width: 80px;
-    display: block;
-    margin: 2em auto;
-
-    @include mixins.tablet {
-      width: 110px;
-    }
-
-    @include mixins.large {
-      width: 150px;
-    }
-  }
-
   h1 {
+  
     font-size: 3em;
     text-decoration: underline;
     background: rgba(250, 250, 250, 0.4);
@@ -46,16 +33,48 @@
     }
   }
 
+  .direction {
+    width: 80px;
+    display: block;
+    margin: 2em auto auto auto;
+
+    @include mixins.tablet {
+      width: 110px;
+    }
+
+    @include mixins.large {
+      width: 150px;
+    }
+  }
+
+
+
+  p {
+    font-family: 'delius', 'serif';
+    text-align: center;
+    margin: 0 auto 2em auto;
+    width: 90%;
+
+    @include mixins.tablet {
+      font-size: 1.4em;
+    }
+
+    @include mixins.large {
+      font-size: 1.7em;
+    }
+  }
+
   .destinations {
     font-size: 2.2em;
-    margin: 1em auto 1em auto;
+    margin: 1em auto 3em auto;
     display: flex;
     flex-direction: column;
+
 
     button {
       display: flex;
       font-family: 'Amatic SC', sans-serif;
-      margin: auto;
+      margin: 0.3em auto;
       background-color: transparent;
       font-size: 1em;
       text-decoration: none;

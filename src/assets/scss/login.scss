@@ -2,6 +2,7 @@
 @use 'mixins';
 
 @import url('https://fonts.bunny.net/css?family=amatic-sc:700');
+@import url('https://fonts.bunny.net/css?family=delius:400');
 
 //LOGIN
 
@@ -11,17 +12,17 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'Amatic SC', sans-serif;
-  min-height: 90vh;
+  min-height: 95vh;
+  font-family: 'delius', 'serif';
 
   @include mixins.tablet {
     background: radial-gradient(circle, $yellow 25%, $brown 60%, black 90%);
   }
 
   h1 {
+    font-family: 'Amatic SC', sans-serif;
     font-size: 3em;
-    margin: 2em 0 0 0;
-    margin-top: 1em;
+    margin: 1em auto 0.5em auto;
     padding-top: 1em;
     background: rgba(250, 250, 250, 0.4);
     width: 100%;
@@ -29,25 +30,28 @@
     @include mixins.tablet {
       font-size: 4em;
     }
+
     @include mixins.large {
       font-size: 5em;
     }
-
   }
 
   .section-form {
     width: 90%;
-    margin-top: 1em;
-    font-size: 1.2em;
+    font-size: 1em;
+
     @include mixins.tablet {
-      font-size: 2.5em;
+      font-size: 1.2em;
+    }
+    @include mixins.large {
+      font-size: 1.8em;
     }
 
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0em;
+     
 
       .input-login {
         display: flex;
@@ -59,6 +63,7 @@
           padding: 0.6em;
           border-radius: 0.5em;
           border: none;
+
           @include mixins.tablet {
             font-size: 0.5em;
           }
@@ -72,9 +77,7 @@
         box-shadow: inset 0 0 1em $brown;
         padding: 0.2em 0em;
         border-radius: 0.5em;
-        font-family: 'Amatic SC', sans-serif;
         font-size: 0.9em;
-
       }
 
       .connexion:hover {
@@ -85,6 +88,22 @@
     }
 
     .text-login-register {
+      margin-top: 2em;
+
+      h2 {    
+        font-size: 1em;
+
+        @include mixins.tablet {
+          font-size: 1.2em;
+        }
+        @include mixins.large {
+          margin-top: 3em;
+
+          font-size: 1.4em;
+        }
+    
+  }
+
       a {
         box-shadow: inset 0 0 1em $brown;
         text-decoration: none;
@@ -92,24 +111,26 @@
         background-color: $blue;
         padding: 0.1em 0.5em;
         border-radius: 0.5em;
+        margin: 5em;
+
       }
 
       a:hover {
         box-shadow: inset 0 0 1em $brown;
         background-color: $yellow;
         border: 1px solid $brown;
-
       }
     }
   }
-  .unlog{
-    margin:1em;
-    padding:0.3em;
+
+  .unlog {
+    margin: 1em;
+    padding: 0.3em;
     font-size: 1em;
+
     @include mixins.tablet {
       font-size: 1.5em;
     }
-
   }
-  
+
 }

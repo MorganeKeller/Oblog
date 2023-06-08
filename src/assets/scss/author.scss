@@ -2,18 +2,20 @@
 @use 'mixins';
 
 @import url('https://fonts.bunny.net/css?family=amatic-sc:700');
+@import url('https://fonts.bunny.net/css?family=delius:400');
 
 //AUTHORS
 
 .authors {
-
-  font-family: 'Amatic SC', sans-serif;
-  background-image: url("../img/library.jpg");
-  background-size: cover;
-  color: $yellow;
+background-image: url("../img/writings\ .png");
+background-size: cover;
+  //background: linear-gradient($green, $brown);
   min-height: 100vh;
+  margin-top: 1em;
+  width: 100%;
 
   h1 {
+    font-family: 'Amatic SC', sans-serif;
     text-align: center;
     color: $black;
     font-size: 3em;
@@ -28,12 +30,21 @@
     @include mixins.large {
       font-size: 5em;
     }
-
   }
 
   p {
-    margin: 0;
+    font-family: 'delius', 'serif';
     text-align: center;
+    margin: 0 auto 2em auto;
+    width: 90%;
+
+    @include mixins.tablet {
+      font-size: 1.4em;
+    }
+
+    @include mixins.large {
+      font-size: 1.7em;
+    }
   }
 
   .author-column {
@@ -54,12 +65,11 @@
       width: 60%;
       text-align: center;
       background-color: $black;
-      opacity: 0.9;
       font-size: 1.1em;
       color: $yellow;
       border-radius: 1em;
       padding: 0;
-      margin: auto auto 1em auto;
+      margin: auto auto 1.5em auto;
 
       @include mixins.tablet {
         font-size: 1.4em;
@@ -71,6 +81,7 @@
 
       a {
         color: $yellow;
+        text-decoration: none;
 
         h2 {
           margin: 0.3em 0;

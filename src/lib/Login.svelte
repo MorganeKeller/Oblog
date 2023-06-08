@@ -8,8 +8,7 @@
     let error = "";
     let isLoggedIn = false; // ajoute la variable d'état de connexion
 
-
-    // ici on récupère les données du users 
+    // ici on récupère les données du users
     const getME = async () => {
         const response = await fetch(
             import.meta.env.VITE_URL_DIRECTUS + "users/me",
@@ -18,17 +17,15 @@
                 headers: {
                     "content-type": "application/json",
                     Authorization: "Bearer " + localStorage.getItem("token"),
-                }
+                },
             }
         ).then((data) => {
-                return data;
-            });
+            return data;
+        });
         // Extract the token and return it
         const json = await response.json();
         return json.data;
     };
-
-
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -39,11 +36,10 @@
             // storage in "localstorage"
             window.localStorage.setItem("token", token);
             let me = getME();
-        //    on récupère l'id qui provient du user/me (utilisateur connecté)
+            //    on récupère l'id qui provient du user/me (utilisateur connecté)
             me.then((value) => {
-            window.localStorage.setItem("id",value.id);
- 
-})
+                window.localStorage.setItem("id", value.id);
+            });
             // modification de l'état de connexion après connexion réussie
             isLoggedIn = true;
         }
@@ -77,7 +73,7 @@
         if (response.ok !== true) {
             error = "Adresse e-mail ou mot de passe incorrect";
             return false;
-        } 
+        }
 
         const json = await response.json();
         // Extraction errors handling
