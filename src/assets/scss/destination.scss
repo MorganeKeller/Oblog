@@ -17,7 +17,7 @@
   .direction {
     width: 80px;
     display: block;
-    margin:1em auto;
+    margin: 2em auto;
 
     @include mixins.tablet {
       width: 110px;
@@ -48,7 +48,9 @@
 
   .destinations {
     font-size: 2.2em;
-    margin:1em auto;
+    margin: 1em auto 1em auto;
+    display: flex;
+    flex-direction: column;
 
     button {
       display: flex;
@@ -65,10 +67,8 @@
         display: none;
       }
 
-      @include mixins.large{
+      @include mixins.large {
         font-size: 2em;
-        justify-content: center;
-        width: 50%;
       }
     }
 
