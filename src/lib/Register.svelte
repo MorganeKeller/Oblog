@@ -50,11 +50,9 @@
       // Handling the user creation response
       // Traiter la réponse de la création d'utilisateur
       if (user) {
-        console.log("Utilisateur créé avec succès !");
         message = "Votre compte a été créé avec succès !";
         formVisible = false;
       } else {
-        console.log("Erreur lors de la création de l'utilisateur.");
         message = "Erreur lors de la création de l'utilisateur.";
       }
     } catch (error) {
@@ -90,12 +88,11 @@
         on:submit={handleSubmit}
       >
         <div class="register-form">
-          <label for="last_name">Nom</label>
+          <label for="last_name">Prénom</label>
           <input required name="first_name" placeholder="ex : NEWTON" />
-          <label for="first_name">Prénom</label>
+
+          <label for="first_name">Nom</label>
           <input required name="last_name" placeholder="ex : Isaac" />
-          <label for="pseudonym">Pseudo</label>
-          <input required name="pseudo" placeholder="ex=Isaacnewton23" />
 
           <label for="email">Email</label>
           <input
@@ -104,6 +101,9 @@
             name="email"
             placeholder="ex : i.newton@test.fr"
           />
+
+          <label for="pseudonym">Pseudo</label>
+          <input required name="pseudo" placeholder="ex=Isaacnewton23" />
 
           <label for="password">Mot de passe</label>
           <input
@@ -125,8 +125,8 @@
       </div>
     </div>
   {:else}
-    <div>
-      <h1>Confirmation de création de compte</h1>
+    <div class="confirmation">
+      <h2>Confirmation de création de compte</h2>
       <p>{message}</p>
     </div>
   {/if}

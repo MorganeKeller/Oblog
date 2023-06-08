@@ -39,6 +39,7 @@
   .author-column {
     height: 90%;
     text-align: center;
+    margin: auto auto 2em auto;
 
     @include mixins.tablet {
       columns: 2;
