@@ -20,7 +20,7 @@
       return {
         ...article,
         pictures:
-          "https://oblogback-production.up.railway.app/assets/" +
+          "https://directus-oblog.up.railway.app/assets/" +
           article.pictures,
       };
     });

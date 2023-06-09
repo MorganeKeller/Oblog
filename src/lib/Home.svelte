@@ -36,7 +36,7 @@
 </script>
 
 <section class="home-background">
-    <h1>🟇 Bienvenue! 🟇</h1>
+    <h1> Bienvenue! </h1>
     <p class="presentation">
         Bienvenue dans nos Carnet de voyages! Que ce soit pour des échanges ou simplement pour découvrir de nouvelles cultures, ici, nous comptons partager nos aventures, nos découvertes et nos expériences dans les endroits les plus incroyables du monde, qu'ils soient près ou loin de chez vous par le biais de petits articles. Ce blog à pour but d'être collaboratif, n'hésitez donc pas à vous inscrire pour commenter et participer en partageant également vos souvenirs.<br> <strong>N'oubliez pas de profiter du voyage!</strong></p>
 
