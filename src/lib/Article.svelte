@@ -3,6 +3,7 @@
     import Comments from "../lib/Comments.svelte";
 
     export let params = {};
+    var tabAuthor = [];
 
     // Extrait l'id issue de la route
     let article_id = params.id;
@@ -22,6 +23,21 @@
     function goBack() {
         window.history.back();
     }
+
+    const getAuthors = async function () {
+        const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
+
+        const response = await fetch(endpoint);
+
+        const json = await response.json();
+        let authors1 = json.data;
+        for (var index in authors1) {
+            tabAuthor[authors1[index].id] = authors1[index].user_name;
+        }
+        return json.data;
+    };
+    getAuthors();
+
 </script>
 
 <article class="art">
@@ -40,7 +56,7 @@
 
         <div class="author_date">
             <p>
-                Par: <b>{publication.author}</b>
+                Par: <b>{tabAuthor[publication.author]}</b>
                 Le:
                 <b
                     ><time datetime={publication.created_at}

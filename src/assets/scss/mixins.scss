@@ -10,11 +10,6 @@
   }
 }
 
-@mixin ultra_wide {
-  @media (min-width: 1440px) {
-    @content;
-  }
-}
 
 @mixin mobile {
   @media (min-width:360px) and (max-width:767px) {

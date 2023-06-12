@@ -2,6 +2,8 @@
     import "../assets/scss/comments.scss";
     import { link } from "svelte-spa-router";
 
+    var tabAuthor = [];
+
     let commentary = [];
     export let article_id;
 
@@ -9,7 +11,6 @@
     let commentText = "";
     let commentAuthor = "";
     let commentDate = "";
-    //let CommentUpdate = "";
 
     const handleSubmitForm = async (event) => {
         event.preventDefault();
@@ -47,7 +48,7 @@
         //Handling response errors
         if (response.ok === false) {
             //We trigger an error to enter the Svelte's catch
-            throw new Error("Erreur de récupération des commentaries");
+            throw new Error("Erreur de récupération des commentaires");
         }
 
         const json = await response.json();
@@ -72,7 +73,6 @@
                     text: commentText,
                     article_id: article_id,
                     author: localStorage.getItem("id"),
-                
                 }),
             }
         );
@@ -80,6 +80,20 @@
         const json = await response.json();
         return json.data;
     };
+
+    const getAuthors = async function () {
+        const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
+
+        const response = await fetch(endpoint);
+
+        const json = await response.json();
+        let authors1 = json.data;
+        for (var index in authors1) {
+            tabAuthor[authors1[index].id] = authors1[index].user_name;
+        }
+        return json.data;
+    };
+    getAuthors();
 </script>
 
 <section class="comments" aria-labelledby="comments-title">
@@ -93,7 +107,7 @@
         {#each comments as commentary}
             <i
                 >Posté le: <b>{commentary.created_at}</b>
-                Par: <b>{commentary.author}</b>
+                Par: <b>{tabAuthor[commentary.author]}</b>
             </i>
             <div aria-labelledby="comment-{commentary.id}" class="div-comment">
                 <p id="comment-{commentary.id}">{commentary.text}</p>
@@ -102,7 +116,7 @@
 
         <form on:submit={handleSubmitForm} aria-labelledby="form-title">
             <h3 id="form-title">Votre commentaire</h3>
-            <label for="Commentary"></label>
+            <label for="Commentary" />
             <textarea
                 required
                 class="input-comment"
@@ -119,6 +133,3 @@
         >
     {/await}
 </section>
-
-<style>
-</style>

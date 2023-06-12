@@ -33,6 +33,7 @@
         margin: 2em auto 2em auto;
         text-align: center;
         font-family: 'delius', 'serif';
+        background: rgba(white, 0.7);
 
         @include mixins.tablet {
             font-size: 1.7em;

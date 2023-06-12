@@ -76,11 +76,8 @@
             padding:0.5em;
             margin:1em;
             @include mixins.tablet {
-              
                 font-size: 1.5em;
-    
             }
-    
         }
     }
 
@@ -93,18 +90,15 @@
         @include mixins.tablet {
             height: 110px;
             font-size: 1.5em;
-
         }
 
         @include mixins.large {
             height: 150px;
             font-size: 1.7em;
-
         }
     }
 
     .logToComment {
         margin: 1em auto;
-
     }
 }

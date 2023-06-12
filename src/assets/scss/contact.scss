@@ -34,10 +34,11 @@
   }
 
   p {
-    max-width: 70%;
+    max-width: 80%;
     margin-bottom: 1em;
     font-size: 1em;
     font-weight: bold;
+    background: rgba(white, 0.7);
 
     @include mixins.tablet {
       font-size: 1.2em;
@@ -94,7 +95,7 @@
     button[type="submit"] {
       background-color: $blue;
       color: $black;
-      padding: 1em 2em;
+      padding: 0.5em 1.5em;
       margin: 0;
       border: none;
       border-radius: 5px;

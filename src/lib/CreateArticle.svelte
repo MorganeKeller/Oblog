@@ -89,7 +89,7 @@
         <p>Chargement en cours...</p>
     {:then article}
         <h1>Votre article</h1>
-        <p>
+        <p class="description">
             &#x27BD; Ici racontez nous vos périples, anecdotes, ce qui vous a
             émerveillé ou déçu, interpellé ou instruit...
         </p>
