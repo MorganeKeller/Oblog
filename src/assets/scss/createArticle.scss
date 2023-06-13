@@ -40,19 +40,19 @@
     text-align: center;
 
     @include mixins.tablet {
-      font-size: 1.2em;
+      font-size: 1.4em;
       margin: 0.5em auto 2em auto;
     }
 
     @include mixins.large {
-      font-size: 1.5em;
+      font-size: 1.7em;
     }
 
     a {
       color: black;
 
       @include mixins.tablet {
-        font-size: 1.3em;
+        font-size: 1.2em;
       }
     }
   }

@@ -40,9 +40,13 @@
       margin: auto auto 1.5em auto;
 
       @include mixins.tablet {
-        font-size: 1.5em;
+        font-size: 1.4em;
       }
-    }
+  
+      @include mixins.large {
+        font-size: 1.7em;
+      }
+      }
 
     a {
       color: $black;
@@ -72,7 +76,7 @@
     margin-bottom: 2em;
     width: 90%;
     margin: auto auto 2em auto;
-   
+
 
     @include mixins.tablet {
       width: 70%;
@@ -86,17 +90,19 @@
       margin-bottom: 2em;
       width: 90%;
       border-radius: 0.5rem;
-      margin-bottom: 6em; display: flex;
+      margin-bottom: 6em;
+      display: flex;
       text-align: center;
       flex-direction: column;
       justify-content: space-between;
       margin: auto auto 3em auto;
       background: linear-gradient($yellow, $blue);
+
       @include mixins.tablet {
         margin: auto auto 8em auto;
 
       }
-  
+
       .phototext {
         display: flex;
         margin-bottom: 0.5em;

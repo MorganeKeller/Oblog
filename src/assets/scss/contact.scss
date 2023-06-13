@@ -14,7 +14,7 @@
   background-image: url("../img/departure.png");
   background-size: cover;
   font-family: 'delius', 'serif';
-
+  font-weight: bold;
 
   h1 {
     font-family: 'Amatic SC', sans-serif;
@@ -37,15 +37,15 @@
     max-width: 80%;
     margin-bottom: 1em;
     font-size: 1em;
-    font-weight: bold;
+
     background: rgba(white, 0.7);
 
     @include mixins.tablet {
-      font-size: 1.2em;
+      font-size: 1.4em;
     }
 
     @include mixins.large {
-      font-size: 1.4em;
+      font-size: 1.7em;
     }
   }
 
@@ -58,11 +58,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 80%;
     margin: 1em auto;
     font-size: 1em;
+
     @include mixins.tablet {
       font-size: 1.2em;
+      width: 60%;
     }
 
     @include mixins.large {
@@ -74,52 +76,67 @@
       width: 80%;
       display: block;
       padding: 1em;
-      margin-bottom: 1em;
+      margin: 1em auto 2.5em auto;
       border-radius: 5px;
       border: none;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+
       @include mixins.tablet {
-        width: 60%;
+        width: 75%;
+      }
+    }
+
+    input {
+      @include mixins.tablet {
+        width: 35%;
       }
     }
 
     textarea {
-      height: 10em;
+      height: 15em;
 
       @include mixins.tablet {
-        height: 15em;
+        height: 20em;
       }
-
     }
 
-    button[type="submit"] {
+    .form-send {
       background-color: $blue;
-      color: $black;
-      padding: 0.5em 1.5em;
-      margin: 0;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
+      box-shadow: inset 0 0 1em $brown;
+      margin: 1em auto 2em auto;
+      padding: 0.5em 0;
+      border-radius: 0.5em;
+      transition: background-color 0.2s ease-in-out;
+      font-size: 1.2em;
+      font-weight: bold;
 
       @include mixins.tablet {
+        font-size: 1em;
+      }
+
+      @include mixins.large {
         font-size: 1.2em;
+        width: 20%;
       }
 
       &:hover {
-        background-color: #0062cc;
+        box-shadow: inset 0 0 1em $brown;
+        background-color: $yellow;
       }
     }
   }
 
   button {
-    margin: 3em auto 5em auto;
-    padding: 0.2em;
+    margin: 3em auto 3em auto;
+    padding: 0.5em;
     font-size: 1em;
+    background-color: $blue;
+    font-weight: bold;
 
     @include mixins.tablet {
       font-size: 1.5em;
-    }
+      margin: 3em auto 5em auto;
 
+    }
   }
 }

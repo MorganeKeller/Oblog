@@ -36,7 +36,7 @@
     <label for="text"> Votre message : </label>
     <textarea name="message" required aria-label="Rédigez ici votre texte" />
 
-    <button type="submit">Envoyer</button>
+    <input class ="form-send" type="submit" aria-label="valider le formulaire" value="Envoyer" />
   </form>
 
   <button on:click={goBack}>Retour</button>

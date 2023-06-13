@@ -62,10 +62,10 @@
 
     button {
       background-color: $blue;
-      padding: 0.4em;
-
+      padding: 0.5em;
+      font-size: 1em;
       @include mixins.tablet {
-        font-size: 1.1em;
+        font-size: 1.5em;
       }
     }
   }
