@@ -36,6 +36,18 @@
     }
   }
 
+  p {
+    font-size: 1.2em;
+
+    @include mixins.tablet {
+      font-size: 1.4em;
+    }
+
+    @include mixins.large {
+      font-size: 1.6em;
+    }
+  }
+
   .section-form {
     width: 90%;
     font-size: 1em;
@@ -52,7 +64,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-align-items: center;
+      align-items: center;
+
       @include mixins.tablet {
         align-items: center;
         margin: auto;

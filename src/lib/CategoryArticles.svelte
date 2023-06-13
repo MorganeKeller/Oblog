@@ -18,7 +18,7 @@
       return {
         ...article,
         pictures:
-        "https://directus-oblog.up.railway.app/assets/" +
+          "https://directus-oblog.up.railway.app/assets/" +
           article.pictures +
           ".jpg",
       };
@@ -30,44 +30,43 @@
   });
 
   const getAuthors = async function () {
-        const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
+    const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
 
-        const response = await fetch(endpoint);
+    const response = await fetch(endpoint);
 
-        const json = await response.json();
-        let authors1 = json.data;
-        for (var index in authors1) {
-            tabAuthor[authors1[index].id] = authors1[index].user_name;
-        }
-        return json.data;
-    };
-    getAuthors();
+    const json = await response.json();
+    let authors1 = json.data;
+    for (var index in authors1) {
+      tabAuthor[authors1[index].id] = authors1[index].user_name;
+    }
+    return json.data;
+  };
+  getAuthors();
 </script>
 
 <section class="category-articles">
-  <h1>Liste des articles</h1>
-  {#each articles as article}
+  <h1>Les articles par destination</h1>
 
-    <article class="each_articleList">
-      <h2>{article.title}</h2>
-
-      <div class="phototext">
-        <a use:link href="/article/{article.id}"
+  <article class="each_articleList">
+    {#each articles as article}
+      <div class="one-article">
+        <div class="phototext">
+          <a use:link href="/article/{article.id}">
+            <img class="taille" src={article.pictures} alt="illustration en rapport avec l'article" /></a
           >
-        <img class="taille" src={article.pictures} alt="illustration" /></a>
-        <p class="overflow-ellipsis">{article.content}</p>
-      </div>
+        </div>
 
+        <h2>{article.title}</h2>
+        <p class="overflow-ellipsis">{article.content}</p>
         <a use:link href="/article/{article.id}">Lire la suite</a>
 
         <div class="infos">
-        <p><strong>{tabAuthor[article.author]}</strong></p>
-        <time datetime={article.created_at}
-          >{new Date(article.created_at).toLocaleDateString("fr-FR")}</time
-        >
+          <p><strong>{tabAuthor[article.author]}</strong></p>
+          <time datetime={article.created_at}
+            >{new Date(article.created_at).toLocaleDateString("fr-FR")}</time
+          >
         </div>
-      
-    </article>
-
-  {/each}
+      </div>
+    {/each}
+  </article>
 </section>

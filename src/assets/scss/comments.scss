@@ -139,6 +139,14 @@
     }
 
     .logToComment {
+        font-size: 1em;
         margin: 1em auto;
+        @include mixins.tablet {
+            font-size: 1.3em;
+        }
+        @include mixins.large {
+            font-size: 1.6em;
+        }
+
     }
 }

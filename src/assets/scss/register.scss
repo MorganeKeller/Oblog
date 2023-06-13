@@ -37,8 +37,8 @@
   .before-register {
     text-align: center;
     color: $black;
-    margin: 0.2em 0 0 0;
-
+    margin: 0.2em auto 0 auto;
+    width: 90%;
     p {
       @include mixins.tablet {
         font-size: 1.5em;

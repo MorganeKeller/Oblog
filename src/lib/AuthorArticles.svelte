@@ -37,39 +37,39 @@
 </script>
 
 <section class="AuthorArticle-background">
-    <h1>Les articles</h1>
-
-    <p>Voici tous les articles de l'auteur</p>
+    <h1>les articles par auteur</h1>
     {#await getArticlesByAuthor()}
         <p>Chargement en cours...</p>
 
         <!-- Des que les données sont prêtes, je les range dans la variable articles -->
     {:then articles}
-        {#each articles as article}
-            <article class="home-article">
-                <h2>{article.title}</h2>
-                <div class="article-bloc">
-                    <a use:link href="/article/{article.id}"
-                        ><img
-                            src={import.meta.env.VITE_URL_DIRECTUS +
-                                "assets/" +
-                                article.pictures}
-                            alt="illustration"
-                        /></a
-                    >
-
+        <article class="home-article">
+            {#each articles as article}
+                <div class="one-article">
+                    <div class="article-bloc">
+                        <a use:link href="/article/{article.id}"
+                            ><img
+                                src={import.meta.env.VITE_URL_DIRECTUS +
+                                    "assets/" +
+                                    article.pictures}
+                                alt="illustration en rapport avec l'article"
+                            /></a
+                        >
+                    </div>
+                    <h2>{article.title}</h2>
                     <p class="overflow">{article.content}</p>
-                </div>
-                <a use:link href="/article/{article.id}">Lire la suite...</a>
-                <div class="home-writer-date">
-                    <p><strong>{tabAuthor[article.author]}</strong></p>
-                    <time datetime={article.created_at}
-                        >{new Date(article.created_at).toLocaleDateString(
-                            "fr-FR"
-                        )}</time
+                    <a use:link href="/article/{article.id}">Lire la suite...</a
                     >
+                    <div class="home-writer-date">
+                        <p><strong>{tabAuthor[article.author]}</strong></p>
+                        <time datetime={article.created_at}
+                            >{new Date(article.created_at).toLocaleDateString(
+                                "fr-FR"
+                            )}</time
+                        >
+                    </div>
                 </div>
-            </article>
-        {/each}
+            {/each}
+        </article>
     {/await}
 </section>

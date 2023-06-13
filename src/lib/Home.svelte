@@ -5,7 +5,6 @@
     var tabAuthor = [];
 
     const getArticles = async () => {
-       
         const endpoint =
             import.meta.env.VITE_URL_DIRECTUS +
             "items/article?fields=*&limit=3&sort=-created_at";
@@ -33,18 +32,24 @@
         return json.data;
     };
     getAuthors();
-
-    
 </script>
 
 <section class="home-background">
-    <h1> Bienvenue! </h1>
+    <h1>Bienvenue!</h1>
     <p class="presentation">
-        Bienvenue dans nos Carnet de voyages! Que ce soit pour des échanges ou simplement pour découvrir de nouvelles cultures, ici, nous comptons partager nos aventures, nos découvertes et nos expériences dans les endroits les plus incroyables du monde, qu'ils soient près ou loin de chez vous par le biais de petits articles. Ce blog à pour but d'être collaboratif, n'hésitez donc pas à vous inscrire pour commenter et participer en partageant également vos souvenirs.<br> <u>N'oubliez pas de profiter du voyage!</u></p>
+        Bienvenue dans nos Carnet de voyages! Que ce soit pour des échanges ou
+        simplement pour découvrir de nouvelles cultures, ici, nous comptons
+        partager nos aventures, nos découvertes et nos expériences dans les
+        endroits les plus incroyables du monde, qu'ils soient près ou loin de
+        chez vous par le biais de petits articles. Ce blog à pour but d'être
+        collaboratif, n'hésitez donc pas à vous inscrire pour commenter et
+        participer en partageant également vos souvenirs.<br />
+        <u>N'oubliez pas de profiter du voyage!</u>
+    </p>
 
     <p>
-        &#x27BD; Vous voici arrivés à destination: ici découvrez les derniers articles
-        publiés
+        &#x27BD; Vous voici arrivés à destination: ici découvrez les derniers
+        articles publiés
     </p>
 
     <!-- Appel de la fonciton pour récupérer les données -->
@@ -57,11 +62,14 @@
             <article class="home-article">
                 <div class="article-bloc">
                     <a use:link href="/article/{article.id}">
-                        <img src={import.meta.env.VITE_URL_DIRECTUS +
+                        <img
+                            src={import.meta.env.VITE_URL_DIRECTUS +
                                 "assets/" +
                                 article.pictures}
                             aria-hidden="true"
-                            alt="illustration"/></a>
+                            alt="illustration"
+                        /></a
+                    >
                 </div>
                 <h2>{article.title}</h2>
                 <div class="home-writer-date">

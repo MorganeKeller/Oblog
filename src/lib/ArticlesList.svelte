@@ -20,8 +20,7 @@
       return {
         ...article,
         pictures:
-          "https://directus-oblog.up.railway.app/assets/" +
-          article.pictures,
+          "https://directus-oblog.up.railway.app/assets/" + article.pictures,
       };
     });
   };
@@ -56,6 +55,7 @@
 
     <a use:link href="/createArticle"> &#x27BD; Par ici!</a>
   </div>
+  
   <article class="each_articleList">
     {#each articles as article}
       <div class="one-article">

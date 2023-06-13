@@ -42,11 +42,11 @@
       @include mixins.tablet {
         font-size: 1.4em;
       }
-  
+
       @include mixins.large {
         font-size: 1.7em;
       }
-      }
+    }
 
     a {
       color: $black;
@@ -118,7 +118,6 @@
           img {
             width: 100%;
             border-radius: 0.5rem;
-
           }
         }
       }
