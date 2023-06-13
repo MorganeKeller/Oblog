@@ -100,7 +100,7 @@
     <h2>Commentaires</h2>
     <!-- Function calling -->
     {#await getComments(commentary)}
-        <p>chargement en cours...</p>
+        <p>Chargement en cours...</p>
         <!-- Once the promise is kept, we store the function's result in the variable "comments" -->
     {:then comments}
         <!-- Go through the whole list of comments, and for each element we store it in the variable "comment" -->

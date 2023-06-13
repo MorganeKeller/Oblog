@@ -31,12 +31,12 @@
 
   p {
     font-family: 'charmonman', 'handwriting';
-    font-size: 1em;
+    font-size: 1.2em;
     width: 85%;
     text-align: center;
 
     @include mixins.tablet {
-      font-size: 1.3em;
+      font-size: 1.4em;
       width: 75%;
     }
 

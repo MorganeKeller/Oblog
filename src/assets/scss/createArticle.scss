@@ -14,6 +14,7 @@
   min-height: 100vh;
   background: linear-gradient($green, white);
   font-family: 'delius', 'serif';
+  font-weight: bold;
 
   h1 {
     font-family: 'Amatic SC', sans-serif;
@@ -35,24 +36,27 @@
 
   .description {
     background: rgba(white, 0.7);
-    font-weight: bold;
-    width: 80%;
+    margin-bottom: 3em;
+    width: 90%;
     text-align: center;
 
     @include mixins.tablet {
       font-size: 1.4em;
       margin: 0.5em auto 2em auto;
+      width: 75%;
     }
 
     @include mixins.large {
       font-size: 1.7em;
+      width: 60%;
+
     }
 
     a {
       color: black;
 
       @include mixins.tablet {
-        font-size: 1.2em;
+        font-size: 1em;
       }
     }
   }
@@ -65,7 +69,7 @@
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin: auto;
+
 
     @include mixins.tablet {
       width: 80%;
@@ -73,9 +77,8 @@
 
     .input-create {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 1em;
+      flex-direction: column;
 
       @include mixins.tablet {
         font-size: 1.3em;
@@ -86,9 +89,15 @@
         font-size: 1.5em;
       }
 
+      label {
+        width: 80%;
+        text-align: center;
+        margin: 2em auto 0.5em auto;
+      }
+
       input {
         padding: 0.5em;
-        width: 40%;
+        width: 50%;
         font-size: 1em;
 
         @include mixins.tablet {
@@ -97,14 +106,14 @@
       }
 
       textarea {
-        height: 10em;
+        height: 15em;
         line-height: 1em;
-        width: 80%;
-        font-size: 1em;
+        width: 90%;
         padding: 1em;
 
         @include mixins.tablet {
           width: 60%;
+          font-size: 1em;
         }
       }
 
@@ -122,7 +131,7 @@
 
   .input-create-submit {
     width: 30%;
-    margin: 1em auto;
+    margin: 4em auto;
     padding: 0.5em;
     font-weight: bold;
     background-color: $blue;

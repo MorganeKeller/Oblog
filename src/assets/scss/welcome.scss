@@ -23,10 +23,10 @@
     font-family: 'Amatic SC', sans-serif;
 
     h1 {
-      font-size: 3em;
-
+      font-size: 4em;
+      text-align: center;
       @include mixins.tablet {
-        font-size: 6em;
+        font-size: 7em;
       }
     }
 

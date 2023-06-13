@@ -6,9 +6,11 @@
     let email;
     let password;
     let error = "";
-    let isLoggedIn = false; // ajoute la variable d'état de connexion
 
-    // ici on récupère les données du users
+    // add a login variable
+    let isLoggedIn = false; 
+
+    //we retrieve user data
     const getME = async () => {
         const response = await fetch(
             import.meta.env.VITE_URL_DIRECTUS + "users/me",
@@ -22,6 +24,7 @@
         ).then((data) => {
             return data;
         });
+        
         // Extract the token and return it
         const json = await response.json();
         return json.data;
@@ -92,6 +95,7 @@
 <div class="login-background">
     <h1>Connexion</h1>
     {#if isLoggedIn}
+    <p>Bienvenue!<br>Vous êtes connecté(e) en tant que </p>
         <!-- on vérifie l'état de connexion pour afficher le bouton de déconnexion -->
         <button class="unlog" on:click={handleLogout}>Se déconnecter</button>
     {:else}

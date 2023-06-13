@@ -33,6 +33,8 @@
         return json.data;
     };
     getAuthors();
+
+    
 </script>
 
 <section class="home-background">

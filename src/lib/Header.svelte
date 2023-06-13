@@ -34,7 +34,7 @@
             title="Carnets de voyages"
             aria-label="lien vers la page d'accueil du site"
         >
-            <img src={logo} alt="Logo du site" />
+            <img src={logo} alt="Logo des Carnets de Voyages" />
         </a>
 
         <div class="nav-links">

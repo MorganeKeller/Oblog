@@ -1,9 +1,9 @@
 <script>
-    import LogoMail from "../assets/img/mail.png" ;
+    import LogoMail from "../assets/img/mail.png";
     import LogoTwitter from "../assets/img/twitter.png";
     import LogoInsta from "../assets/img/instagram.png";
     import LogoFile from "../assets/img/google-docs.png";
-    import LogoCita from "../assets/img/citation.png"
+    import LogoCita from "../assets/img/citation.png";
     import LogoPen from "../assets/img/signature.png";
 
     import { link } from "svelte-spa-router";
@@ -29,7 +29,7 @@
                     aria-label="Redirection vers notre page Twitter"
                     ><img src={LogoTwitter} alt="Logo Twitter" /></a
                 >
-               
+
                 <a
                     use:link
                     href="/error"
@@ -68,6 +68,6 @@
         </div>
     </ul>
 </footer>
+
 <style>
-    
 </style>

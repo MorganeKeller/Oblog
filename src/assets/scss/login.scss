@@ -7,7 +7,7 @@
 //LOGIN
 
 .login-background {
-  background: radial-gradient(circle, $yellow 35%, $brown 70%, black 100%);
+  background: radial-gradient(circle, $yellow 35%, $green 70%, $blue 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@
   font-family: 'delius', 'serif';
 
   @include mixins.tablet {
-    background: radial-gradient(circle, $yellow 25%, $brown 60%, black 90%);
+    background: radial-gradient(circle, $yellow 25%, $green 60%, $blue 90%);
   }
 
   h1 {

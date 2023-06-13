@@ -48,7 +48,6 @@
         {#each articles as article}
             <article class="home-article">
                 <h2>{article.title}</h2>
-                <!-- http://chara-redif.vpnuser.lan/directus/uploads/ -->
                 <div class="article-bloc">
                     <a use:link href="/article/{article.id}"
                         ><img

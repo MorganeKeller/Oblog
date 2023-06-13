@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    
 
     h1 {
         background: rgba(250, 250, 250, 0.4);
@@ -34,7 +35,7 @@
         text-align: center;
         font-family: 'delius', 'serif';
         background: rgba(white, 0.4);
-
+        font-weight: bold;
         @include mixins.tablet {
             font-size: 1.4em;
           }
@@ -60,7 +61,9 @@
             @include mixins.large {
                 font-size: 1.8em;
             }
-    
+    em{
+        font-weight: bold;
+    }
         }
     }
 }

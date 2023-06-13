@@ -91,9 +91,10 @@
         <h1>Votre article</h1>
         <p class="description">
             &#x27BD; Ici, racontez nous vos périples, anecdotes, ce qui vous a
-            émerveillé ou déçu, interpellé ou instruit...<br>
-            <a use:link href="/login">Connectez-vous pour poster votre article</a>
-
+            émerveillé ou déçu, interpellé ou instruit...<br />
+            <a use:link href="/login"
+                >Connectez-vous pour poster votre article</a
+            >
         </p>
 
         <form
