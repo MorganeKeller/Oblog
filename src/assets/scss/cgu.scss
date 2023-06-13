@@ -33,12 +33,13 @@
   }
 
   .cgu-bloc {
-    width: 90%;
+
 
     p {
       font-size: 1em;
       font-weight: bold;
-     margin: auto;
+      margin: auto auto 2em auto;
+      width: 90%;
 
       @include mixins.tablet {
         font-size: 1.4em;
@@ -53,6 +54,8 @@
       line-height: 1.6em;
       text-align: left;
       list-style: circle;
+      width: 80%;
+      margin: auto;
 
       @include mixins.tablet {
         font-size: 1.4em;
@@ -91,7 +94,8 @@
 
   button {
     margin-bottom: 4em;
-padding:0.5em;      font-size: 1em;
+    padding: 0.5em;
+    font-size: 1em;
 
     @include mixins.tablet {
       font-size: 1.7em;
