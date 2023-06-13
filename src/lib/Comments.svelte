@@ -105,8 +105,7 @@
     {:then comments}
         <!-- Go through the whole list of comments, and for each element we store it in the variable "comment" -->
         {#each comments as commentary}
-            <i
-                >Posté le: <b>{commentary.created_at}</b>
+            <i>
                 Par: <b>{tabAuthor[commentary.author]}</b>
             </i>
             <div aria-labelledby="comment-{commentary.id}" class="div-comment">

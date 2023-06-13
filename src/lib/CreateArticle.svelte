@@ -90,8 +90,10 @@
     {:then article}
         <h1>Votre article</h1>
         <p class="description">
-            &#x27BD; Ici racontez nous vos périples, anecdotes, ce qui vous a
-            émerveillé ou déçu, interpellé ou instruit...
+            &#x27BD; Ici, racontez nous vos périples, anecdotes, ce qui vous a
+            émerveillé ou déçu, interpellé ou instruit...<br>
+            <a use:link href="/login">Connectez-vous pour poster votre article</a>
+
         </p>
 
         <form
@@ -112,13 +114,13 @@
             </div>
 
             <div class="input-create">
-                <label for="text" class="input-creat-textarea"
-                    >Et pour nous partager votre aventure, c'est par là:</label
+                <label for="text"
+                    >Et pour nous décrire votre aventure, c'est par là:</label
                 >
                 <textarea
                     required
                     minlength="30"
-                    maxlength="3000"
+                    maxlength="4000"
                     bind:value={articleText}
                 />
             </div>
@@ -129,7 +131,6 @@
                 </label>
                 <select
                     name="destination"
-                    id=""
                     required
                     bind:value={articleDestination}
                 >
@@ -144,7 +145,6 @@
 
             <input type="submit" value="Envoyer" class="input-create-submit" />
         </form>
-        <a use:link href="/login">Connectez-vous pour poster votre article</a>
     {/await}
 </section>
 

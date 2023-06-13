@@ -11,16 +11,37 @@
     background-color: $black;
     color: $yellow;
 
+    @include mixins.tablet {
+        margin: auto auto 10em auto;
+        width: 60%;
+    }
+
     h2 {
         font-family: 'Amatic SC', sans-serif;
         font-size: 1.5em;
         margin-bottom: 1em;
         text-align: center;
+
+        @include mixins.tablet {
+            font-size: 2em;
+        }
+
+        @include mixins.large {
+            font-size: 2.3em;
+        }
     }
 
     i {
         margin: 1em 2em 0 2em;
         font-size: 0.6em;
+
+        @include mixins.tablet {
+            font-size: 0.9em;
+        }
+
+        @include mixins.large {
+            font-size: 1.4em;
+        }
     }
 
     p {
@@ -29,7 +50,11 @@
         color: white;
 
         @include mixins.tablet {
-            font-size: 1.1em;
+            font-size: 1.2em;
+        }
+
+        @include mixins.large {
+            font-size: 1.6em;
         }
     }
 
@@ -61,6 +86,14 @@
             font-size: 3em;
             font-family: 'Amatic SC', sans-serif;
             margin-bottom: 0.5em;
+
+            @include mixins.tablet {
+                font-size: 3.5em;
+            }
+
+            @include mixins.large {
+                font-size: 4em;
+            }
         }
 
         label {
@@ -73,28 +106,32 @@
 
         .submit {
             font-size: 1em;
-            padding:0.5em;
-            margin:1em;
+            padding: 0.5em;
+            margin: 1em;
+
             @include mixins.tablet {
                 font-size: 1.5em;
             }
+            @include mixins.large {
+                font-size: 2em;
+            }
+
         }
     }
 
     .input-comment {
         width: 70%;
-        height: 80px;
-        font-size: 1em;
+        height: 10em;
+        font-size: 1.5em;
         margin: 0.5em 0 1em 0;
 
         @include mixins.tablet {
-            height: 110px;
-            font-size: 1.5em;
+           height:15em;
+            font-size: 2.3em;
         }
 
         @include mixins.large {
-            height: 150px;
-            font-size: 1.7em;
+            font-size: 3em;
         }
     }
 

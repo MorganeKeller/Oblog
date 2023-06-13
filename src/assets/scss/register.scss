@@ -2,17 +2,20 @@
 @use 'mixins';
 
 @import url('https://fonts.bunny.net/css?family=amatic-sc:700');
+@import url('https://fonts.bunny.net/css?family=delius:400');
 
 //REGISTER
 
 .main-register {
-  background-image: url("../img/wood.jpg");
+  background-image: url("../img/world.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
   text-align: center;
   min-height: 100vh;
-  color: $yellow;
+  color: $black;
+  font-family: 'delius', 'serif';
+  font-weight: bold;
 
   h1 {
     font-family: 'Amatic SC', sans-serif;
@@ -29,12 +32,11 @@
     @include mixins.large {
       font-size: 5em;
     }
-
   }
 
   .before-register {
     text-align: center;
-    color: $yellow;
+    color: $black;
     margin: 0.2em 0 0 0;
 
     p {
@@ -47,7 +49,11 @@
       }
 
       a {
-        color: $yellow;
+        color: $black;
+
+        &:hover {
+          color: $brown;
+        }
       }
     }
   }
@@ -60,55 +66,60 @@
     padding: 1em;
     background-color: $black;
     width: 70%;
+    color: white;
 
     @include mixins.tablet {
       width: 50%;
     }
 
+    @include mixins.large {
+      width: 35%;
+    }
+
     label,
     input {
-      margin: 0.2em 0;
       font-size: 1em;
+      padding: 0.3em;
 
       @include mixins.tablet {
         font-size: 1.4em;
       }
+    }
+
+    input {
+      margin: 0 0 1em 0;
+
     }
 
     .btn-creation {
-      font-size: 0.8em;
-
-      @include mixins.tablet {
-        font-size: 1.4em;
-      }
-
-    }
-  }
-
-  .register-validation {
-    input {
-      width: 10em;
-      font-size: 0.7em;
-      border-radius: 0.5em;
-      border: none;
+      font-size: 1em;
       background-color: $blue;
       box-shadow: inset 0 0 1em $brown;
-      padding: 0.2em 0em;
+      padding: 0.5em;
+      margin-top: 1em;
       border-radius: 0.5em;
-      font-family: 'Amatic SC', sans-serif;
-      font-size: 1.2em;
-      margin-top: 0.2em;
+
+      @include mixins.tablet {
+        font-size: 1.7em;
+      }
+
+      &:hover {
+        box-shadow: inset 0 0 1em $brown;
+        background-color: $yellow;
+        border: 1px solid $brown;
+      }
     }
 
-    input:hover {
-      box-shadow: inset 0 0 1em $brown;
-      background-color: $yellow;
-      border: 1px solid $brown;
-    }
-  }
+    button {
+      margin: 2em;
+      padding: 0.5em;
+      border-radius: 0.5em;
 
-  button {
-    margin: 2em;
+      &:hover {
+        background-color: $blue;
+        box-shadow: inset 0 0 1em $brown;
+      }
+    }
   }
 
   .footer-register {
@@ -117,37 +128,39 @@
 
       @include mixins.tablet {
         font-size: 1.5em;
+        margin: 1em auto 4em auto;
       }
 
-      @include mixins.tablet {
+      @include mixins.large {
         font-size: 2em;
       }
 
-
       a {
-        color: $yellow;
-        font-weight: bold;
+        color: $black;
+
+        &:hover {
+          color: $brown;
+        }
       }
     }
   }
 
   .confirmation {
-    h2{
-  
+    h2 {
       font-size: 1.5em;
       margin-top: 4em;
       padding-top: 1em;
       width: 100%;
-  
+
       @include mixins.tablet {
         font-size: 2em;
       }
-  
+
       @include mixins.large {
         font-size: 3em;
       }
-  
     }
+
     p {
       margin: 2em auto 3em auto;
 
@@ -158,7 +171,6 @@
       @include mixins.tablet {
         font-size: 2em;
       }
-
     }
   }
 }

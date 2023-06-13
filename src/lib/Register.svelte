@@ -1,8 +1,14 @@
 <script>
+  // @ts-nocheck
+
   import { link } from "svelte-spa-router";
   import { onMount } from "svelte";
 
   import "../assets/scss/register.scss";
+
+  import { fade } from "svelte/transition";
+  let visible = true;
+
   // Initializing the message and the form visibility states
   let message = "";
   let formVisible = true;
@@ -89,10 +95,10 @@
       >
         <div class="register-form">
           <label for="last_name">Prénom</label>
-          <input required name="first_name" placeholder="ex : NEWTON" />
+          <input required name="first_name" placeholder="ex : Isaac" />
 
           <label for="first_name">Nom</label>
-          <input required name="last_name" placeholder="ex : Isaac" />
+          <input required name="last_name" placeholder="ex : NEWTON" />
 
           <label for="email">Email</label>
           <input
@@ -112,10 +118,15 @@
             name="password"
             placeholder="********"
           />
-
-          <button class="btn-creation" type="submit">Créer mon compte</button>
+          <input
+            class="btn-creation"
+            aria-label="Valider création de compte"
+            type="submit"
+            value=" &#x27BD; Créer mon compte"
+          />
         </div>
       </form>
+
       <div class="footer-register">
         <p>
           Tu as déjà un compte ? Connecte-toi <a use:link href="/login"
@@ -127,7 +138,11 @@
   {:else}
     <div class="confirmation">
       <h2>Confirmation de création de compte</h2>
-      <p>{message}</p>
+      {#if visible}
+        <p bind:this={visible} transition:fade={{ duration: 1100 }}>
+          {message}
+        </p>
+      {/if}
     </div>
   {/if}
 </section>
