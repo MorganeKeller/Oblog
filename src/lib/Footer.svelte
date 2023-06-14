@@ -68,6 +68,3 @@
         </div>
     </ul>
 </footer>
-
-<style>
-</style>
