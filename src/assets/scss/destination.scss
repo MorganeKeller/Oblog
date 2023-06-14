@@ -38,11 +38,11 @@
     margin: auto;
 
     @include mixins.tablet {
-      width: 110px;
+      width: 100px;
     }
 
     @include mixins.large {
-      width: 150px;
+      width: 130px;
     }
   }
 
@@ -83,8 +83,9 @@
         display: none;
       }
 
-      @include mixins.large {
-        font-size: 2em;
+      @include mixins.tablet {
+        font-size: 1.5em;
+        margin: 0 auto;
       }
     }
 

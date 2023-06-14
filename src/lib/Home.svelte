@@ -67,7 +67,7 @@
                                 "assets/" +
                                 article.pictures}
                             aria-hidden="true"
-                            alt="illustration"
+                            alt="illustration en rapport avec l'article"
                         /></a
                     >
                 </div>

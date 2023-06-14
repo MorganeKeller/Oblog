@@ -8,7 +8,7 @@
     let error = "";
 
     // add a login variable
-    let isLoggedIn = false; 
+    let isLoggedIn = false;
 
     //we retrieve user data
     const getME = async () => {
@@ -24,7 +24,7 @@
         ).then((data) => {
             return data;
         });
-        
+
         // Extract the token and return it
         const json = await response.json();
         return json.data;
@@ -95,7 +95,7 @@
 <div class="login-background">
     <h1>Connexion</h1>
     {#if isLoggedIn}
-    <p>Bienvenue!<br>Vous êtes connecté(e) en tant que </p>
+        <p>Bienvenue!</p>
         <!-- on vérifie l'état de connexion pour afficher le bouton de déconnexion -->
         <button class="unlog" on:click={handleLogout}>Se déconnecter</button>
     {:else}

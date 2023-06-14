@@ -118,10 +118,6 @@
     .text-login-register {
       margin-top: 4em;
 
-      @include mixins.tablet {
-        margin: 0;
-      }
-
       h2 {
         font-size: 1em;
 
@@ -129,6 +125,11 @@
           margin-top: 1em;
           font-size: 1.2em;
         }
+      }
+
+      p {
+        font-size: 1em;
+
       }
 
       a {

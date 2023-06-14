@@ -65,9 +65,10 @@
     flex-direction: column;
     margin: 1em auto;
     padding: 1em;
-    background-color: $black;
+    background: rgba(0,0,0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     width: 70%;
-    color: white;
+    color: black;
 
     @include mixins.tablet {
       width: 50%;

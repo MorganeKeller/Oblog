@@ -38,6 +38,7 @@
 
         @include mixins.tablet {
             font-size: 1em;
+            width: 80%;
         }
 
         @include mixins.large {
@@ -49,14 +50,13 @@
         margin-bottom: 4em;
 
         .quote {
-            width: 80%;
+            width: 70%;
             margin: auto;
             padding: 0.5em;
 
             @include mixins.tablet {
                 font-size: 1em;
                 padding: 0;
-
             }
 
             @include mixins.large {

@@ -64,18 +64,17 @@
       width: 60%;
       text-align: center;
       background-color: $black;
-      font-size: 1em;
       color: $yellow;
       border-radius: 1em;
       padding: 0;
       margin: auto auto 1.5em auto;
 
       @include mixins.tablet {
-        font-size: 1.2em;
+        font-size: 1em;
       }
 
       @include mixins.large {
-        font-size: 1.4em;
+        font-size: 1.2em;
       }
 
       a {

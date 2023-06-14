@@ -15,7 +15,8 @@
   background-size: cover;
   font-family: 'delius', 'serif';
   font-weight: bold;
-padding-bottom:2em;
+  padding-bottom: 2em;
+
   h1 {
     font-family: 'Amatic SC', sans-serif;
     font-size: 3em;
@@ -49,10 +50,10 @@ padding-bottom:2em;
   }
 
   form {
-    background-color: white;
+    background: rgba(250, 250, 250, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     padding: 1.5em;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +64,7 @@ padding-bottom:2em;
     @include mixins.tablet {
       font-size: 1em;
       width: 60%;
-      padding:1em 0 0 0;
+      padding: 1em 0 0 0;
     }
 
     @include mixins.large {
@@ -89,13 +90,19 @@ padding-bottom:2em;
       @include mixins.tablet {
         width: 65%;
       }
+
       @include mixins.large {
         width: 40%;
       }
     }
 
     textarea {
-      height: 15em;      
+      height: 15em;
+
+      @include mixins.tablet {
+        height: 10em;
+      }
+
     }
 
     .form-send {

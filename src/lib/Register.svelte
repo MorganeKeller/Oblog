@@ -95,7 +95,7 @@
       >
         <div class="register-form">
           <label for="last_name">Prénom</label>
-          <input required name="first_name" placeholder="ex : Isaac" />
+          <input type="text" required name="first_name" placeholder="ex : Isaac" />
 
           <label for="first_name">Nom</label>
           <input required name="last_name" placeholder="ex : NEWTON" />
