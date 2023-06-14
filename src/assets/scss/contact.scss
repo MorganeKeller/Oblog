@@ -4,6 +4,7 @@
 @import url('https://fonts.bunny.net/css?family=amatic-sc:700');
 
 
+//CONTACT
 
 .container {
   display: flex;
@@ -59,7 +60,7 @@
     align-items: center;
     justify-content: center;
     width: 80%;
-    margin: 1em auto;
+    margin: 2em auto 3em auto;
 
     @include mixins.tablet {
       font-size: 1em;
@@ -102,7 +103,6 @@
       @include mixins.tablet {
         height: 10em;
       }
-
     }
 
     .form-send {
@@ -122,19 +122,6 @@
         box-shadow: inset 0 0 1em $brown;
         background-color: $yellow;
       }
-    }
-  }
-
-  button {
-    margin: 3em auto 3em auto;
-    padding: 0.5em;
-    font-size: 1em;
-    background-color: $blue;
-    font-weight: bold;
-    border-radius: 0.5em;
-
-    @include mixins.tablet {
-      font-size: 1em;
     }
   }
 }

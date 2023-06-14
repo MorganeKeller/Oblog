@@ -1,9 +1,6 @@
 <script>
   import "../assets/scss/contact.scss";
 
-  function goBack() {
-    window.history.back();
-  }
 </script>
 
 <section class="container">
@@ -39,5 +36,4 @@
     <input class ="form-send" type="submit" aria-label="valider le formulaire" value="Envoyer" />
   </form>
 
-  <button on:click={goBack}>Retour</button>
 </section>

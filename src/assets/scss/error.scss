@@ -51,11 +51,11 @@ text-align: center;
       font-family: 'delius', 'serif';
 
       @include mixins.tablet {
-        font-size: 1.5em;
+        font-size: 1.2em;
       }
 
       @include mixins.large {
-        font-size: 2em;
+        font-size: 1.4em;
       }
     }
 

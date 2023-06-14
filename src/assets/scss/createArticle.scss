@@ -20,6 +20,7 @@
     font-family: 'Amatic SC', sans-serif;
     font-size: 3em;
     padding-top: 0.5em;
+    margin-bottom:0em;
     background: rgba(250, 250, 250, 0.4);
     width: 100%;
     text-align: center;
@@ -41,14 +42,12 @@
 
     @include mixins.tablet {
       font-size: 1em;
-      margin: 0.5em auto 2em auto;
+      margin: 0.5em auto 1em auto;
       width: 75%;
     }
 
     @include mixins.large {
       font-size: 1.2em;
-      width: 60%;
-
     }
 
     a {
@@ -138,7 +137,7 @@
     @include mixins.tablet {
       width: 15%;
       font-size: 1em;
-      margin: 4em auto 6em auto;
+      margin: 1em auto 6em auto;
       padding: 1em auto;
 
       &:hover {
