@@ -89,7 +89,7 @@
       </p>
       <em>J. R. R. Tolkien</em>
     </div>
-    
+
     <div class="quote">
       <p>
         <img src={LogoQuote} alt="logo de citation" /> « Voyager, c’est donner un
@@ -97,7 +97,7 @@
       </p>
       <em>Alexandre Poussin</em>
     </div>
-    
+
     <div class="quote">
       <p>
         <img src={LogoQuote} alt="logo de citation" /> « Je ne suis pas la même après

@@ -15,41 +15,36 @@
   background-size: cover;
   font-family: 'delius', 'serif';
   font-weight: bold;
-
+padding-bottom:2em;
   h1 {
     font-family: 'Amatic SC', sans-serif;
     font-size: 3em;
-    margin-top: 1em;
-    padding-top: 1em;
+    padding-top: 0.5em;
     background: rgba(250, 250, 250, 0.4);
     width: 100%;
 
     @include mixins.tablet {
-      font-size: 4em;
+      font-size: 3.5em;
     }
 
     @include mixins.large {
-      font-size: 5em;
+      font-size: 4em;
     }
   }
 
   p {
     max-width: 90%;
     margin-bottom: 1em;
-    font-size: 1em;
-
     background: rgba(white, 0.7);
 
     @include mixins.tablet {
-      font-size: 1.4em;
+      font-size: 1em;
       width: 80%;
-
     }
 
     @include mixins.large {
-      font-size: 1.7em;
+      font-size: 1.2em;
       width: 70%;
-
     }
   }
 
@@ -64,15 +59,15 @@
     justify-content: center;
     width: 80%;
     margin: 1em auto;
-    font-size: 1em;
 
     @include mixins.tablet {
-      font-size: 1.2em;
+      font-size: 1em;
       width: 60%;
+      padding:1em 0 0 0;
     }
 
     @include mixins.large {
-      font-size: 1.4em;
+      font-size: 1.2em
     }
 
     input,
@@ -97,30 +92,23 @@
       @include mixins.large {
         width: 40%;
       }
-
     }
 
     textarea {
-      height: 15em;
-
-      @include mixins.tablet {
-        height: 20em;
-      }
+      height: 15em;      
     }
 
     .form-send {
       background-color: $blue;
       box-shadow: inset 0 0 1em $brown;
-      margin: 1em auto 2em auto;
-      padding: 1em 0;
       border-radius: 0.5em;
       transition: background-color 0.2s ease-in-out;
       font-size: 1em;
       font-weight: bold;
 
       @include mixins.tablet {
-        font-size: 1.2em;
-        width: 30%;
+        font-size: 1em;
+        width: 20%;
       }
 
       &:hover {
@@ -136,11 +124,10 @@
     font-size: 1em;
     background-color: $blue;
     font-weight: bold;
+    border-radius: 0.5em;
 
     @include mixins.tablet {
-      font-size: 1.5em;
-      margin: 3em auto 5em auto;
-
+      font-size: 1em;
     }
   }
 }
