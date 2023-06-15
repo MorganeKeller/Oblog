@@ -19,6 +19,7 @@
     text-align: center;
     font-size: 3em;
     background: rgba(250, 250, 250, 0.4);
+    padding-top: 0.5em;
 
     @include mixins.tablet {
       font-size: 3.5em;
@@ -55,17 +56,20 @@
     align-items: center;
     flex-direction: column;
     font-size: 0.8em;
-    width: 90%;
+    width: 80%;
     margin: auto;
     border: solid 3px $black;
     border-radius: 0.5rem;
     margin-bottom: 4em;
 
     @include mixins.tablet {
-      width: 40%;
+      width: 50%;
       border: solid 3px $black;
       margin-bottom: 9em;
+    }
 
+    @include mixins.large {
+      width: 40%;
     }
 
     .article-bloc {

@@ -35,7 +35,7 @@
 
     p {
       width: 80%;
-      
+
       margin: auto auto 1.5em auto;
 
       @include mixins.tablet {
@@ -146,7 +146,6 @@
 
         @include mixins.tablet {
           font-size: 1.2em;
-
         }
       }
 
@@ -190,5 +189,4 @@
       }
     }
   }
-
 }
