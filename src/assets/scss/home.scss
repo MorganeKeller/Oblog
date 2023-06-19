@@ -63,13 +63,13 @@
     margin-bottom: 4em;
 
     @include mixins.tablet {
-      width: 50%;
+      width: 40%;
       border: solid 3px $black;
       margin-bottom: 9em;
     }
 
     @include mixins.large {
-      width: 40%;
+      width: 35%;
     }
 
     .article-bloc {

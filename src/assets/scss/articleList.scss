@@ -72,7 +72,6 @@
 
   .each_articleList {
     font-family: 'delius', 'serif';
-    margin-bottom: 2em;
     width: 90%;
     margin: auto auto 2em auto;
 
@@ -82,24 +81,23 @@
       columns: 2;
     }
 
+    @include mixins.large {
+      width: 80%;
+      columns: 3;
+    }
+
     .one-article {
       display: inline-block;
       border: solid 3px $black;
       font-family: 'delius', 'serif';
-      margin-bottom: 2em;
-      width: 90%;
+      width: 70%;
       border-radius: 0.5rem;
-      margin-bottom: 6em;
-      display: flex;
-      text-align: center;
-      flex-direction: column;
-      justify-content: space-between;
       margin: auto auto 3em auto;
       background: linear-gradient($yellow, $blue);
 
       @include mixins.tablet {
         margin: auto auto 8em auto;
-
+        width: 85%;
       }
 
       .phototext {
@@ -127,17 +125,17 @@
         margin: auto;
 
         @include mixins.tablet {
-          font-size: 3em;
+          font-size: 2em;
         }
 
         @include mixins.large {
-          font-size: 4em;
+          font-size: 3em;
         }
       }
 
       .overflow-ellipsis {
         font-family: 'delius', 'serif';
-        font-size: 0.9em;
+        font-size: 0.6em;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -150,7 +148,7 @@
       }
 
       a {
-        font-size: 1em;
+        font-size: 0.8em;
         color: $black;
         width: 90%;
         text-align: right;
@@ -169,17 +167,17 @@
         display: flex;
         align-items: center;
         margin-bottom: 1.5em;
-        font-size: 0.8em;
+        font-size: 1em;
         justify-content: center;
 
         p,
         time {
-          font-size: 1.3em;
+          font-size: 1em;
           margin: 0;
           padding: 0.5em;
 
           @include mixins.tablet {
-            font-size: 1.5em;
+            font-size: 1.2em;
           }
         }
 
