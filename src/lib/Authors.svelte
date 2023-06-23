@@ -14,10 +14,11 @@
 </script>
 
 <section class="authors">
+     <h1>Les Auteurs</h1>
    {#await getAuthors()}
       <p>chargement en cours...</p>
    {:then articleAuthor}
-      <h1>Les Auteurs</h1>
+    
       <p class="author-text">
          Ici vous trouverez tous nos contributeurs, qu'ils soient
          commentateurs ou rédacteurs. En cliquant sur chaque nom vous

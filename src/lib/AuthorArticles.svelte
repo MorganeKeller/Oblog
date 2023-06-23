@@ -27,11 +27,11 @@
 
         const response = await fetch(endpoint);
 
-        // Gestion des erreurs de réponse
+        // Response errors handling
 
         const json = await response.json();
 
-        // Gestion des erreurs d'extraction
+        // Extract error handling
         return json.data;
     };
 </script>
@@ -41,7 +41,7 @@
     {#await getArticlesByAuthor()}
         <p>Chargement en cours...</p>
 
-        <!-- Des que les données sont prêtes, je les range dans la variable articles -->
+        <!-- As soon as the data is ready, we store it in the variable "articles" -->
     {:then articles}
         <article class="home-article">
             {#each articles as article}

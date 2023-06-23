@@ -45,6 +45,3 @@
     </nav>
 </header>
 
-<style>
-    
-</style>
