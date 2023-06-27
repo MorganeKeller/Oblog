@@ -4,11 +4,8 @@
 
    const getAuthors = async function () {
       const endpoint = import.meta.env.VITE_URL_DIRECTUS + "users";
-
       const response = await fetch(endpoint);
-
       const json = await response.json();
-
       return json.data;
    };
 </script>
