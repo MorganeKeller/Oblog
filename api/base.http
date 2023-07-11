@@ -1,41 +1,55 @@
 ###
-# Recuperer du premier commentaires
-http://chara-redif.vpnuser.lan:8055/items/commentary/1
+#Se connecter en tant qu'admin de Directus
+POST https://directus-oblog.up.railway.app/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "admin@example.com",
+    "password": "1234"
+}
 
 ###
-https://oblogback-production.up.railway.app/assets/article?field=pictures
+# Récuperer le premier commentaires
+http://directus-oblog.up.railway.app/items/commentary/1
+
+###
+https://directus-oblog.up.railway.app/assets/article?field=pictures
 
 ###
 # Récupération du premier article
 https://directus-oblog.up.railway.app/items/commentary
 
+###
+# Récupérer la liste des users
+
+GET http://directus-oblog.up.railway.app/users
 
 ###
-# Récuparation d'un user 
-http://chara-redif.vpnuser.lan:8055/items/article?fields=user_id
+#Récupération d'un user avec son id
+http://directus-oblog.up.railway.app/users/fb2f60c3-7553-4c36-8445-71f64d6d3891
 
 ###
-http://chara-redif.vpnuser.lan:8055/users/fb2f60c3-7553-4c36-8445-71f64d6d3891
-
+# Chargement liste d'articles triés chronologiquement et affichage limité à 3
+https://directus-oblog.up.railway.app/items/article?sort=-created_at&limit=3&fields=*.*,pictures
 
 
 ###
-POST http://chara-redif.vpnuser.lan:8055/items/article HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzExMzAzNiwiZXhwIjoxNjgzMTEzOTM2LCJpc3MiOiJkaXJlY3R1cyJ9.7ypnP-7ugSCTafA2t8OvpKuCv5QDMlTVgD2ScTzwxp8
+#création d'un article
+POST https://directus-oblog.up.railway.app/items/article HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4ODEzMTE3NCwiZXhwIjoxNjg4MTMyMDc0LCJpc3MiOiJkaXJlY3R1cyJ9.8qVdlUNmLdy5MPzr2gLg7oYyJyYJMymIYnEow4ar1wM
 Content-Type: application/json
 
 {       
         
       "title": "La France et Avignon",
-      "content": "Avignon, c'est beau, mais malgré son beau palais des papes, son pont d'avignon est une arnaque",
+      "content": "Avignon, c'est beau, mais malgré son beau palais des papes, son pont est une arnaque",
       "category_id": 1
-    }
+}
+
 
 
 ###
-#se connecter en tant qu utilisateur de directus
-
-POST  HTTP://chara-redif.vpnuser.lan:8055/auth/login HTTP/1.1
+https://directus-oblog.up.railway.app/items/commentary?filter[article_id][_eq]=article_id HTTP/1.1
 Content-Type: application/json
 
 {
@@ -43,41 +57,34 @@ Content-Type: application/json
     "password":"1234"
 }
 
+###
+#liste des articles par id
+https://directus-oblog.up.railway.app/items/article?fields=id
 
 ###
-# Chargement list article trié chronologiquement et affichage limité à 3
-http://chara-redif.vpnuser.lan:8055/items/article?sort=-created_at&limit=3&fields=*.*,pictures
+#liste de tous els articles avec toutes les infos
+https://directus-oblog.up.railway.app/items/article
 
 ###
-http://chara-redif.vpnuser.lan:8055/items/commentary?filter[article_id][_eq]=article_id HTTP/1.1
-Content-Type: application/json
-
-{
-    "email":"admin@example.com",
-    "password":"1234"
-}
-###
-
-http://chara-redif.vpnuser.lan:8055/items/article?fields=id
-###
-
-http://chara-redif.vpnuser.lan:8055/items/article
+#affichage articles avec tri sur champs
+https://directus-oblog.up.railway.app/items/article?fields=id, title, pictures, author, content, category_id
 
 ###
-http://chara-redif.vpnuser.lan:8055/items/article?fields=id, title, pictures, author, content, category_id
-###
-http://chara-redif.vpnuser.lan:8055/items/article?fields=*.*.*&sort=-created_at&limit=3
+#articles, tous les champs et sous champs, rangé par ordre chronologique et limité a 3
+https://directus-oblog.up.railway.app/items/article?fields=*.*.*&sort=-created_at&limit=3
 
 ###
-http://chara-redif.vpnuser.lan:8055/items/commentary?filter=[article_id][_eq]=article_id
+#commentaires selon l'id de l'article
+https://directus-oblog.up.railway.app/items/commentary?filter=[article_id][_eq]=article_id
 
 
 ###
-http://chara-redif.vpnuser.lan:8055/items/commentary?filter=[user_id][_eq]=adcca067-dc11-498c-a0f1-303ed8d1bc53
+https://directus-oblog.up.railway.app/items/commentary?filter=[user_id][_eq]=adcca067-dc11-498c-a0f1-303ed8d1bc53
 
 ###
-POST  HTTP://chara-redif.vpnuser.lan:8055/users/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MjY4MzgxOSwiZXhwIjoxNjgyNjg0NzE5LCJpc3MiOiJkaXJlY3R1cyJ9.XVUdHxnapZNIiR2GIvspra8ce817ibOhAcu-dIwndi0
+#creation utilisateur, avec champs
+POST  https://directus-oblog.up.railway.app/users/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4ODEzMTU3MywiZXhwIjoxNjg4MTMyNDczLCJpc3MiOiJkaXJlY3R1cyJ9.fHIfpjRIBG27lG98x1uVdktYKszT5JCq5fbUatEGpVk
 content-type: application/json
 
 {      "id":"",
@@ -108,7 +115,8 @@ content-type: application/json
 
 
 ### Test comments
-POST  HTTP://chara-redif.vpnuser.lan:8055/items/commentary HTTP/1.1
+#Création commentaire,texte + article id + author id
+POST  https://directus-oblog.up.railway.app/items/commentary HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzEyMTc2MywiZXhwIjoxNjgzMTIyNjYzLCJpc3MiOiJkaXJlY3R1cyJ9.o7I6WYUUiezx8lxkXvALCNoPaBzq9UgKpBwIOZ5Wl-I
 content-type: application/json
 
@@ -120,12 +128,4 @@ content-type: application/json
         "author": "f6d187d8-d9d1-42a4-9da6-97e50ab1055b"
     }
 
-###
-http://chara-redif.vpnuser.lan:8055/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjYTY3NTk1LWQ5ZDEtNDA0Yy05ZDgwLTIxOTVmZjJiOTNhZCIsInJvbGUiOiJlNjkwMTUyMy1kMmVkLTRiZjEtYmNmYi0wODExODcyOGM0N2UiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY4MzExOTIzMiwiZXhwIjoxNjgzMTIwMTMyLCJpc3MiOiJkaXJlY3R1cyJ9.6Fqkddh_Hh5r6wAHdGEfW7qW2xOmKCMCfsq-RzbJs7k
-
-
-
-###
-HTTP://chara-redif.vpnuser.lan:8055/items/category
 

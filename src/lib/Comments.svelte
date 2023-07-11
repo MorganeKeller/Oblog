@@ -10,7 +10,6 @@
     //Form informations
     let commentText = "";
     let commentAuthor = "";
-    let commentDate = "";
 
     const handleSubmitForm = async (event) => {
         event.preventDefault();
@@ -25,7 +24,7 @@
         //Empty the textarea
         commentText = "";
         commentAuthor = "";
-        commentDate = "";
+        
     };
 
     //Function to retrieve comments

@@ -135,7 +135,7 @@
 
       .overflow-ellipsis {
         font-family: 'delius', 'serif';
-        font-size: 0.6em;
+        font-size: 1em;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -148,7 +148,7 @@
       }
 
       a {
-        font-size: 0.8em;
+        font-size: 1em;
         color: $black;
         width: 90%;
         text-align: right;
